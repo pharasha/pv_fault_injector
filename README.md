@@ -2,6 +2,7 @@
 A Python tool for simulating PV systems based on PVLib with custome support for fault injection.
 
 ## File Overview
+```
 pv_fault_injector/
 |
 ├── data/
@@ -17,6 +18,7 @@ pv_fault_injector/
 ├── faults.py                   # Fault injection functions
 ├── weather.py                  # Weather fetcher and 
 └── README.md
+```
 ---
 
 ## Data Flow
