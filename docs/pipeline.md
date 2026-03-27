@@ -1,7 +1,7 @@
 # Simulation Pipeline
 
 ## File Overview
-
+```
 pv_fault_injector/
 |
 ├── data/
@@ -17,6 +17,7 @@ pv_fault_injector/
 ├── faults.py                   # Fault injection functions
 ├── weather.py                  # Weather fetcher and 
 └── README.md
+```
 ---
 
 ## Data Flow
