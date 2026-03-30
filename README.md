@@ -6,6 +6,7 @@ A Python tool for simulating PV systems based on PVLib with custome support for 
 pv_fault_injector/
 |
 ├── data/
+|   ├── output/                 # contains simulation output
 |   ├── modules.json            # Module characteristics
 |   ├── settings.json           # Simulation settings
 |   └── ...
@@ -14,9 +15,12 @@ pv_fault_injector/
 |   ├── pipeline.md             # pipeline documentation
 |   └──  faults.md              # faults documentation
 |
-├── simulation.py               # Main Simulation and Classes
-├── faults.py                   # Fault injection functions
-├── weather.py                  # Weather fetcher and 
+├── src/
+|   ├── simulation.py               # Simulation Classes
+|   ├── faults.py                   # Fault injection functions
+|   └── ...
+|
+├── main.py                  # Main Simulation
 └── README.md
 ```
 ---
