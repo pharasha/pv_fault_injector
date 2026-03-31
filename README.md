@@ -16,9 +16,11 @@ pv_fault_injector/
 |   └──  faults.md              # faults documentation
 |
 ├── src/
-|   ├── simulation.py               # Simulation Classes
-|   ├── faults.py                   # Fault injection functions
-|   └── ...
+|   ├── Simulation.py               # Simulation Classes
+|   ├── PvSystem.py               # Pv System Class
+|   ├── WeatherModel.py               # Weather Model Class
+|   └── Faults.py                   # Fault injection functions
+| 
 |
 ├── main.py                  # Main Simulation
 └── README.md
