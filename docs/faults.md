@@ -198,3 +198,12 @@ ac_faulty = wiring_loss(ac, resistance_factor=0.05)  # 5% extra loss
 
 ---
 
+## Implemented functions
+
+| Function | Source | What it touches | Links |
+|---|---|---|---|
+| `soiling_kimber()` | Kimber 2006 | scales GHI/DHI/DNI in `weather_df` | [PVPMC](https://pvpmc.sandia.gov/modeling-guide/1-weather-design-inputs/shading-soiling-and-reflection-losses/soiling-losses/kimber-soiling-model/) |
+| `degradation()` | Jordan & Kurtz 2013 (NREL/TP-5200-51664) | reduces `I_L_ref` by 0.5%/year | [NREL PDF](https://docs.nrel.gov/docs/fy12osti/51664.pdf) / [PVsyst degradation model](https://www.pvsyst.com/help-pvsyst7/pvmodule_degradation.htm) |
+| `pid()` | EPJ PV 2026 / PMC 2022 | collapses `R_sh_ref`, minor `I_L_ref` hit | [EPJ PV 2026](https://www.epj-pv.org/articles/epjpv/full_html/2026/01/pv20250051/pv20250051.html) / [PMC 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9699168/) |
+| `open_string()` | Sabbaghpur Arani 2016 / NREL 2024 | reduces `strings_per_inverter` | [Wiley 2016](https://onlinelibrary.wiley.com/doi/10.1155/2016/8712960) / [NREL 2024](https://www.osti.gov/pages/servlets/purl/2580300) |
+
