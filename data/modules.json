@@ -1,16 +1,33 @@
-{
-  "module_cec":           "..",
-  "inverter_cec":         "...",
-  "latitude":    47.4062,
-  "longitude":   9.3046,
-  "altitude_m":  670,
-  "timezone":    "Europe/Zurich",
+{ "sys1":  {
+                "module_cec":           "..",
+                "inverter_cec":         "...",
+                "latitude":    47.4062,
+                "longitude":   9.3046,
+                "altitude_m":  670,
+                "timezone":    "Europe/Zurich",
 
-  "tilt_deg":    20,
-  "azimuth_deg": 180,
-  "system_loss_fraction": 0.14,
+                "tilt_deg":    20,
+                "azimuth_deg": 180,
+                "system_loss_fraction": 0.14,
 
-  "modules_per_string":   12,
-  "strings_per_inverter": 12,
-  "real_module_count":    148
+                "modules_per_string":   12,
+                "strings_per_inverter": 12,
+                "real_module_count":    148
+              },
+  "sys2":  {
+                "module_cec":           "..",
+                "inverter_cec":         "...",
+                "latitude":    47.4062,
+                "longitude":   9.3046,
+                "altitude_m":  670,
+                "timezone":    "Europe/Zurich",
+
+                "tilt_deg":    20,
+                "azimuth_deg": 180,
+                "system_loss_fraction": 0.14,
+
+                "modules_per_string":   12,
+                "strings_per_inverter": 12,
+                "real_module_count":    148
+              }
 }
