@@ -11,7 +11,7 @@
                 "system_loss_fraction": 0.14,
 
                 "modules_per_string":   12,
-                "strings_per_inverter": 12,
+                "strings": 12,
                 "real_module_count":    148
               },
   "sys2":  {
@@ -27,7 +27,7 @@
                 "system_loss_fraction": 0.14,
 
                 "modules_per_string":   12,
-                "strings_per_inverter": 12,
+                "strings": 12,
                 "real_module_count":    148
               }
 }
