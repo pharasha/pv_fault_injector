@@ -22,6 +22,14 @@ class Simulation:
         
         #SNOW COVERAGE LOSSES
 
+
+    def simulate_chunked(self, chunks):
+        # chunks: list of (weather_df, module_params) from degradation_timeseries()
+        pass
+
+    def simulate(self, weather_df):
+        pass
+
     def run(self):
         for sys in self.systems:
             self.weather[sys.id]=self.fetchWeather(sys)

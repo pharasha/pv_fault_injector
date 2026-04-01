@@ -42,16 +42,7 @@ class PvSystem():
         self.mc=ModelChain(system=self.pv_sys,location=self.location) #TOODO: CHECK MORE ABOUT LOSS_PARAMETERS                          
 
 
-    def build_system(self, module_params=None):
-        # module_params: override parameters used by fault injection (degradation, PID, etc.)
-        pass
-
-    def location(self):
-        pass
-
-    def simulate(self, weather_df, module_params=None):
-        pass
-
-    def simulate_chunked(self, chunks):
-        # chunks: list of (weather_df, module_params) from degradation_timeseries()
-        pass
+    def shift_sys_parameters(self, **params):
+        for param, shift in params.items():
+            if param in self.array.module_parameters:
+                self.array.module_parameters[param] += shift
