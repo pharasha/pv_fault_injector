@@ -8,7 +8,6 @@ class PvSystem():
     PvSystem Class description
     """
     def __init__(self, config):
-        self.id                   = config["id"]
         self.latitude             = config["latitude"]
         self.longitude            = config["longitude"]
         self.altitude             = config["altitude_m"]
@@ -35,11 +34,11 @@ class PvSystem():
                          module_parameters=self.module,
                          temperature_model_parameters=PARAMS['sapm']['open_rack_glass_glass'],
                          modules_per_string=self.modules_per_string,
-                         strings=self.strings_per_inverter)
+                         strings=self.strings)
         
-        self.pv_sys=PVSystem(arrays=self.array,inverter_parameters=self.inverter)
+        self.pv_sys=PVSystem(arrays=[self.array],inverter_parameters=self.inverter)
 
-        self.mc=ModelChain(system=self.pv_sys,location=self.location) #TOODO: CHECK MORE ABOUT LOSS_PARAMETERS  
+        self.mc=ModelChain(system=self.pv_sys,location=self.location, spectral_model='no_loss',aoi_model='physical') #TOODO: CHECK MORE ABOUT LOSS_PARAMETERS  
 
     def run_model(self,weather):
         self.mc.run_model(weather)  

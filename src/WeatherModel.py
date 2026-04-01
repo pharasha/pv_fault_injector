@@ -3,7 +3,7 @@ import requests_cache
 import pandas as pd
 from retry_requests import retry
 
-class WeatherModel:
+class WeatherModel():
     def __init__(self):
         # Setup the Open-Meteo DatabaseAPI client with cache and retry on error
         self.cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
@@ -53,7 +53,7 @@ class WeatherModel:
         hourly_data["dni"] = hourly_direct_normal_irradiance
         hourly_data["direct_irradiance"] = hourly_direct_irradiance
         hourly_data["temp_air"] = hourly_temperature
-        hourly_data["wind"] = hourly_wind_speed
+        hourly_data["wind_speed"] = hourly_wind_speed
         hourly_data["precip"] = hourly_precip
         hourly_data["snow"] = hourly_snow
         hourly_data["isday"] = hourly_isday

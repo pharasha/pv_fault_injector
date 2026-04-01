@@ -19,14 +19,14 @@ def soiling_kimber(weather_df, soiling_loss_rate=0.0015, cleaning_threshold=6.0,
         daily_precip,
         soiling_loss_rate=soiling_loss_rate,
         cleaning_threshold=cleaning_threshold,
-        soiling_max=max_soiling,
+        max_soiling=max_soiling,
         grace_period=grace_period,
     )
     soiling_ratio = soiling_ratio.reindex(weather_df.index, method="ffill")# daily -> hourly
 
     df = weather_df.copy()
     for col in ["ghi", "dhi", "dni"]:
-        df[col] = df[col] * soiling_ratio
+        df[col] = df[col] * (1-soiling_ratio)
     return df
 
 # ==========================================================

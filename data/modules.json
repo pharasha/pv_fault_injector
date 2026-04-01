@@ -1,6 +1,6 @@
 { "sys1":  {
-                "module_cec":           "..",
-                "inverter_cec":         "...",
+                "module_cec":           "Canadian_Solar_Inc__CS6K_285M",
+                "inverter_cec":         "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
                 "latitude":    47.4062,
                 "longitude":   9.3046,
                 "altitude_m":  670,
@@ -10,13 +10,13 @@
                 "azimuth_deg": 180,
                 "system_loss_fraction": 0.14,
 
-                "modules_per_string":   12,
-                "strings": 12,
-                "real_module_count":    148
+                "modules_per_string":   4,
+                "strings": 2,
+                "real_module_count":    8
               },
   "sys2":  {
-                "module_cec":           "..",
-                "inverter_cec":         "...",
+                "module_cec":           "Canadian_Solar_Inc__CS6K_285M",
+                "inverter_cec":         "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
                 "latitude":    47.4062,
                 "longitude":   9.3046,
                 "altitude_m":  670,
@@ -26,8 +26,8 @@
                 "azimuth_deg": 180,
                 "system_loss_fraction": 0.14,
 
-                "modules_per_string":   12,
-                "strings": 12,
-                "real_module_count":    148
+                "modules_per_string":   4,
+                "strings": 2,
+                "real_module_count":    8
               }
 }
