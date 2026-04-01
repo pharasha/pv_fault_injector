@@ -39,10 +39,8 @@ class PvSystem():
         
         self.pv_sys=PVSystem(arrays=self.array,inverter_parameters=self.inverter)
 
-        self.mc=ModelChain(system=self.pv_sys,location=self.location) #TOODO: CHECK MORE ABOUT LOSS_PARAMETERS                          
+        self.mc=ModelChain(system=self.pv_sys,location=self.location) #TOODO: CHECK MORE ABOUT LOSS_PARAMETERS  
 
-
-    def shift_sys_parameters(self, **params):
-        for param, shift in params.items():
-            if param in self.array.module_parameters:
-                self.array.module_parameters[param] += shift
+    def run_model(self,weather):
+        self.mc.run_model(weather)  
+        return self.mc.results                         

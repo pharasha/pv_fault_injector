@@ -1,5 +1,6 @@
 import pandas as pd
 import WeatherModel,PvSystem
+from Faults import *
 
 class Simulation:
     def __init__(self, systems, weather_model: WeatherModel, story):
@@ -9,30 +10,53 @@ class Simulation:
         self.story=story
         self.weather_model=weather_model
         self.weather={}
+        self.weather_with_anomalies={}
 
     def fetchWeather(self,sys):
         weather=self.weather_model.request_historical(sys.latitude,sys.longitude,self.story.start,self.story.end)
         return weather
     
-    def applyAnomalies(self,weather):
-        # ENTRY POINT A
+    def applyAnomalies(self,weather_df):
         
         #SOILING LOSSES
-        soiling_loss=pvl.soiling.kimber(weather, cleaning_threshold=6, soiling_loss_rate=0.0015, grace_period=14, max_soiling=0.3, manual_wash_dates=None, initial_soiling=0, rain_accum_period=24)
-        
+        df=soiling_kimber(weather_df)
+
         #SNOW COVERAGE LOSSES
+        # df=snow(.)
+
+        return df
 
 
-    def simulate_chunked(self, chunks):
-        # chunks: list of (weather_df, module_params) from degradation_timeseries()
-        pass
+    def simulate_chunked(self,sys, chunk):
+        
+        sys.array.module_parameters=chunk[1]
 
-    def simulate(self, weather_df):
-        pass
+        results=sys.run_model(chunk[0])
+
+        return results.ac
+
+    def simulate(self, sys,weather):
+
+        out=pd.DataFrame()
+        #ENTRY POINT B
+        chunks=degradation_timeseries(weather,sys.array.module_parameters)
+        for chunk in chunks:
+                pd.concat(out,self.simulate_chunked(self,sys, chunk))
+        return out
+
+
+        
+
 
     def run(self):
         for sys in self.systems:
+            # FETCH WEATHER DATA FOR EACH SYSTEM
             self.weather[sys.id]=self.fetchWeather(sys)
+            # ENTRY POINT A FOR FAULTS AFFECTING WEATHER DATA
+            self.weather_with_anomalies[sys.id]=self.applyAnomalies(self.weather[sys.id])
+            
+            out=sys.simulate(sys,self.weather_with_anomalies[sys.id])
+            
 
 
 
