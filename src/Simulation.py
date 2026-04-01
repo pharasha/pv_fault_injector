@@ -1,6 +1,6 @@
 import pandas as pd
 from src import WeatherModel,PvSystem
-from src import Faults
+from src import faults
 import matplotlib.pyplot as plt
 
 class Simulation():
@@ -21,7 +21,7 @@ class Simulation():
     def applyAnomalies(self,weather_df):
         
         #SOILING LOSSES
-        df=Faults.soiling_kimber(weather_df)
+        df=faults.soiling_kimber(weather_df)
 
         #SNOW COVERAGE LOSSES
         # df=snow(.)
@@ -41,7 +41,7 @@ class Simulation():
 
         out_arr=[]
         #ENTRY POINT B
-        chunks=Faults.degradation_timeseries(weather,sys.array.module_parameters)
+        chunks=faults.degradation_timeseries(weather,sys.array.module_parameters)
         for chunk in chunks:
                 out_arr.append(self.simulate_chunked(sys, chunk))
         out=pd.concat(out_arr)
@@ -52,7 +52,7 @@ class Simulation():
         for id, sys in self.systems.items():
             # FETCH WEATHER DATA FOR EACH SYSTEM
             self.weather[id]=self.fetchWeather(sys)
-            # ENTRY POINT A FOR FAULTS AFFECTING WEATHER DATA
+            # ENTRY POINT A FOR faults AFFECTING WEATHER DATA
             self.weather_with_anomalies[id]=self.applyAnomalies(self.weather[id])
             out=self.simulate(sys,self.weather_with_anomalies[id])
             self.output[id]=out

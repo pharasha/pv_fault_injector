@@ -75,7 +75,7 @@ Column mapping:
 | `module_cec` | CEC database key for the module |
 | `inverter_cec` | CEC database key for the inverter |
 | `modules_per_string` | used only for the CEC model topology |
-| `strings_per_inverter` | used only for the CEC model topology |
+| `strings` | used only for the CEC model topology |
 | `real_module_count` | actual number of modules on the roof |
 | `system_loss_fraction` | flat derate for healthy-system losses (0–1) |
 | `comparison_window` | default date range for compare.py |

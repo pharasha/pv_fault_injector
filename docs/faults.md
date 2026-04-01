@@ -3,7 +3,7 @@
 ## Pipeline reference
 
 ```
-fetch_weather()                →  weather_df
+fetch_weather()  -------------- →  weather_df
                                        │
                                run_simulation(cfg, weather_df)
                                    ├─ build_system(cfg)
@@ -37,20 +37,18 @@ Soiling loss builds up over time and resets when it rains enough. More realistic
 **Injection point:** A - modify `weather_df` before `run_simulation`.
 
 ```python
-from faults import soiling_kimber
+from src import faults
 
-weather_faulty = soiling_kimber(
+weather_faulty = faults.soiling_kimber(
     weather_df,
-    soiling_loss_rate=0.002,    # 0.2% loss per day
-    cleaning_threshold=5.0,     # mm of daily rain needed to clean
+    soiling_loss_rate=0.0015,    # 0.15% loss per day
+    cleaning_threshold=6.0,     # mm of daily rain needed to clean
     max_soiling=0.3,            # cap at 30% loss
 )
 ac = run_simulation(cfg, weather_faulty)
 ```
 
 Internally this calls `pvlib.soiling.kimber()` on the daily rainfall totals (computed from the `precipitation` column that Open-Meteo already returns). The function returns a time series of soiling loss fractions, which is then reindexed to hourly and applied to GHI/DHI/DNI.
-
-The `precipitation` column is already in `weather_df` from `fetch_weather()`, so no extra data is needed.
 
 ---
 
@@ -73,11 +71,11 @@ Key assumptions: shading fraction is constant (no moving shading).
 
 Entire strings are shaded. The shading fault applies to the whole string and not individual modules. Split the shaded and unshaded part into two diffrent Array objects.
 
-TODO: check if treating two strings as two seperate arrays models the mismatch correctly. Strings would operate on theire own MPP and there wouldnt be a compromise that causes a mismatch loss.
+Note: pvlib multi-array treats each array as independent (multi-MPPT equivalent). This skips the mismatch loss that occurs in a single-MPPT system where shaded and unshaded strings share one bus voltage. For accurate single-MPPT modeling, compute IV curves per string via `singlediode()`, combine in parallel, and find MPP with `bishop88_mpp()`. The mismatch loss is small compared to the loss caused by irradiance reduction, so the multi-array approximation is good enough for a synthetic dataset.
 
 **In pvlib:** `PVSystem` accepts multiple `Array` objects, and `ModelChain.run_model()` accepts a list of weather DataFrames (one per array).
 
-**Injection point:** B - replaces `run_simulation`.
+**Injection point:** B - replaces `run_simulation` or just run simulation with two array objects.
 
 ```python
 # split strings into two Array objects (shaded / unshaded)
@@ -92,47 +90,33 @@ TODO: check if treating two strings as two seperate arrays models the mismatch c
 
 One or more strings are completely disconnected (broken connector, damaged wire). Those strings produce zero power.
 
-**In pvlib:** No. Modify `cfg` before passing to `run_simulation`.
-
 **Injection point:** B - modify `cfg` before `run_simulation`.
 
 ```python
-from faults import open_string
+from src import faults
 
-cfg_faulty = open_string(cfg, strings_lost=2)
+cfg_faulty = faults.open_string(cfg, strings_lost=2)
 ac = run_simulation(cfg_faulty, weather_df)
 ```
 
-This reduces `strings_per_inverter` by `strings_lost` and scales `real_module_count` proportionally. The ModelChain then models a smaller system from the start.
+This reduces `strings` by `strings_lost`. The ModelChain then models a smaller system from the start.
 
 ---
 
 ## Module degradation
 
-Panels age and lose output capacity over time. 
-TODO: Check all relevent effects.
+Panels age and lose output capacity over time. The dominant effect is a reduction in photocurrent (`I_L_ref`). Jordan & Kurtz (2013) report a median Pmax loss of 0.5%/year.
 
-WIP: The dominant effect is a reduction in photocurrent (`I_L_ref`) - the amount of current a cell produces per unit of irradiance decreases.
-
-**In pvlib:** No dedicated degradation function. Modify the module parameters before building the system.
-
-**Injection point:** B - modify module parameters, then build system manually (cannot go through `run_simulation` directly).
+**Injection point:** B - `degradation_timeseries()` splits `weather_df` into monthly chunks and returns `[(chunk, params), ...]`. `Simulation.simulate()` iterates over these, setting `module_parameters` per chunk before each `ModelChain.run_model()` call.
 
 ```python
-from pvlib.pvsystem import retrieve_sam
-from faults import degradation
-
-# modules are read from CECMod database
-modules = retrieve_sam("CECMod") # we can change later to modules.cfg
-module_params = modules[cfg["module_cec"]]
-
-degraded = degradation(module_params, years=10, annual_rate=0.005)
-# degraded is a modified copy with I_L_ref reduced by 5% over 10 years
+chunks = faults.degradation_timeseries(weather_df, module_params, initial_years=5)
+for chunk_weather, chunk_params in chunks:
+    sys.array.module_parameters = chunk_params
+    results = sys.run_model(chunk_weather)
 ```
 
-Use degradation function to modify module parameters before building the  `PVSystem` (instead of using the original `module_params`). This requires building the system manually, replacing `module_parameters=module` with `module_parameters=degraded`.
-
-TODO: check the 0.5%/year rate.
+`degradation()` is the underlying helper and can also be used standalone to set a fixed degradation state.
 
 ---
 
@@ -142,26 +126,17 @@ High voltage stress between the cell and the grounded module frame drives leakag
 
 The power curve signature is distinct from normal degradation: `R_sh_ref` (shunt resistance) collapses hard, which shows up as a drooping IV curve before Vmp and a fill factor loss that gets more pronounced at high irradiance. Normal degradation barely touches shunt resistance.
 
-**In pvlib:** Modify module parameters before building the system.
-
-**Injection point:** B - modify module parameters, then build system manually.
+**Injection point:** B - apply before simulation, same pattern as degradation. `pid()` returns modified params; set `sys.array.module_parameters` before calling `run_model()`.
 
 ```python
-from pvlib.pvsystem import retrieve_sam
-from faults import pid
-
-modules = retrieve_sam("CECMod")
-module_params = modules[cfg["module_cec"]]
-
-pid_params = pid(module_params, severity=0.5)  # moderate PID
-# Inside pid: I_L_ref reduced by eg. 50%, R_sh_ref reduced by eg. 40%
+pid_params = faults.pid(sys.array.module_parameters, severity=0.5)
+sys.array.module_parameters = pid_params
+results = sys.run_model(weather_df)
 ```
 
-Pass `pid_params` as `module_parameters` when constructing the `Array` or `PVSystem`.
+`severity` ranges from 0 (healthy) to 1 (fully degraded). Values at severity=1: 93% R_sh_ref collapse, 5% I_L_ref drop. See sources in the implemented functions table.
 
-`severity` ranges from 0 (no effect) to 1 (complete failure).
-
-TODO: verify that reducing I_L_ref and R_sh_ref is sufficient to model PID accurately, and find realistic severity ranges from literature.
+TODO: not yet wired into Simulation.py.
 
 ---
 
@@ -176,7 +151,7 @@ The inverter operates at reduced efficiency, MPPT is not tracking correctly, the
 from faults import inverter_fault
 
 ac = run_simulation(cfg, weather_df)
-ac_faulty = inverter_fault(ac, efficiency=0.7)  # inverter delivers 70% of normal output
+ac_faulty = inverter_fault(ac, efficiency_loss=0.3)  # inverter delivers 70% of normal output
 ```
 
 ---
@@ -196,14 +171,18 @@ ac = run_simulation(cfg, weather_df)
 ac_faulty = wiring_loss(ac, resistance_factor=0.05)  # 5% extra loss
 ```
 
+TODO: not yet implemented.
+
 ---
 
 ## Implemented functions
 
-| Function | Source | What it touches | Links |
-|---|---|---|---|
-| `soiling_kimber()` | Kimber 2006 | scales GHI/DHI/DNI in `weather_df` | [PVPMC](https://pvpmc.sandia.gov/modeling-guide/1-weather-design-inputs/shading-soiling-and-reflection-losses/soiling-losses/kimber-soiling-model/) |
-| `degradation()` | Jordan & Kurtz 2013 (NREL/TP-5200-51664) | reduces `I_L_ref` by 0.5%/year | [NREL PDF](https://docs.nrel.gov/docs/fy12osti/51664.pdf) / [PVsyst degradation model](https://www.pvsyst.com/help-pvsyst7/pvmodule_degradation.htm) |
-| `pid()` | EPJ PV 2026 / PMC 2022 | collapses `R_sh_ref`, minor `I_L_ref` hit | [EPJ PV 2026](https://www.epj-pv.org/articles/epjpv/full_html/2026/01/pv20250051/pv20250051.html) / [PMC 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9699168/) |
-| `open_string()` | Sabbaghpur Arani 2016 / NREL 2024 | reduces `strings_per_inverter` | [Wiley 2016](https://onlinelibrary.wiley.com/doi/10.1155/2016/8712960) / [NREL 2024](https://www.osti.gov/pages/servlets/purl/2580300) |
-
+| Function | Source | What it touches | Scientific Basis & Key Numbers | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| `soiling_kimber()` | Kimber 2006 | scales GHI/DHI/DNI in `weather_df` | 0.15% daily loss; 6mm rain threshold for cleaning; 14-day grace period. | [PVPMC](https://pvpmc.sandia.gov/modeling-guide/1-weather-design-inputs/shading-soiling-and-reflection-losses/soiling-losses/kimber-soiling-model/) |
+| `degradation()` | Jordan & Kurtz 2013 | reduces `I_L_ref` by 0.5%/year | 0.5%/year median Pmax loss, 80% can be mapped to Photocurrent. We map 100% for simplicity. | [Jordan & Kurtz (2013)](https://docs.nrel.gov/docs/fy12osti/51664.pdf) / [PVsyst](https://www.pvsyst.com/help-pvsyst7/pvmodule_degradation.htm) |
+| `pid()` | Mahmood 2026 / Hasan 2022 | collapses `R_sh_ref` by 94.3%, minor `I_L_ref` hit by 5% | Experimental 94.3% collapse in Shunt Resistance (25.41 $\Omega$ to 1.435 $\Omega$). Photocurrent drop by 5%. | [Mahmood et al. (2026)](https://doi.org/10.1051/epjpv/2025028) |
+| `open_string()` | Sabbaghpur Arani 2016 | reduces `strings`: `strings` - `strings_lost` | Linear reduction in total array current capacity when strings are disconnected. | [Sabbaghpur Arani (2016)](https://onlinelibrary.wiley.com/doi/10.1155/2016/8712960) |
+| `shading_string()` | - | scale irradiance for a specific array | 50% (for example) reduction in GHI/DHI/DNI to simulate a shaded parallel branch. | - |
+| `degradation_timeseries()` | Jordan & Kurtz 2013 | splits `weather_df` into chunks, applies time-varying degradation to each | Builds on `degradation()`: computes elapsed years per chunk and applies annual rate incrementally. | [Jordan & Kurtz (2013)](https://docs.nrel.gov/docs/fy12osti/51664.pdf) |
+| `inverter_fault()` | - | scales AC output by `(1 - efficiency_loss)` | - | - |
