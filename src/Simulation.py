@@ -1,18 +1,18 @@
 import pandas as pd
-from src import WeatherModel,PvSystem
+from src import WeatherModel, PvSystem
 from src import faults
 import matplotlib.pyplot as plt
 
 class Simulation():
     def __init__(self, systems, weather_model: WeatherModel.WeatherModel, story):
-        self.systems={}
+        self.systems = {}
         for id, sys in systems.items():
-            self.systems[id]=PvSystem.PvSystem(sys)
-        self.story=story
-        self.weather_model=weather_model
-        self.weather={}
-        self.weather_with_anomalies={}
-        self.output={}
+            self.systems[id] = PvSystem.PvSystem(sys)
+        self.story                      = story
+        self.weather_model              = weather_model
+        self.weather                    = {}
+        self.weather_with_anomalies     = {}
+        self.output                     = {}
 
     def fetchWeather(self,sys):
         weather=self.weather_model.request_historical(sys.latitude,sys.longitude,self.story["timeframe"]["start"],self.story["timeframe"]["end"])
@@ -29,7 +29,9 @@ class Simulation():
         return df
 
 
-    def simulate_chunked(self,sys, chunk):
+    def simulate_chunked(self, sys, chunk):
+        # chunk[0]: weather data
+        # chunk[1]: module parameters
         
         sys.array.module_parameters=chunk[1]
 
@@ -37,11 +39,11 @@ class Simulation():
 
         return results.ac
 
-    def simulate(self, sys,weather):
+    def simulate(self, sys, weather):
 
         out_arr=[]
         #ENTRY POINT B
-        chunks=faults.degradation_timeseries(weather,sys.array.module_parameters)
+        chunks=faults.degradation_timeseries(weather, sys.array.module_parameters)
         for chunk in chunks:
                 out_arr.append(self.simulate_chunked(sys, chunk))
         out=pd.concat(out_arr)
@@ -58,7 +60,7 @@ class Simulation():
             self.output[id]=out
         
 
-    def plot_id(self,id):
+    def plot_id(self, id):
         plt.figure()
         plt.title("Output power of System "+id)
         plt.xlabel("Time")
