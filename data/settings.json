@@ -3,7 +3,29 @@
 "timeframe": {
     "start": "2023-01-01",
     "end":   "2023-01-05"
-  }
+  },
 
+"faults": {
+    "sys1": [
+      {
+        "type": "soiling",
+        "params": {}
+      },
+      {
+        "type": "pid",
+        "start": "2023-01-03",
+        "end":   "2023-01-05",
+        "params": { "severity": 0.4 }
+      }
+    ],
+    "sys2": [
+      {
+        "type": "inverter_fault",
+        "start": "2023-01-02",
+        "end":   "2023-01-03",
+        "params": { "efficiency_loss": 0.3 }
+      }
+    ]
+  }
 
 }

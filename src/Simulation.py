@@ -28,6 +28,30 @@ class Simulation():
 
         return df
 
+    def apply_point_a(self, weather_df, fault_list):
+        df = weather_df.copy()
+        for f in fault_list:
+            if f["type"] == "soiling":
+                df = faults.soiling_kimber(df, **f.get("params", {}))
+        return df
+    
+    def apply_point_c(self, ac, fault_list):
+        for f in fault_list:
+            if f["type"] == "inverter_fault":
+                params = f.get("params", {}) # key value pairs
+                # if start or end is specified, create mask and only apply inverter_fault to that window
+                # otherwise apply to whole series
+                if "start" in f or "end" in f:
+                    window_start = pd.Timestamp(f["start"]) if "start" in f else ac.index[0]
+                    window_end   = pd.Timestamp(f["end"])   if "end"   in f else ac.index[-1]
+                    mask = (ac.index >= window_start) & (ac.index <= window_end) # boolean mask for the window
+                    ac = ac.copy()
+                    ac[mask] = faults.inverter_fault(ac[mask], **params)
+                else:
+                    ac = faults.inverter_fault(ac, **params)
+                    
+            ## can add more point c fault types       
+        return ac
 
     def simulate_chunked(self, sys, chunk):
         # chunk[0]: weather data
