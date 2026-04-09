@@ -2,7 +2,7 @@
 
 "timeframe": {
     "start": "2023-01-01",
-    "end":   "2023-01-05"
+    "end":   "2023-01-07"
   },
 
 "faults": {
@@ -15,15 +15,15 @@
         "type": "pid",
         "start": "2023-01-03",
         "end":   "2023-01-05",
-        "params": { "severity": 0.4 }
+        "params": { "severity": 0.8 }
       }
     ],
     "sys2": [
       {
         "type": "inverter_fault",
-        "start": "2023-01-02",
-        "end":   "2023-01-03",
-        "params": { "efficiency_loss": 0.3 }
+        "start": "2023-01-03",
+        "end":   "2023-01-05",
+        "params": { "efficiency_loss": 0.5 }
       }
     ]
   }
