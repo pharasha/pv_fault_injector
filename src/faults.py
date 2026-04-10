@@ -2,9 +2,12 @@
 
 import pvlib
 
+FAULT_LIST=["soiling","degradation","inverter_fault","pid","open_string"]
 # ==========================================================
 # Injection point A: modify weather_df before simulation
 # ==========================================================
+
+
 
 def soiling_kimber(weather_df, soiling_loss_rate=0.0015, cleaning_threshold=6.0,
                    max_soiling=0.30, grace_period=14):

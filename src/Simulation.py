@@ -2,6 +2,8 @@ import pandas as pd
 from src import WeatherModel, PvSystem
 from src import faults
 import matplotlib.pyplot as plt
+from prompt_toolkit import prompt
+from datetime import datetime
 
 class Simulation():
     def __init__(self, systems, weather_model: WeatherModel.WeatherModel, story):
@@ -154,6 +156,9 @@ class Simulation():
             # Injection Point C: AC output modifications
             self.output[id] = self.apply_point_c(ac, fault_list)
 
+        # Save the outputs
+        self.save() 
+
     def plot_id(self, id):
         plt.figure()
         plt.title("Output power of System "+id)
@@ -161,6 +166,37 @@ class Simulation():
         plt.ylabel("Output Power (kW)")
         plt.plot(self.output[id])
         plt.show()
+
+    
+    def save(self):
+        sim_id=prompt("Simulation id : ",default='Sim_'+datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
+
+        for id, sys in self.systems.items():
+
+            # Make Weather Frame
+            weather_list=[self.weather[id],self.weather_with_anomalies[id]]
+            weather_frame=pd.concat(weather_list)
+
+            # Make Output Frame
+            output_frame=self.output[id]
+
+            # Make Flags Frame
+            fault_list = self.story.get("faults", {}).get(id, [])
+            flag_frame=pd.DataFrame(0, index=weather_frame.index, columns=FAULT_LIST)
+
+            for fault in fault_list:
+                flag_frame.loc[fault["start_date"]:fault["end_date"], fault["type"]]=1
+
+            #Save all
+            all_list=[output_frame,weather_list,flag_frame]
+            all_frame=pd.concat(all_list)
+
+            all_frame.to_csv('./output/'+sim_id+'/'+id+'.csv')
+
+
+
+
+
 
             
 
