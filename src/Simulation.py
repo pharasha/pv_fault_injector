@@ -4,6 +4,7 @@ from src import faults
 import matplotlib.pyplot as plt
 from prompt_toolkit import prompt
 from datetime import datetime
+import os
 
 class Simulation():
     def __init__(self, systems, weather_model: WeatherModel.WeatherModel, story):
@@ -182,15 +183,24 @@ class Simulation():
 
             # Make Flags Frame
             fault_list = self.story.get("faults", {}).get(id, [])
-            flag_frame=pd.DataFrame(0, index=weather_frame.index, columns=FAULT_LIST)
+            flag_frame=pd.DataFrame(0, index=weather_frame.index, columns=faults.FAULT_LIST)
 
             for fault in fault_list:
-                flag_frame.loc[fault["start_date"]:fault["end_date"], fault["type"]]=1
 
-            #Save all
-            all_list=[output_frame,weather_list,flag_frame]
+                flag_frame.loc[fault.get("start_date"):fault.get("end_date"), fault["type"]]=1
+
+            #Make full dataframe
+            all_list=[output_frame,weather_frame,flag_frame]
             all_frame=pd.concat(all_list)
 
+            
+            # Create directory if it doesn't exist
+            file_path = './output/'+sim_id+'/'+id+'.csv'
+            directory = os.path.dirname(file_path)
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+
+            # Save All
             all_frame.to_csv('./output/'+sim_id+'/'+id+'.csv')
 
 
