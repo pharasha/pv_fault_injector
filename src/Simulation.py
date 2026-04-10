@@ -17,17 +17,6 @@ class Simulation():
     def fetchWeather(self, sys):
         weather = self.weather_model.request_historical(sys.latitude, sys.longitude, self.story["timeframe"]["start"], self.story["timeframe"]["end"])
         return weather.tz_convert(sys.timezone)
-    
-    def applyAnomalies(self,weather_df):
-        
-        #SOILING LOSSES
-        df=faults.soiling_kimber(weather_df)
-
-        #SNOW COVERAGE LOSSES
-        # df=snow(.)
-
-        return df
-
 
     def set_timezone(self, timestamp, timezone):
         ts = pd.Timestamp(timestamp)
@@ -148,39 +137,8 @@ class Simulation():
             #? can add more point c fault types
         return ac
 
-    def simulate_chunked(self, sys, chunk):
-        # chunk[0]: weather data
-        # chunk[1]: module parameters
-        
-        sys.array.module_parameters=chunk[1]
-
-        results=sys.run_model(chunk[0])
-
-        return results.ac
-
-    def simulate(self, sys, weather):
-
-        out_arr=[]
-        #ENTRY POINT B
-        chunks=faults.degradation_timeseries(weather, sys.array.module_parameters)
-        for chunk in chunks:
-                out_arr.append(self.simulate_chunked(sys, chunk))
-        out=pd.concat(out_arr)
-        return out
-
-
-    def run(self):
-        for id, sys in self.systems.items():
-            # FETCH WEATHER DATA FOR EACH SYSTEM
-            self.weather[id]=self.fetchWeather(sys)
-            # ENTRY POINT A FOR faults AFFECTING WEATHER DATA
-            self.weather_with_anomalies[id]=self.applyAnomalies(self.weather[id])
-            out=self.simulate(sys,self.weather_with_anomalies[id])
-            self.output[id]=out
-        
-
     #  new pipeline when apply functions are done:
-    def run_new(self):
+    def run(self):
         for id, sys in self.systems.items():
             fault_list = self.story.get("faults", {}).get(id, [])
     
