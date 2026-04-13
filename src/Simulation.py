@@ -141,24 +141,25 @@ class Simulation():
         return ac
 
     #  new pipeline when apply functions are done:
-    def run(self):
+    def run(self, save=True):
         for id, sys in self.systems.items():
             fault_list = self.story.get("faults", {}).get(id, [])
-    
+
             # featch weather system
             self.weather[id] = self.fetchWeather(sys)
-    
+
             # Injection Point A: weather modifications
             self.weather_with_anomalies[id] = self.apply_point_a(self.weather[id], fault_list)
-    
+
             # Injection Point B: module param modifications + simulation
             ac = self.apply_point_b(sys, self.weather_with_anomalies[id], fault_list)
-    
+
             # Injection Point C: AC output modifications
             self.output[id] = self.apply_point_c(ac, fault_list)
 
         # Save the outputs
-        self.save() 
+        if save:
+            self.save()
 
     def plot_id(self, id):
         plt.figure()
