@@ -118,7 +118,11 @@ class Simulation():
 
         return pd.concat(out_arr)
     
-    def apply_point_c(self, ac, fault_list):
+    def apply_point_c(self, ac, fault_list,weather_df,sys):
+
+        #Apply snowfall loss on ac power output
+        ac = faults.snowfall_dc_loss(ac,weather_df,sys)
+
         print(f"[C] fault_list: {[f['type'] for f in fault_list]}")
         tz = ac.index.tz
         for f in fault_list:
@@ -136,12 +140,11 @@ class Simulation():
                 else:
                     print(f"[C] inverter_fault applied to whole series ({len(ac)} timesteps)")
                     ac = faults.inverter_fault(ac, **params)
-
             #? can add more point c fault types
         return ac
 
     #  new pipeline when apply functions are done:
-    def run(self):
+    def run(self,save=True):
         for id, sys in self.systems.items():
             fault_list = self.story.get("faults", {}).get(id, [])
     
@@ -155,10 +158,11 @@ class Simulation():
             ac = self.apply_point_b(sys, self.weather_with_anomalies[id], fault_list)
     
             # Injection Point C: AC output modifications
-            self.output[id] = self.apply_point_c(ac, fault_list)
+            self.output[id] = self.apply_point_c(ac, fault_list,self.weather[id],sys)
 
         # Save the outputs
-        self.save() 
+        if save :
+            self.save() 
 
     def plot_id(self, id):
         plt.figure()

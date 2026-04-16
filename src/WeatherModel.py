@@ -13,7 +13,7 @@ class WeatherModel():
     def request_historical(self, latitude, longitude, start, end) -> pd.DataFrame:
         # Make sure all required weather variables are listed here
         # The order of variables in hourly or daily is important to assign them correctly below
-        url = "https://archive-api.open-meteo.com/v1/archive"
+        url = "https://historical-forecast-api.open-meteo.com/v1/forecast"
         params = {
             "latitude": latitude,
             "longitude": longitude,
@@ -21,7 +21,8 @@ class WeatherModel():
             "end_date": end,
             "hourly": [
                 "cloud_cover", "shortwave_radiation","diffuse_radiation", "direct_normal_irradiance", "direct_radiation","temperature_2m","wind_speed_10m","precipitation","snowfall","is_day"
-            ]
+            ],
+            "models":"meteoswiss_icon_ch1"
         }
         responses = self.openmeteo.weather_api(url, params=params)
 

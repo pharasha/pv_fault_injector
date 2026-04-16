@@ -1,8 +1,8 @@
 {
 
 "timeframe": {
-    "start": "2023-01-01",
-    "end":   "2023-01-07"
+    "start": "2026-01-10",
+    "end":   "2026-01-15"
   },
 
 "faults": {
@@ -13,17 +13,21 @@
       },
       {
         "type": "pid",
-        "start": "2023-01-03",
-        "end":   "2023-01-05",
+        "start": "2026-01-12",
+        "end":   "2026-01-13",
         "params": { "severity": 0.8 }
       }
     ],
     "sys2": [
       {
-        "type": "inverter_fault",
-        "start": "2023-01-03",
-        "end":   "2023-01-05",
-        "params": { "efficiency_loss": 0.5 }
+        "type": "soiling",
+        "params": {}
+      },
+      {
+        "type": "pid",
+        "start": "2026-01-12",
+        "end":   "2026-01-13",
+        "params": { "severity": 0.8 }
       }
     ]
   }

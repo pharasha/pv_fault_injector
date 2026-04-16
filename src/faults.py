@@ -111,3 +111,17 @@ def bridging_fault(module_params, modules_shorted=2):
 def inverter_fault(ac_power, efficiency_loss=0.3): 
     # efficiency_loss: 0.0 -> healthy, 0.3 -> 30% AC power loss
     return ac_power * (1 - efficiency_loss)
+
+def snowfall_dc_loss(ac_power,weather_df, sys):
+    # Returns DC level loss caused by snowfall on modules.
+    # Uses a function which calculates the portion of the panel covered by snow (since it can slide).
+    # Then uses this portion to calculate DC loss portion. 
+    snow_cover_ratio=pvlib.snow.coverage_nrel(weather_df["snow"], 
+                                              weather_df["ghi"], 
+                                              weather_df["temp_air"], 
+                                              sys.tilt)
+    
+    snow_loss_ratio=pvlib.snow.dc_loss_nrel(snow_cover_ratio,
+                                            sys.strings)
+
+    return ac_power * (1 - snow_loss_ratio)
