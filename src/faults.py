@@ -58,20 +58,6 @@ def degradation(module_params, years, annual_rate=0.005):
     return params
 
 
-def degradation_timeseries(weather_df, module_params, initial_years=0, annual_rate=0.005, freq="ME"):
-    # time-varying degradation, splits weather_df into chunks, returns [(chunk, params), ...]
-    # initial_years: degradation already present before simulation starts
-    # freq: chunk size, "YE" yearly, "ME" monthly
-    chunks = []
-    for _, chunk in weather_df.resample(freq):
-        if chunk.empty:
-            continue
-        t = (chunk.index[0] - weather_df.index[0]).days / 365.25  # years since sim start
-        params = degradation(module_params, years=initial_years + t, annual_rate=annual_rate)
-        chunks.append((chunk, params))
-    return chunks
-
-
 def pid(module_params, severity):
     # PID-s (shunting type, dominant in p-type c-Si, most common and destructive), EPJ PV 2026
     # collapses R_sh_ref and mild drop in I_L_ref

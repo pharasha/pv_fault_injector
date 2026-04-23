@@ -42,21 +42,21 @@ def fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries):
         legend_entries.append(mpatches.Patch(color=color, alpha=0.5, label=label))
 
 
-def plot_power_comparison(sim_healthy, sim_faulty, story, systems, save_path=None):
+def plot_power_comparison(sim_healthy, sim_faulty, community, save_path=None):
     # time series plot showing healthy and faulty AC power side by side for each system
     # fault windows are shaded so you can see exactly when each fault was active
     # power is shown in kW
 
-    sim_start = story["timeframe"]["start"]
-    sim_end = story["timeframe"]["end"]
-    tz = list(systems.values())[0]["timezone"]
-
-    num_systems = len(systems)
+    num_systems = len(community)
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, systems):
+    for ax, sys_id in zip(axes, community):
+        sim_start = community[sys_id]["timeframe"]["start"]
+        sim_end   = community[sys_id]["timeframe"]["end"]
+        tz = sim_healthy.timezone[sys_id]
+
         healthy_power = sim_healthy.output[sys_id]
         faulty_power = sim_faulty.output[sys_id]
 
@@ -68,34 +68,34 @@ def plot_power_comparison(sim_healthy, sim_faulty, story, systems, save_path=Non
             Line2D([0], [0], color="steelblue", linewidth=1.5, label="faulty"),
         ]
 
-        fault_list = story["faults"].get(sys_id, [])
+        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
-        ax.set_title(sys_id)
+        ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
         ax.set_ylabel("AC Power (kW)")
         ax.set_xlabel("Time")
         ax.legend(handles=legend_entries, loc="upper right", fontsize=8)
 
-    plt.suptitle(f"Healthy vs faulty power  |  {sim_start} to {sim_end}", fontsize=11)
+    plt.suptitle("Healthy vs faulty power", fontsize=11)
     plt.tight_layout()
     save_fig(fig, save_path, "power_comparison.png")
     plt.show()
 
 
-def plot_power_ratio(sim_healthy, sim_faulty, story, systems, save_path=None):
+def plot_power_ratio(sim_healthy, sim_faulty, community, save_path=None):
     # daily energy ratio (faulty / healthy) per system, shown as a line over the simulation window
     # a value of 1.0 means no loss, 0.7 means the fault reduced energy by 30%
 
-    sim_start = story["timeframe"]["start"]
-    sim_end = story["timeframe"]["end"]
-    tz = list(systems.values())[0]["timezone"]
-
-    num_systems = len(systems)
+    num_systems = len(community)
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, systems):
+    for ax, sys_id in zip(axes, community):
+        sim_start = community[sys_id]["timeframe"]["start"]
+        sim_end   = community[sys_id]["timeframe"]["end"]
+        tz = sim_healthy.timezone[sys_id]
+
         healthy_power = sim_healthy.output[sys_id]
         faulty_power = sim_faulty.output[sys_id]
 
@@ -114,35 +114,35 @@ def plot_power_ratio(sim_healthy, sim_faulty, story, systems, save_path=None):
             Line2D([0], [0], color="steelblue", linewidth=1.5, label="faulty / healthy (daily)"),
         ]
 
-        fault_list = story["faults"].get(sys_id, [])
+        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
-        ax.set_title(sys_id)
+        ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
         ax.set_ylabel("Daily energy ratio (faulty / healthy)")
         ax.set_xlabel("Date")
         ax.legend(handles=legend_entries, loc="upper right", fontsize=8)
 
-    plt.suptitle(f"Daily energy ratio  |  {sim_start} to {sim_end}", fontsize=11)
+    plt.suptitle("Daily energy ratio", fontsize=11)
     plt.tight_layout()
     save_fig(fig, save_path, "power_ratio.png")
     plt.show()
 
 
-def plot_daily_energy_loss(sim_healthy, sim_faulty, story, systems, save_path=None):
+def plot_daily_energy_loss(sim_healthy, sim_faulty, community, save_path=None):
     # bar chart showing total daily energy loss (kWh) per system
     # fault windows are shown as colored background spans so the timing is clear
     # bars are not split by fault — that would require isolated per-fault simulations
 
-    sim_start = story["timeframe"]["start"]
-    sim_end = story["timeframe"]["end"]
-    tz = list(systems.values())[0]["timezone"]
-
-    num_systems = len(systems)
+    num_systems = len(community)
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, systems):
+    for ax, sys_id in zip(axes, community):
+        sim_start = community[sys_id]["timeframe"]["start"]
+        sim_end   = community[sys_id]["timeframe"]["end"]
+        tz = sim_healthy.timezone[sys_id]
+
         healthy_power = sim_healthy.output[sys_id]
         faulty_power = sim_faulty.output[sys_id]
 
@@ -152,38 +152,38 @@ def plot_daily_energy_loss(sim_healthy, sim_faulty, story, systems, save_path=No
 
         ax.bar(daily_loss_kwh.index, daily_loss_kwh.values, width=0.8, color="steelblue", alpha=0.8)
 
-        fault_list = story["faults"].get(sys_id, [])
+        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
         legend_entries = [mpatches.Patch(color="steelblue", alpha=0.8, label="energy loss")]
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
-        ax.set_title(sys_id)
+        ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
         ax.set_ylabel("Daily energy loss (kWh)")
         ax.set_xlabel("Date")
         if legend_entries:
             ax.legend(handles=legend_entries, loc="upper right", fontsize=8)
 
-    plt.suptitle(f"Daily energy loss from faults  |  {sim_start} to {sim_end}", fontsize=11)
+    plt.suptitle("Daily energy loss from faults", fontsize=11)
     plt.tight_layout()
     save_fig(fig, save_path, "daily_energy_loss.png")
     plt.show()
 
 
-def plot_daily_energy_comparison(sim_healthy, sim_faulty, story, systems, save_path=None):
+def plot_daily_energy_comparison(sim_healthy, sim_faulty, community, save_path=None):
     # grouped bar chart comparing daily energy (kWh) between healthy and faulty, per system
     # each day has two bars side by side: one for healthy, one for faulty
     # this gives a cleaner view than the hourly timeseries when looking at the full simulation window
     # fault windows are shaded in the background so we can see which bars are affected
 
-    sim_start = story["timeframe"]["start"]
-    sim_end = story["timeframe"]["end"]
-    tz = list(systems.values())[0]["timezone"]
-
-    num_systems = len(systems)
+    num_systems = len(community)
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, systems):
+    for ax, sys_id in zip(axes, community):
+        sim_start = community[sys_id]["timeframe"]["start"]
+        sim_end   = community[sys_id]["timeframe"]["end"]
+        tz = sim_healthy.timezone[sys_id]
+
         healthy_power = sim_healthy.output[sys_id]
         faulty_power = sim_faulty.output[sys_id]
 
@@ -204,15 +204,15 @@ def plot_daily_energy_comparison(sim_healthy, sim_faulty, story, systems, save_p
             mpatches.Patch(color="steelblue", alpha=0.7, label="faulty"),
         ]
 
-        fault_list = story["faults"].get(sys_id, [])
+        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
-        ax.set_title(sys_id)
+        ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
         ax.set_ylabel("Daily energy (kWh)")
         ax.set_xlabel("Date")
         ax.legend(handles=legend_entries, loc="upper right", fontsize=8)
 
-    plt.suptitle(f"Daily energy: healthy vs faulty  |  {sim_start} to {sim_end}", fontsize=11)
+    plt.suptitle("Daily energy: healthy vs faulty", fontsize=11)
     plt.tight_layout()
     save_fig(fig, save_path, "daily_energy_comparison.png")
     plt.show()

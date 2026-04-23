@@ -11,10 +11,9 @@ class PvSystem():
         self.latitude             = config["latitude"]
         self.longitude            = config["longitude"]
         self.altitude             = config["altitude_m"]
-        self.timezone             = config["timezone"]
+        self.timezone             = config.get("timezone", "Europe/Zurich")
         self.tilt                 = config["tilt_deg"]
         self.azimuth              = config["azimuth_deg"]
-        self.loss                 = config["system_loss_fraction"]
         self.modules_per_string   = config["modules_per_string"]
         self.strings              = config["strings"]
         self.module_cec           = config["module_cec"]

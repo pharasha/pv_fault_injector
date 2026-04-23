@@ -7,24 +7,39 @@ from datetime import datetime
 import os
 
 class Simulation():
-    def __init__(self, systems, weather_model: WeatherModel.WeatherModel, story):
+    def __init__(self, community, weather_model: WeatherModel.WeatherModel):
         self.systems = {}
-        for id, sys in systems.items():
-            self.systems[id] = PvSystem.PvSystem(sys)
-        self.story                      = story
+        for id, data in community.items():
+            self.systems[id] = PvSystem.PvSystem(data["parameters"])
+        self.community                  = community
         self.weather_model              = weather_model
         self.weather                    = {}
         self.weather_with_anomalies     = {}
         self.output                     = {}
+        self.timezone                   = { id: sys.timezone for id, sys in self.systems.items() }
 
-    def fetchWeather(self, sys):
-        weather = self.weather_model.request_historical(sys.latitude, sys.longitude, self.story["timeframe"]["start"], self.story["timeframe"]["end"])
+    def fetchWeather(self, sys, id):
+        weather = self.weather_model.request_historical(sys.latitude, sys.longitude, self.community[id]["timeframe"]["start"], self.community[id]["timeframe"]["end"])
         return weather.tz_convert(sys.timezone)
 
     def set_timezone(self, timestamp, timezone):
         ts = pd.Timestamp(timestamp)
         return ts.tz_localize(timezone) if ts.tzinfo is None else ts.tz_convert(timezone)
     
+    def build_fault_list(self, events):
+        fault_list = []
+        for fault_type, enabled in events["perm_events"].items():
+            if enabled:
+                fault_list.append({"type": fault_type, "params": {}})
+        for event in events["temp_events"]:
+            fault_list.append({
+                "type": event["desc"],
+                "start": event["start"],
+                "end": event["end"],
+                "params": event.get("params", {})
+            })
+        return fault_list
+
     def apply_point_a(self, weather_df, fault_list):
         df = weather_df.copy()
         for f in fault_list:
@@ -146,10 +161,10 @@ class Simulation():
     #  new pipeline when apply functions are done:
     def run(self, save=True):
         for id, sys in self.systems.items():
-            fault_list = self.story.get("faults", {}).get(id, [])
+            fault_list = self.build_fault_list(self.community[id]["events"])
 
             # featch weather system
-            self.weather[id] = self.fetchWeather(sys)
+            self.weather[id] = self.fetchWeather(sys, id)
 
             # Injection Point A: weather modifications
             self.weather_with_anomalies[id] = self.apply_point_a(self.weather[id], fault_list)
@@ -178,26 +193,21 @@ class Simulation():
 
         for id, sys in self.systems.items():
 
-            # Make Weather Frame
-            weather_list=[self.weather[id],self.weather_with_anomalies[id]]
-            weather_frame=pd.concat(weather_list)
-
-            # Make Output Frame
-            output_frame=self.output[id]
-
             # Make Flags Frame
-            fault_list = self.story.get("faults", {}).get(id, [])
-            flag_frame=pd.DataFrame(0, index=weather_frame.index, columns=faults.FAULT_LIST)
+            fault_list = self.build_fault_list(self.community[id]["events"])
+            flag_frame = pd.DataFrame(0, index=self.weather[id].index, columns=faults.FAULT_LIST)
 
             for fault in fault_list:
+                flag_frame.loc[fault.get("start"):fault.get("end"), fault["type"]] = 1
 
-                flag_frame.loc[fault.get("start_date"):fault.get("end_date"), fault["type"]]=1
+            # Combine columns: ac power | original weather | anomaly weather | fault flags
+            all_frame = pd.concat([
+                self.output[id].rename("ac_power"),
+                self.weather[id],
+                self.weather_with_anomalies[id].add_suffix("_anomaly"),
+                flag_frame,
+            ], axis=1)
 
-            #Make full dataframe
-            all_list=[output_frame,weather_frame,flag_frame]
-            all_frame=pd.concat(all_list)
-
-            
             # Create directory if it doesn't exist
             file_path = './output/'+sim_id+'/'+id+'.csv'
             directory = os.path.dirname(file_path)
