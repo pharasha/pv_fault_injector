@@ -129,8 +129,9 @@ def plot_power_ratio(sim_healthy, sim_faulty, story, systems, save_path=None):
 
 
 def plot_daily_energy_loss(sim_healthy, sim_faulty, story, systems, save_path=None):
-    # stacked bar chart showing daily energy loss (kWh) broken down by active fault, per system
-    # each bar's total height is the actual measured loss (healthy minus faulty)
+    # bar chart showing total daily energy loss (kWh) per system
+    # fault windows are shown as colored background spans so the timing is clear
+    # bars are not split by fault — that would require isolated per-fault simulations
 
     sim_start = story["timeframe"]["start"]
     sim_end = story["timeframe"]["end"]
@@ -149,40 +150,11 @@ def plot_daily_energy_loss(sim_healthy, sim_faulty, story, systems, save_path=No
         daily_faulty_kwh = (faulty_power / 1000).resample("D").sum()
         daily_loss_kwh = (daily_healthy_kwh - daily_faulty_kwh).clip(lower=0)
 
+        ax.bar(daily_loss_kwh.index, daily_loss_kwh.values, width=0.8, color="steelblue", alpha=0.8)
+
         fault_list = story["faults"].get(sys_id, [])
-        # keep insertion order while deduplicating fault types
-        seen = set()
-        fault_types_present = [f["type"] for f in fault_list if not (f["type"] in seen or seen.add(f["type"]))]
-
-        # for each fault type, compute its share of the daily loss
-        per_fault_loss = {ftype: pd.Series(0.0, index=daily_loss_kwh.index) for ftype in fault_types_present}
-
-        for day in daily_loss_kwh.index:
-            active_today = []
-            for f in fault_list:
-                fstart = pd.Timestamp(f.get("start", sim_start), tz=tz)
-                fend = pd.Timestamp(f.get("end", sim_end), tz=tz)
-                if fstart <= day <= fend:
-                    active_today.append(f["type"])
-            if active_today:
-                share = daily_loss_kwh[day] / len(active_today)
-                for ftype in active_today:
-                    per_fault_loss[ftype][day] = share
-
-        bottom = pd.Series(0.0, index=daily_loss_kwh.index)
-        legend_entries = []
-        for ftype in fault_types_present:
-            color = FAULT_COLORS.get(ftype, "gray")
-            ax.bar(
-                per_fault_loss[ftype].index,
-                per_fault_loss[ftype].values,
-                bottom=bottom.values,
-                color=color,
-                width=0.8,
-                alpha=0.8,
-            )
-            legend_entries.append(mpatches.Patch(color=color, alpha=0.8, label=ftype))
-            bottom = bottom + per_fault_loss[ftype]
+        legend_entries = [mpatches.Patch(color="steelblue", alpha=0.8, label="energy loss")]
+        fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
         ax.set_title(sys_id)
         ax.set_ylabel("Daily energy loss (kWh)")
