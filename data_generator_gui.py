@@ -380,7 +380,8 @@ def saveComm():
             with open(filename, 'w') as f:
                 json.dump(stateToDict(), f, indent=4)
             comm_file_path=filename
-            print(f"Successfully saved data to {filename}")
+            #print(f"Successfully saved data to {filename}")
+            messagebox.showinfo("Great Success",f"Successfully saved data to {filename}")
         except Exception as e:
             print(f"An error occurred: {e}")
     else:
@@ -390,7 +391,7 @@ def saveComm():
 
 def clearAll():
 
-    global all_markers, selected_marker, ignore_click, system_counter, properties_widgets
+    global all_markers, selected_marker, ignore_click, system_counter, properties_widgets,comm_file_path,comm_loaded,community_name
     comm_loaded=False
     comm_file_path=""
     community_name=""
