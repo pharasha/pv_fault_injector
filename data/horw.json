@@ -31,8 +31,14 @@
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": 30.0,
-                            "el_range": 15.0,
+                            "az_range": [
+                                30.0,
+                                30.0
+                            ],
+                            "el_range": [
+                                15.0,
+                                15.0
+                            ],
                             "affected_fraction": 0.3,
                             "opacity": 1.0,
                             "ramp": 0
@@ -90,8 +96,14 @@
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": 30.0,
-                            "el_range": 15.0,
+                            "az_range": [
+                                30.0,
+                                30.0
+                            ],
+                            "el_range": [
+                                15.0,
+                                15.0
+                            ],
                             "affected_fraction": 0.3,
                             "opacity": 1.0,
                             "ramp": 0
@@ -141,8 +153,14 @@
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": 30.0,
-                            "el_range": 15.0,
+                            "az_range": [
+                                30.0,
+                                30.0
+                            ],
+                            "el_range": [
+                                15.0,
+                                15.0
+                            ],
                             "affected_fraction": 0.3,
                             "opacity": 1.0,
                             "ramp": 0
@@ -192,8 +210,14 @@
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": 30.0,
-                            "el_range": 15.0,
+                            "az_range": [
+                                30.0,
+                                30.0
+                            ],
+                            "el_range": [
+                                15.3,
+                                15.0
+                            ],
                             "affected_fraction": 0.3,
                             "opacity": 1.0,
                             "ramp": 0
@@ -214,21 +238,21 @@
                     }
                 },
                 "temporary": {
-                    "open_string_b67": {
+                    "open_string_219": {
                         "start": "2026-04-09",
                         "end": "2026-04-15",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_aa9": {
+                    "inverter_fault_5e7": {
                         "start": "2026-04-07",
                         "end": "2026-04-10",
                         "params": {
                             "efficiency_loss": 0.5
                         }
                     },
-                    "open_string_db8": {
+                    "open_string_910": {
                         "start": "2026-04-18",
                         "end": "2026-04-22",
                         "params": {
@@ -265,8 +289,14 @@
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": 30.0,
-                            "el_range": 15.0,
+                            "az_range": [
+                                30.0,
+                                30.0
+                            ],
+                            "el_range": [
+                                15.0,
+                                15.0
+                            ],
                             "affected_fraction": 0.3,
                             "opacity": 1.0,
                             "ramp": 0
@@ -316,8 +346,14 @@
                     "mask_shading": {
                         "enabled": false,
                         "params": {
-                            "az_range": 30.0,
-                            "el_range": 15.0,
+                            "az_range": [
+                                30.0,
+                                30.0
+                            ],
+                            "el_range": [
+                                15.0,
+                                15.0
+                            ],
                             "affected_fraction": 0.3,
                             "opacity": 1.0,
                             "ramp": 0

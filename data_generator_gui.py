@@ -27,8 +27,8 @@ SYSTEM_PROPERTIES_DATA = {
     "module_cec":         {"default": "Canadian_Solar_Inc__CS6X_305P",               "min": None,   "max": None,   "type": str},
     "inverter_cec":       {"default": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_", "min": None, "max": None, "type": str},
     "altitude_m":         {"default": 470,                                           "min": 0,      "max": 9000,   "type": int},
-    "tilt_deg":           {"default": 20,                                            "min": 0,      "max": 90,     "type": float},
-    "azimuth_deg":        {"default": 180,                                           "min": 0,      "max": 360,    "type": float},
+    "tilt_deg":           {"default": 20.0,                                            "min": 0,      "max": 90,     "type": float},
+    "azimuth_deg":        {"default": 180.0,                                           "min": 0,      "max": 360,    "type": float},
     "modules_per_string": {"default": 4,                                             "min": 1,      "max": 100,    "type": int},
     "strings":            {"default": 2,                                             "min": 1,      "max": 100,    "type": int},
 }
@@ -59,8 +59,8 @@ PERMANENT_EVENTS_DATA = {
     "mask_shading": {
         "enabled": True,
         "params": {
-            "az_range":           {"default": 30.0, "min": 0.0,  "max": 360.0, "type": float},
-            "el_range":           {"default": 15.0, "min": 0.0,  "max": 90.0,  "type": float},
+            "az_range":           {"default": [39.0, 150.0], "min": [0.0,0.0],  "max": [360.0,360.0], "type": float},
+            "el_range":           {"default": [5.0, 45.0], "min": [0.0,0.0],  "max": [90.0,90.0],  "type": float},
             "affected_fraction":  {"default": 0.3,  "min": 0.0,  "max": 1.0,   "type": float},
             "opacity":            {"default": 1.0,  "min": 0.0,  "max": 1.0,   "type": float},
             "ramp":               {"default": 0,    "min": 0,    "max": 100,   "type": int},
@@ -471,8 +471,14 @@ def update_sidebar_fields(marker):
     for event, values in marker.perm_events.items(): 
         perm_events_widgets[event]["enabled"].set(values["enabled"])
         for param,value in values["params"].items():
-            perm_events_widgets[event]["params"][param].delete(0, "end")
-            perm_events_widgets[event]["params"][param].insert(0,str(value))
+        # Handle multiple value parameters
+            if type(value) is list:
+                for idx,val in enumerate(value):
+                    perm_events_widgets[event]["params"][param][idx].delete(0, "end")
+                    perm_events_widgets[event]["params"][param][idx].insert(0,str(val))
+            else:
+                perm_events_widgets[event]["params"][param].delete(0, "end")
+                perm_events_widgets[event]["params"][param].insert(0,str(value))
 
 
     # Clear existing rows first
@@ -499,7 +505,12 @@ def update_markers(*args):
     for event, values in perm_events_widgets.items():    
         selected_marker.perm_events[event]["enabled"]=bool(values["enabled"].get())
         for param,value in values["params"].items():
-            selected_marker.perm_events[event]["params"][param]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"](value.get())
+            if type(value) is list:
+                for idx,val in enumerate(value):
+                    selected_marker.perm_events[event]["params"][param][idx]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"](val.get())
+
+            else:
+                selected_marker.perm_events[event]["params"][param]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"](value.get())
 
 
     # ----------- TEMPORARY
@@ -818,11 +829,20 @@ for event, parameters in PERMANENT_EVENTS_DATA.items():
 
         ctk.CTkLabel(row, text=format_key(key), width=120, anchor="w",height=20).pack(side="left")
 
-        param_entry = ctk.CTkEntry(row, width=150,height=20)
-        param_entry.configure(state="normal")
-        param_entry.bind("<KeyRelease>", update_markers)
-        param_entry.insert(0, str(value["default"]))
-        param_entry.pack(side="left", padx=(5, 0))
+        # Handle multiple value parameters
+        if type(value["default"]) is list:
+            param_entry = [ctk.CTkEntry(row, width=70,height=20) for _ in value["default"]]
+            for idx,entry in enumerate(param_entry):
+                entry.configure(state="normal")
+                entry.bind("<KeyRelease>", update_markers)
+                entry.insert(0, str(value["default"][idx]))
+                entry.pack(side="left", padx=(5, 0))
+        else:
+            param_entry = ctk.CTkEntry(row, width=150,height=20)
+            param_entry.configure(state="normal")
+            param_entry.bind("<KeyRelease>", update_markers)
+            param_entry.insert(0, str(value["default"]))
+            param_entry.pack(side="left", padx=(5, 0))
 
         perm_events_widgets[event]["params"][key] = param_entry
     
