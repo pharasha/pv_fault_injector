@@ -49,14 +49,14 @@ def plot_power_comparison(sim_healthy, sim_faulty, community, save_path=None):
     # fault windows are shaded so you can see exactly when each fault was active
     # power is shown in kW
 
-    num_systems = len(community)
+    num_systems = len(community["systems"])
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, community):
-        sim_start = community[sys_id]["timeframe"]["start"]
-        sim_end   = community[sys_id]["timeframe"]["end"]
+    for ax, sys_id in zip(axes, sim_healthy.systems):
+        sim_start = community["start_date"]
+        sim_end   = community["end_date"]
         tz = sim_healthy.timezone[sys_id]
 
         healthy_power = sim_healthy.output[sys_id]
@@ -70,7 +70,7 @@ def plot_power_comparison(sim_healthy, sim_faulty, community, save_path=None):
             Line2D([0], [0], color="steelblue", linewidth=1.5, label="faulty"),
         ]
 
-        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
+        fault_list = sim_faulty.build_fault_list(sim_faulty.system_data[sys_id]["events"])
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
         ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
@@ -88,14 +88,14 @@ def plot_power_ratio(sim_healthy, sim_faulty, community, save_path=None):
     # daily energy ratio (faulty / healthy) per system, shown as a line over the simulation window
     # a value of 1.0 means no loss, 0.7 means the fault reduced energy by 30%
 
-    num_systems = len(community)
+    num_systems = len(community["systems"])
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, community):
-        sim_start = community[sys_id]["timeframe"]["start"]
-        sim_end   = community[sys_id]["timeframe"]["end"]
+    for ax, sys_id in zip(axes, sim_healthy.systems):
+        sim_start = community["start_date"]
+        sim_end   = community["end_date"]
         tz = sim_healthy.timezone[sys_id]
 
         healthy_power = sim_healthy.output[sys_id]
@@ -116,7 +116,7 @@ def plot_power_ratio(sim_healthy, sim_faulty, community, save_path=None):
             Line2D([0], [0], color="steelblue", linewidth=1.5, label="faulty / healthy (daily)"),
         ]
 
-        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
+        fault_list = sim_faulty.build_fault_list(sim_faulty.system_data[sys_id]["events"])
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
         ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
@@ -135,14 +135,14 @@ def plot_daily_energy_loss(sim_healthy, sim_faulty, community, save_path=None):
     # fault windows are shown as colored background spans so the timing is clear
     # bars are not split by fault — that would require isolated per-fault simulations
 
-    num_systems = len(community)
+    num_systems = len(community["systems"])
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, community):
-        sim_start = community[sys_id]["timeframe"]["start"]
-        sim_end   = community[sys_id]["timeframe"]["end"]
+    for ax, sys_id in zip(axes, sim_healthy.systems):
+        sim_start = community["start_date"]
+        sim_end   = community["end_date"]
         tz = sim_healthy.timezone[sys_id]
 
         healthy_power = sim_healthy.output[sys_id]
@@ -154,7 +154,7 @@ def plot_daily_energy_loss(sim_healthy, sim_faulty, community, save_path=None):
 
         ax.bar(daily_loss_kwh.index, daily_loss_kwh.values, width=0.8, color="steelblue", alpha=0.8)
 
-        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
+        fault_list = sim_faulty.build_fault_list(sim_faulty.system_data[sys_id]["events"])
         legend_entries = [mpatches.Patch(color="steelblue", alpha=0.8, label="energy loss")]
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
@@ -176,14 +176,14 @@ def plot_daily_energy_comparison(sim_healthy, sim_faulty, community, save_path=N
     # this gives a cleaner view than the hourly timeseries when looking at the full simulation window
     # fault windows are shaded in the background so we can see which bars are affected
 
-    num_systems = len(community)
+    num_systems = len(community["systems"])
     fig, axes = plt.subplots(num_systems, 1, figsize=(14, 4 * num_systems), sharex=False)
     if num_systems == 1:
         axes = [axes]
 
-    for ax, sys_id in zip(axes, community):
-        sim_start = community[sys_id]["timeframe"]["start"]
-        sim_end   = community[sys_id]["timeframe"]["end"]
+    for ax, sys_id in zip(axes, sim_healthy.systems):
+        sim_start = community["start_date"]
+        sim_end   = community["end_date"]
         tz = sim_healthy.timezone[sys_id]
 
         healthy_power = sim_healthy.output[sys_id]
@@ -206,7 +206,7 @@ def plot_daily_energy_comparison(sim_healthy, sim_faulty, community, save_path=N
             mpatches.Patch(color="steelblue", alpha=0.7, label="faulty"),
         ]
 
-        fault_list = sim_faulty.build_fault_list(community[sys_id]["events"])
+        fault_list = sim_faulty.build_fault_list(sim_faulty.system_data[sys_id]["events"])
         fault_spans(ax, fault_list, sim_start, sim_end, tz, legend_entries)
 
         ax.set_title(f"{sys_id}  |  {sim_start} to {sim_end}")
