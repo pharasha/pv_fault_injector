@@ -9,6 +9,8 @@ from tkcalendar import DateEntry,Calendar
 import copy
 import secrets
 import ast
+from src.WeatherModel import WeatherModel
+from src.Simulation import Simulation
 
 # --- Theme Setup ---
 ctk.set_appearance_mode("dark")
@@ -168,8 +170,12 @@ def unformat_key(s):
 
 
 def runSim():
-        # CHECK FOR ALL DATES TO BE INSIDE SIMULATION DATE
-    None
+    # CHECK FOR ALL DATES TO BE INSIDE SIMULATION DATE
+    community_dict = stateToDict()
+    wm = WeatherModel()
+    sim = Simulation(community_dict, wm)
+    sim.run()
+
 
 
 def debug_print():
@@ -350,18 +356,22 @@ def loadComm():
     end_date_entry.insert(0, community_end_day)
     end_date_entry.configure(state="readonly")  
 
-    
+    central_coords=[0.0,0.0]
+
     for marker in marker_data:
         new_marker=map_widget.set_marker(float(marker["props"]["latitude"]), float(marker["props"]["longitude"]), text=marker["name"], command=on_marker_click)
         new_marker.props=marker["props"]
         new_marker.perm_events=marker["events"]["permanent"]
         new_marker.temp_events=marker["events"]["temporary"]
         all_markers.append(new_marker)
+        central_coords[0]+=float(marker["props"]["latitude"])/len(marker_data)
+        central_coords[1]+=float(marker["props"]["longitude"])/len(marker_data)
 
     system_panel.place_forget()
     comm_data_panel.pack(pady=8,padx=8)
     save_comm_btn.grid(row=5, column=0, pady=5)
     run_sim_btn.grid(row=5, column=1,  pady=5)
+    map_widget.set_position(central_coords[0], central_coords[1],zoom=14)
     comm_loaded=True
 
 def saveComm():
@@ -744,7 +754,7 @@ comm_data_panel.grid_columnconfigure(1, weight=1)
 save_comm_btn=ctk.CTkButton(comm_data_panel, text="💾  Save Community", command=saveComm,
               fg_color="#c0392b", hover_color="#e74c3c")
 
-run_sim_btn=ctk.CTkButton(comm_data_panel, text="▶  Run Simulation", command=saveComm,
+run_sim_btn=ctk.CTkButton(comm_data_panel, text="▶  Run Simulation", command=runSim,
               fg_color="#27ae60", hover_color="#2ecc71")
 
 save_comm_btn.grid(row=5, column=0,  pady=5);save_comm_btn.grid_forget()
