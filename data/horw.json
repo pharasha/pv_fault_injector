@@ -142,7 +142,7 @@
             "events": {
                 "permanent": {
                     "soiling": {
-                        "enabled": true,
+                        "enabled": false,
                         "params": {
                             "soiling_loss_rate": 0.1,
                             "cleaning_threshold": 0.05,
