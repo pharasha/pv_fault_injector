@@ -174,7 +174,12 @@ def runSim():
     community_dict = stateToDict()
     wm = WeatherModel()
     sim = Simulation(community_dict, wm)
-    sim.run()
+    try:
+        sim.run()
+        messagebox.showinfo("Success", "Simulation Completed.")
+    except Exception as e:
+        messagebox.showerror("Simulation Failed", str(e))
+
 
 
 
