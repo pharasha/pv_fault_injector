@@ -59,8 +59,8 @@ PERMANENT_EVENTS_DATA = {
     "mask_shading": {
         "enabled": True,
         "params": {
-            "az_range":           {"default": [39.0, 150.0], "min": [0.0,0.0],  "max": [360.0,360.0], "type": float},
-            "el_range":           {"default": [5.0, 45.0], "min": [0.0,0.0],  "max": [90.0,90.0],  "type": float},
+            "az_range":           {"default": [39.0, 150.0], "min": [0.0,0.0],  "max": [360.0,360.0], "type": [float,float]},
+            "el_range":           {"default": [5.0, 45.0], "min": [0.0,0.0],  "max": [90.0,90.0],  "type": [float,float]},
             "affected_fraction":  {"default": 0.3,  "min": 0.0,  "max": 1.0,   "type": float},
             "opacity":            {"default": 1.0,  "min": 0.0,  "max": 1.0,   "type": float},
             "ramp":               {"default": 0,    "min": 0,    "max": 100,   "type": int},
@@ -508,7 +508,7 @@ def update_markers(*args):
         for param,value in values["params"].items():
             if type(value) is list:
                 for idx,val in enumerate(value):
-                    selected_marker.perm_events[event]["params"][param][idx]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"](val.get())
+                    selected_marker.perm_events[event]["params"][param][idx]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"][idx](val.get())
 
             else:
                 selected_marker.perm_events[event]["params"][param]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"](value.get())
@@ -756,7 +756,7 @@ load_comm_btn=ctk.CTkButton(comm_button_panel, text="⬆  Load Community", comma
               fg_color="#2980b9", hover_color="#3498db", width=240)
 
 new_comm_btn.pack(fill="x", pady=5);load_comm_btn.pack(fill="x", pady=5);
-ctk.CTkButton(comm_button_panel, text="🐛  DEBUG", command=debug_print,fg_color="#222", hover_color="#444", width=240).pack(fill="x", pady=5, padx=10)
+#ctk.CTkButton(comm_button_panel, text="🐛  DEBUG", command=debug_print,fg_color="#222", hover_color="#444", width=240).pack(fill="x", pady=5, padx=10)
 
 # ── PV parameter Panel ──────────────────────────────────────────────────────
 
