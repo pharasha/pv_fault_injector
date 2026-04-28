@@ -198,7 +198,8 @@ class Simulation():
 
     
     def save(self):
-        sim_id=prompt("Simulation id : ",default='Sim_'+datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
+        
+        sim_id=self.community["name"]+"_"+datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 
         for id, sys in self.systems.items():
 
