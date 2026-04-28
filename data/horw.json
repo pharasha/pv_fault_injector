@@ -7,57 +7,57 @@
         {
             "name": "System #0",
             "props": {
-                "latitude": "47.02478506755702",
-                "longitude": "8.306793276459985",
+                "latitude": 47.02478506755702,
+                "longitude": 8.306793276459985,
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": "470",
-                "tilt_deg": "20",
-                "azimuth_deg": "180",
-                "modules_per_string": "4",
-                "strings": "2"
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
             },
             "events": {
                 "permanent": {
                     "soiling": {
                         "enabled": false,
                         "params": {
-                            "soiling_loss_rate": "0.1",
-                            "cleaning_threshold": "0.05",
-                            "max_soiling": "0.5",
-                            "grace_period": "7"
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
                         }
                     },
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": "30.0",
-                            "el_range": "15.0",
-                            "affected_fraction": "0.3",
-                            "opacity": "1.0",
-                            "ramp": "0"
+                            "az_range": 30.0,
+                            "el_range": 15.0,
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
                         }
                     },
                     "degradation": {
                         "enabled": false,
                         "params": {
-                            "annual_rate": "0.5",
-                            "initial_years": "0"
+                            "annual_rate": 0.5,
+                            "initial_years": 0
                         }
                     },
                     "pid": {
                         "enabled": true,
                         "params": {
-                            "severity": "0.5"
+                            "severity": 0.5
                         }
                     }
                 },
                 "temporary": {
-                    "inverter_fault_46d": {
+                    "inverter_fault_867": {
                         "start": "2026-04-06",
                         "end": "2026-04-30",
                         "params": {
-                            "efficiency_loss": "0.5"
+                            "efficiency_loss": 0.5
                         }
                     }
                 }
@@ -71,15 +71,15 @@
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
                 "altitude_m": 470,
-                "tilt_deg": 20,
-                "azimuth_deg": 180,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
                 "modules_per_string": 4,
                 "strings": 2
             },
             "events": {
                 "permanent": {
                     "soiling": {
-                        "enabled": true,
+                        "enabled": false,
                         "params": {
                             "soiling_loss_rate": 0.1,
                             "cleaning_threshold": 0.05,
@@ -117,48 +117,48 @@
         {
             "name": "System #2",
             "props": {
-                "latitude": "47.01287711158717",
-                "longitude": "8.30241591134768",
+                "latitude": 47.01287711158717,
+                "longitude": 8.30241591134768,
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": "470",
-                "tilt_deg": "20",
-                "azimuth_deg": "180",
-                "modules_per_string": "4",
-                "strings": "2"
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
             },
             "events": {
                 "permanent": {
                     "soiling": {
                         "enabled": true,
                         "params": {
-                            "soiling_loss_rate": "0.1",
-                            "cleaning_threshold": "0.05",
-                            "max_soiling": "0.5",
-                            "grace_period": "7"
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
                         }
                     },
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": "30.0",
-                            "el_range": "15.0",
-                            "affected_fraction": "0.3",
-                            "opacity": "1.0",
-                            "ramp": "0"
+                            "az_range": 30.0,
+                            "el_range": 15.0,
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
                         }
                     },
                     "degradation": {
                         "enabled": true,
                         "params": {
-                            "annual_rate": "0.5",
-                            "initial_years": "0"
+                            "annual_rate": 0.5,
+                            "initial_years": 0
                         }
                     },
                     "pid": {
                         "enabled": false,
                         "params": {
-                            "severity": "0.5"
+                            "severity": 0.5
                         }
                     }
                 },
@@ -168,57 +168,71 @@
         {
             "name": "System #3",
             "props": {
-                "latitude": "47.014691271430905",
-                "longitude": "8.311513964326195",
+                "latitude": 47.014691271430905,
+                "longitude": 8.311513964326195,
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": "470",
-                "tilt_deg": "20",
-                "azimuth_deg": "180",
-                "modules_per_string": "4",
-                "strings": "2"
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
             },
             "events": {
                 "permanent": {
                     "soiling": {
                         "enabled": true,
                         "params": {
-                            "soiling_loss_rate": "0.1",
-                            "cleaning_threshold": "0.05",
-                            "max_soiling": "0.5",
-                            "grace_period": "7"
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
                         }
                     },
                     "mask_shading": {
                         "enabled": true,
                         "params": {
-                            "az_range": "30.0",
-                            "el_range": "15.0",
-                            "affected_fraction": "0.3",
-                            "opacity": "1.0",
-                            "ramp": "0"
+                            "az_range": 30.0,
+                            "el_range": 15.0,
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
                         }
                     },
                     "degradation": {
                         "enabled": false,
                         "params": {
-                            "annual_rate": "0.5",
-                            "initial_years": "0"
+                            "annual_rate": 0.5,
+                            "initial_years": 0
                         }
                     },
                     "pid": {
                         "enabled": true,
                         "params": {
-                            "severity": "0.5"
+                            "severity": 0.5
                         }
                     }
                 },
                 "temporary": {
-                    "open_string_869": {
+                    "open_string_b67": {
                         "start": "2026-04-09",
                         "end": "2026-04-15",
                         "params": {
-                            "strings_lost": "1"
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_aa9": {
+                        "start": "2026-04-07",
+                        "end": "2026-04-10",
+                        "params": {
+                            "efficiency_loss": 0.5
+                        }
+                    },
+                    "open_string_db8": {
+                        "start": "2026-04-18",
+                        "end": "2026-04-22",
+                        "params": {
+                            "strings_lost": 1
                         }
                     }
                 }
@@ -232,8 +246,8 @@
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
                 "altitude_m": 470,
-                "tilt_deg": 20,
-                "azimuth_deg": 180,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -278,48 +292,48 @@
         {
             "name": "System #5",
             "props": {
-                "latitude": "47.01934343193073",
-                "longitude": "8.30589205423098",
+                "latitude": 47.01934343193073,
+                "longitude": 8.30589205423098,
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": "470",
-                "tilt_deg": "20",
-                "azimuth_deg": "180",
-                "modules_per_string": "4",
-                "strings": "2"
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
             },
             "events": {
                 "permanent": {
                     "soiling": {
                         "enabled": true,
                         "params": {
-                            "soiling_loss_rate": "0.1",
-                            "cleaning_threshold": "0.05",
-                            "max_soiling": "0.5",
-                            "grace_period": "7"
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
                         }
                     },
                     "mask_shading": {
                         "enabled": false,
                         "params": {
-                            "az_range": "30.0",
-                            "el_range": "15.0",
-                            "affected_fraction": "0.3",
-                            "opacity": "1.0",
-                            "ramp": "0"
+                            "az_range": 30.0,
+                            "el_range": 15.0,
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
                         }
                     },
                     "degradation": {
                         "enabled": true,
                         "params": {
-                            "annual_rate": "0.5",
-                            "initial_years": "0"
+                            "annual_rate": 0.5,
+                            "initial_years": 0
                         }
                     },
                     "pid": {
                         "enabled": true,
                         "params": {
-                            "severity": "0.5"
+                            "severity": 0.5
                         }
                     }
                 },

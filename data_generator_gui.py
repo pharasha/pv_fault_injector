@@ -492,14 +492,14 @@ def update_markers(*args):
    
     # UPDATE PARAMS 
         for key, widget in properties_widgets.items():
-            selected_marker.props[key]=widget.get()
+            selected_marker.props[key]=SYSTEM_PROPERTIES_DATA[key]["type"](widget.get())
    
     # UPDATE EVENTS
     # ----------- PERMANENT
     for event, values in perm_events_widgets.items():    
-        selected_marker.perm_events[event]["enabled"]=values["enabled"].get()
+        selected_marker.perm_events[event]["enabled"]=bool(values["enabled"].get())
         for param,value in values["params"].items():
-            selected_marker.perm_events[event]["params"][param]=value.get()
+            selected_marker.perm_events[event]["params"][param]=PERMANENT_EVENTS_DATA[event]["params"][param]["type"](value.get())
 
 
     # ----------- TEMPORARY
@@ -508,11 +508,13 @@ def update_markers(*args):
     else:
         selected_marker.temp_events={}
         for row in event_tree.get_children():
-            event, start, end, params = event_tree.item(row, "values") 
+            event, start, end, params = event_tree.item(row, "values")
+            params=ast.literal_eval(params)
+            params={key:TEMPORARY_EVENTS_DATA[unformat_key(event)]["params"][key]["type"](params[key]) for key in list(params.keys())}
             key=unformat_key(event)+"_"+str(secrets.token_hex(2)[:3])
-            selected_marker.temp_events[key]={"start":start,
+            selected_marker.temp_events[key]={"start":start, 
                                                 "end": end,
-                                                "params":ast.literal_eval(params)}
+                                                "params":params}
 
 def delete_selected_marker():
     global selected_marker
