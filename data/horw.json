@@ -269,7 +269,7 @@
                 "longitude": 8.31490427652102,
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
+                "altitude_m": 47,
                 "tilt_deg": 20.0,
                 "azimuth_deg": 180.0,
                 "modules_per_string": 4,

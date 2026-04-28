@@ -346,8 +346,8 @@ def loadComm():
     marker_data=data["systems"]
     
 
-    com_id_entry.configure(text=data["name"])
-    com_desc_entry.configure(text=data["desc"])
+    com_id_entry.configure(text=community_name)
+    com_desc_entry.configure(text=community_description)
 
     # Start date update
     start_date_entry.configure(state="normal")
