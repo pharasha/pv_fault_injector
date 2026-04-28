@@ -1,5 +1,5 @@
 {
-    "name": "Horw Energy Community",
+    "name": "horw_energy_community",
     "desc": "This is a text to describe the Horw Energy Community. It is just a palceholder for testing the description section on the tool.",
     "start_date": "2026-04-01",
     "end_date": "2026-04-28",
@@ -269,7 +269,7 @@
                 "longitude": 8.31490427652102,
                 "module_cec": "Canadian_Solar_Inc__CS6X_305P",
                 "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
+                "altitude_m": 47,
                 "tilt_deg": 20.0,
                 "azimuth_deg": 180.0,
                 "modules_per_string": 4,

@@ -174,7 +174,12 @@ def runSim():
     community_dict = stateToDict()
     wm = WeatherModel()
     sim = Simulation(community_dict, wm)
-    sim.run()
+    try:
+        sim.run()
+        messagebox.showinfo("Success", "Simulation Completed.")
+    except Exception as e:
+        messagebox.showerror("Simulation Failed", str(e))
+
 
 
 
@@ -184,7 +189,7 @@ def debug_print():
 def stateToDict():
     global all_markers,community_name,community_description,community_start_day,community_end_day
     full_dict = {}
-    full_dict["name"]=community_name
+    full_dict["name"]=unformat_key(community_name)
     full_dict["desc"]=community_description
     full_dict["start_date"]=community_start_day
     full_dict["end_date"]=community_end_day
@@ -332,7 +337,7 @@ def loadComm():
         return
     #UPDATE VIEW
     clearAll()
-    community_name=data["name"]
+    community_name=format_key(data["name"])
     community_description=data["desc"]
     community_start_day=data["start_date"]
     community_end_day=data["end_date"]
@@ -341,8 +346,8 @@ def loadComm():
     marker_data=data["systems"]
     
 
-    com_id_entry.configure(text=data["name"])
-    com_desc_entry.configure(text=data["desc"])
+    com_id_entry.configure(text=community_name)
+    com_desc_entry.configure(text=community_description)
 
     # Start date update
     start_date_entry.configure(state="normal")
