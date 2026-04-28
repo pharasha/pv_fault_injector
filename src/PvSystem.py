@@ -8,14 +8,14 @@ class PvSystem():
     PvSystem Class description
     """
     def __init__(self, config):
-        self.latitude             = config["latitude"]
-        self.longitude            = config["longitude"]
-        self.altitude             = config["altitude_m"]
+        self.latitude             = float(config["latitude"])
+        self.longitude            = float(config["longitude"])
+        self.altitude             = float(config["altitude_m"])
         self.timezone             = config.get("timezone", "Europe/Zurich")
-        self.tilt                 = config["tilt_deg"]
-        self.azimuth              = config["azimuth_deg"]
-        self.modules_per_string   = config["modules_per_string"]
-        self.strings              = config["strings"]
+        self.tilt                 = float(config["tilt_deg"])
+        self.azimuth              = float(config["azimuth_deg"])
+        self.modules_per_string   = int(config["modules_per_string"])
+        self.strings              = int(config["strings"])
         self.module_cec           = config["module_cec"]
         self.inverter_cec         = config["inverter_cec"]
 

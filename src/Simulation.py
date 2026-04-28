@@ -6,20 +6,31 @@ from prompt_toolkit import prompt
 from datetime import datetime
 import os
 
+KNOWN_FAULT_TYPES = sorted(
+    ["soiling", "mask_shading", "degradation", "pid", "open_string", "inverter_fault", "snow"],
+    key=len, reverse=True,
+)
+
 class Simulation():
     def __init__(self, community, weather_model: WeatherModel.WeatherModel):
-        self.systems = {}
-        for id, data in community.items():
-            self.systems[id] = PvSystem.PvSystem(data["parameters"])
         self.community                  = community
         self.weather_model              = weather_model
+        self.systems                    = {}
+        self.system_data                = {}
+        for i, sys_data in enumerate(community["systems"]):
+            sid = sys_data["name"]
+            self.systems[sid]           = PvSystem.PvSystem(sys_data["props"])
+            self.system_data[sid]       = sys_data
         self.weather                    = {}
         self.weather_with_anomalies     = {}
+        self.mask_shading_loss          = {}
         self.output                     = {}
         self.timezone                   = { id: sys.timezone for id, sys in self.systems.items() }
 
     def fetchWeather(self, sys, id):
-        weather = self.weather_model.request_historical(sys.latitude, sys.longitude, self.community[id]["timeframe"]["start"], self.community[id]["timeframe"]["end"])
+        start = self.community["start_date"]
+        end   = self.community["end_date"]
+        weather = self.weather_model.request_historical(sys.latitude, sys.longitude, start, end)
         return weather.tz_convert(sys.timezone)
 
     def set_timezone(self, timestamp, timezone):
@@ -28,26 +39,27 @@ class Simulation():
     
     def build_fault_list(self, events):
         fault_list = []
-        for fault_type, enabled in events["perm_events"].items():
-            if enabled:
-                fault_list.append({"type": fault_type, "params": {}})
-        for event in events["temp_events"]:
+        for fault_type, cfg in events["permanent"].items():
+            if cfg["enabled"]:
+                fault_list.append({"type": fault_type, "params": cfg.get("params", {})})
+        temporary = events.get("temporary") or {}
+        for key, event in temporary.items():
+            fault_type = next((ft for ft in KNOWN_FAULT_TYPES if key.startswith(ft)), key)
             fault_list.append({
-                "type": event["desc"],
+                "type": fault_type,
                 "start": event["start"],
                 "end": event["end"],
                 "params": event.get("params", {})
             })
         return fault_list
 
-    def apply_point_a(self, weather_df, fault_list):
+    def apply_point_a(self, id, weather_df, fault_list, location):
         df = weather_df.copy()
         for f in fault_list:
             if f["type"] == "soiling":
                 df = faults.soiling_kimber(df, **f.get("params", {}))
-            # SNOW COVERAGE LOSSES
-            # if f["type"] == "snow"
-            # df = faults.snow(df, ...)
+            if f["type"] == "mask_shading":
+                df, self.mask_shading_loss[id] = faults.mask_shading(df, location, **f.get("params", {}))
         return df
 
     # ------------------------------------------------------
@@ -96,14 +108,14 @@ class Simulation():
                 if chunk_start >= f_window_start and chunk_end <= f_window_end:
                     active[f["type"]] = f.get("params", {})
 
-            strings = original_strings - active.get("open_string", {}).get("strings_lost", 0)
+            strings = original_strings - int(active.get("open_string", {}).get("strings_lost", 0))
             params = original_params.copy()
 
             if "degradation" in active:
                 t_offset = (chunk.index[0] - sim_start).total_seconds() / (365.25 * 24 * 3600)
                 params = faults.degradation(
                     params,
-                    years=active["degradation"].get("initial_years", 0) + t_offset,
+                    years=float(active["degradation"].get("initial_years", 0)) + t_offset,
                     annual_rate=active["degradation"].get("annual_rate", 0.005),
                 )
 
@@ -135,10 +147,9 @@ class Simulation():
     
     def apply_point_c(self, ac, fault_list,weather_df,sys):
 
-        #Apply snowfall loss on ac power output
-        ac = faults.snowfall_dc_loss(ac,weather_df,sys)
+        if any(f["type"] == "snow" for f in fault_list):
+            ac = faults.snowfall_dc_loss(ac,weather_df,sys)
 
-        print(f"[C] fault_list: {[f['type'] for f in fault_list]}")
         tz = ac.index.tz
         for f in fault_list:
             if f["type"] == "inverter_fault":
@@ -149,11 +160,9 @@ class Simulation():
                     window_start = self.set_timezone(f["start"], tz) if "start" in f else ac.index[0]
                     window_end = self.set_timezone(f["end"],   tz) if "end"   in f else ac.index[-1]
                     mask = (ac.index >= window_start) & (ac.index <= window_end)
-                    print(f"[C] inverter_fault applied to window {window_start} - {window_end} ({mask.sum()} timesteps)")
                     ac = ac.copy()
                     ac[mask] = faults.inverter_fault(ac[mask], **params)
                 else:
-                    print(f"[C] inverter_fault applied to whole series ({len(ac)} timesteps)")
                     ac = faults.inverter_fault(ac, **params)
             #? can add more point c fault types
         return ac
@@ -161,13 +170,13 @@ class Simulation():
     #  new pipeline when apply functions are done:
     def run(self, save=True):
         for id, sys in self.systems.items():
-            fault_list = self.build_fault_list(self.community[id]["events"])
+            fault_list = self.build_fault_list(self.system_data[id]["events"])
 
             # featch weather system
             self.weather[id] = self.fetchWeather(sys, id)
 
             # Injection Point A: weather modifications
-            self.weather_with_anomalies[id] = self.apply_point_a(self.weather[id], fault_list)
+            self.weather_with_anomalies[id] = self.apply_point_a(id, self.weather[id], fault_list, sys.location)
 
             # Injection Point B: module param modifications + simulation
             ac = self.apply_point_b(sys, self.weather_with_anomalies[id], fault_list)
@@ -194,19 +203,22 @@ class Simulation():
         for id, sys in self.systems.items():
 
             # Make Flags Frame
-            fault_list = self.build_fault_list(self.community[id]["events"])
+            fault_list = self.build_fault_list(self.system_data[id]["events"])
             flag_frame = pd.DataFrame(0, index=self.weather[id].index, columns=faults.FAULT_LIST)
 
             for fault in fault_list:
                 flag_frame.loc[fault.get("start"):fault.get("end"), fault["type"]] = 1
 
-            # Combine columns: ac power | original weather | anomaly weather | fault flags
+            # Combine columns: ac power | original weather | anomaly weather | fault flags | shading loss
             all_frame = pd.concat([
                 self.output[id].rename("ac_power"),
                 self.weather[id],
                 self.weather_with_anomalies[id].add_suffix("_anomaly"),
                 flag_frame,
             ], axis=1)
+
+            if id in self.mask_shading_loss:
+                all_frame["mask_shading_loss"] = self.mask_shading_loss[id]
 
             # Create directory if it doesn't exist
             file_path = './output/'+sim_id+'/'+id+'.csv'

@@ -13,6 +13,8 @@ FAULT_COLORS = {
     "pid":            "red",
     "open_string":    "purple",
     "inverter_fault": "green",
+    "mask_shading":   "brown",
+    "snowfall_dc_loss": "cyan",
 }
 
 

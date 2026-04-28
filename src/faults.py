@@ -1,8 +1,10 @@
 # fault injection functions
 
+import pandas as pd
 import pvlib
+import numpy as np
 
-FAULT_LIST=["soiling","degradation","inverter_fault","pid","open_string"]
+FAULT_LIST=["soiling","degradation","inverter_fault","pid","open_string","mask_shading", "snowfall_dc_loss"]
 # ==========================================================
 # Injection point A: modify weather_df before simulation
 # ==========================================================
@@ -11,6 +13,10 @@ FAULT_LIST=["soiling","degradation","inverter_fault","pid","open_string"]
 
 def soiling_kimber(weather_df, soiling_loss_rate=0.0015, cleaning_threshold=6.0,
                    max_soiling=0.30, grace_period=14):
+    soiling_loss_rate = float(soiling_loss_rate)
+    cleaning_threshold = float(cleaning_threshold)
+    max_soiling = float(max_soiling)
+    grace_period = int(grace_period)
     # Kimber (2006): rain-based soiling model where loss builds up daily and resets on rain
     # soiling_loss_rate: fraction lost per day (Kimber default: 0.15%/day)
     # cleaning_threshold: daily rain in mm needed to clean (Kimber default: 6 mm)
@@ -32,15 +38,45 @@ def soiling_kimber(weather_df, soiling_loss_rate=0.0015, cleaning_threshold=6.0,
     return df
 
 
-def shading_string(weather_df, shading_factor=0.5):
-    # String-level partial shading uniformly reduces irradiance for an entire string.
-    # To use this correctly, build a PVSystem with two array objects. 
-    # Apply this modified weather_df only to the shaded array, and
-    # pass the unmodified weather_df to the healthy array.
+def mask_shading(weather_df, location, az_range, el_range,
+                  affected_fraction, opacity, ramp):
+    az_range = [float(v) for v in az_range]
+    el_range = [float(v) for v in el_range]
+    affected_fraction = float(affected_fraction)
+    opacity = float(opacity)
+    ramp = float(ramp)
+    # Array-level partial shading applies a shading factor to the entire array based on sun position.
+    # az_range and el_range define the sun positions where shading occurs, with ramp controlling the speed at which shading increases.
     df = weather_df.copy()
-    for col in ["ghi", "dhi", "dni"]:
-        df[col] = df[col] * (1 - shading_factor)
-    return df
+    idx = df.index
+
+    sun_position = pvlib.solarposition.get_solarposition(idx, location.latitude, location.longitude)
+    
+    sun_az = sun_position["azimuth"]
+    sun_el = sun_position["apparent_elevation"]
+
+    score_az = trapezoid_score(sun_az, *az_range, ramp)
+    score_el = trapezoid_score(sun_el, *el_range, ramp)
+    # shading_scores = np.minimum(score_az, score_el)
+    shading_scores = score_az * score_el
+
+    loss = shading_scores * affected_fraction * opacity
+
+    df["dni"] = df["dni"] * (1 - loss)
+    df["dhi"] = df["dhi"] * (1 - loss)
+    df["ghi"] = df["dhi"] + np.clip(np.cos(np.deg2rad(sun_position["apparent_zenith"])), 0, 1) * df["dni"]
+
+    return df, pd.Series(loss, index=idx)
+
+# helper function for shading faults
+def trapezoid_score(x, x_lo, x_hi, ramp = 10):
+    # ramp: transition width in degrees on each edge — score rises 0→1 from x_lo to x_lo+ramp
+    x = np.asarray(x)
+    if ramp <= 0:
+        return ((x >= x_lo) & (x <= x_hi)).astype(float)
+    left = (x - x_lo) / ramp 
+    right = (x_hi - x) / ramp
+    return np.clip(np.minimum(left, right), 0.0, 1.0)
 
 
 
@@ -49,6 +85,8 @@ def shading_string(weather_df, shading_factor=0.5):
 # ==========================================================
 
 def degradation(module_params, years, annual_rate=0.005):
+    years = float(years)
+    annual_rate = float(annual_rate)
     # Jordan & Kurtz (2013): median 0.5%/year Pmax loss
     # PVsyst internally assumes ca. 80% of that loss maps to I_L_ref reduction,
     # we will use this assumption for now
@@ -59,6 +97,7 @@ def degradation(module_params, years, annual_rate=0.005):
 
 
 def pid(module_params, severity):
+    severity = float(severity)
     # PID-s (shunting type, dominant in p-type c-Si, most common and destructive), EPJ PV 2026
     # collapses R_sh_ref and mild drop in I_L_ref
     # severity 0 → healthy, severity 1 → fully degraded
@@ -78,11 +117,6 @@ def open_string(system_config, strings_lost):
     return cfg
 
 
-def wiring_loss_physics(system_config, added_loss_percent=3.0):
-    # TODO: should this be added?
-    pass
-
-
 def bridging_fault(module_params, modules_shorted=2):
     # Sabbaghpur Arani (2016) Section 6.2: Bridging/Short-circuit
     # This fault shorts out a number of modules in a string.
@@ -94,7 +128,8 @@ def bridging_fault(module_params, modules_shorted=2):
 # Injection point C: modify AC output (post-simulation)
 # ==========================================================
 
-def inverter_fault(ac_power, efficiency_loss=0.3): 
+def inverter_fault(ac_power, efficiency_loss=0.3):
+    efficiency_loss = float(efficiency_loss)
     # efficiency_loss: 0.0 -> healthy, 0.3 -> 30% AC power loss
     return ac_power * (1 - efficiency_loss)
 
