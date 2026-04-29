@@ -447,6 +447,8 @@ def clearAll():
     comm_file_path=""
     community_name=""
     system_counter = 0
+    if all_markers:
+        [marker.delete() for marker in all_markers]
     all_markers = []
     selected_marker = None
     ignore_click = False
@@ -760,12 +762,12 @@ btn_fit.pack(pady=4,padx=4)
 
 
 # ── Community Panel  ───────────────────────────────────────────────────────────
-comm_panel = ctk.CTkFrame(root, corner_radius=12, border_width=2, border_color="#444",bg_color="transparent")
+comm_panel = ctk.CTkFrame(root, corner_radius=12, border_width=2, border_color="#444",bg_color="transparent",fg_color="transparent")
 
-comm_data_panel = ctk.CTkFrame(comm_panel)
+comm_data_panel = ctk.CTkFrame(comm_panel,fg_color="transparent")
 
 
-comm_button_panel = ctk.CTkFrame(comm_panel)
+comm_button_panel = ctk.CTkFrame(comm_panel,fg_color="transparent")
 comm_button_panel.pack(pady=8,padx=8)
 
 
