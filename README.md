@@ -1,28 +1,26 @@
 # PV Fault Injector
-A Python tool for simulating PV systems based on PVLib with custome support for fault injection.
+A Python tool for simulating PV systems based on PVLib with custom support for fault injection.
 
 ## File Overview
 ```
 pv_fault_injector/
 |
 ├── data/
-|   ├── output/                 # contains simulation output
-|   ├── modules.json            # Module characteristics
-|   ├── settings.json           # Simulation settings
-|   └── ...
+|   └── horw.json               # Example community config
 |
 ├── docs/
-|   ├── pipeline.md             # pipeline documentation
-|   └──  faults.md              # faults documentation
+|   ├── pipeline.md             # Pipeline documentation
+|   └── faults.md               # Faults documentation
 |
 ├── src/
-|   ├── Simulation.py           # Simulation Classes
-|   ├── PvSystem.py             # Pv System Class
-|   ├── WeatherModel.py         # Weather Model Class
-|   └── Faults.py               # Fault injection functions
-| 
+|   ├── Simulation.py           # Simulation class
+|   ├── PvSystem.py             # PvSystem class
+|   ├── WeatherModel.py         # Weather fetching
+|   ├── faults.py               # Fault injection functions
+|   └── plot.py                 # Plotting functions
 |
-├── main.py                     # Main Simulation
+├── output/                     # Simulation output (CSV per system)
+├── data_generator_gui.py       # GUI for creating and editing community JSON files
 └── README.md
 ```
 ---
@@ -30,30 +28,28 @@ pv_fault_injector/
 ## Data Flow
 
 ```
-    config.json ──► weather.py ──► weather_df (ghi, dhi, dni, temp_air, wind_speed, precipitation, ...)
+community.json ──► WeatherModel ──► weather_df (ghi, dhi, dni, temp_air, wind_speed, precipitation, ...)
                                         │
                         ┌───────────────┴───────────────┐
                         │ Injection point A             │ Injection point B
                         ▼                               ▼
-                soiling, shading         degradation, pid, open_string
+                soiling, mask_shading    degradation, pid, open_string
                                             
                         │                               │
                         └───────────────┬───────────────┘
                                         ▼
-    config.json ──► simulate.py ◄── weather_df (modified or original)
-                        │           module_params (modified or original)
-                        ▼
-                ac_simulated (hourly W)
-                        │
-                        ▼
-                inverter, wiring          (Injection point C)
-
-                        │
-                        ▼
-                ac_faulty (hourly W)
-                
-                        │
-                        ▼       
-                metrics + plots
+                                 PvSystem.run_model()
+                                        │
+                                        ▼
+                                ac_simulated (hourly W)
+                                        │
+                                        ▼
+                          inverter_fault, snowfall        (Injection point C)
+                                        │
+                                        ▼
+                                ac_faulty (hourly W)
+                                        │
+                                        ▼
+                                output CSV + plots
 ```
 ---
