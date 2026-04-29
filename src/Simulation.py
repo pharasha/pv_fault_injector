@@ -25,6 +25,7 @@ class Simulation():
         self.weather_with_anomalies     = {}
         self.mask_shading_loss          = {}
         self.output                     = {}
+        self.output_healthy             = {}
         self.timezone                   = { id: sys.timezone for id, sys in self.systems.items() }
 
     def fetchWeather(self, sys, id):
@@ -184,6 +185,8 @@ class Simulation():
             # Injection Point C: AC output modifications
             self.output[id] = self.apply_point_c(ac, fault_list,self.weather[id],sys)
 
+            self.output_healthy[id] =  sys.run_model(self.weather[id]).ac
+
         # Save the outputs
         if save:
             self.save()
@@ -210,11 +213,18 @@ class Simulation():
             for fault in fault_list:
                 flag_frame.loc[fault.get("start"):fault.get("end"), fault["type"]] = 1
 
+            fault_ratio = 1 - (self.output[id] / self.output_healthy[id])
+            fault_ratio_col = fault_ratio.rename("fault_ratio")
+            fault_flag = (fault_ratio >= 0.2).astype(int).rename("fault_flag")
+
             # Combine columns: ac power | original weather | anomaly weather | fault flags | shading loss
             all_frame = pd.concat([
                 self.output[id].rename("ac_power"),
+                self.output_healthy[id].rename("ac_power_healthy"),
                 self.weather[id],
                 self.weather_with_anomalies[id].add_suffix("_anomaly"),
+                fault_ratio_col,
+                fault_flag,
                 flag_frame,
             ], axis=1)
 
