@@ -11,6 +11,9 @@ import secrets
 import ast
 from src.WeatherModel import WeatherModel
 from src.Simulation import Simulation
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("hslu.starsolar.pvsim")
 
 # --- Theme Setup ---
 ctk.set_appearance_mode("dark")
@@ -18,10 +21,7 @@ ctk.set_default_color_theme("blue")
 
 # --- Constants ---
 
-
-
 COMM_DIR = "./data"
-
 
 SYSTEM_PROPERTIES_DATA = {
     "latitude":           {"default": None,                                          "min": -90.0,  "max": 90.0,   "type": float},
@@ -112,6 +112,21 @@ perm_events_widgets = {}
 
 
 # --- Accessory Functions ------
+
+def fit_map_to_markers(padding=0.5):
+    """Fit map to show all markers with padding."""
+    global map_widget,all_markers
+    if not all_markers:
+        return
+
+    lat_list = [marker.position[0] for marker in all_markers]
+    lon_list = [marker.position[1] for marker in all_markers]
+ 
+    map_widget.fit_bounding_box(
+        (max(lat_list) + padding, min(lon_list) - padding),  # top left
+        (min(lat_list) - padding, max(lon_list) + padding),  # bottom right
+    )
+
 
 def open_calendar_popup(entry_widget):
     """Opens a floating calendar popup and sets selected date into the entry."""
@@ -376,7 +391,7 @@ def loadComm():
     comm_data_panel.pack(pady=8,padx=8)
     save_comm_btn.grid(row=5, column=0, pady=5)
     run_sim_btn.grid(row=5, column=1,  pady=5)
-    map_widget.set_position(central_coords[0], central_coords[1],zoom=14)
+    fit_map_to_markers(padding=5e-3)
     comm_loaded=True
 
 def saveComm():
@@ -423,6 +438,8 @@ def place_marker(coords):
     # CHECK IF THERE's A COMMUNITY SELECTED AND IF WE ARE CLICKING ANOTHER MARKER
     if ignore_click or (not comm_loaded):
         ignore_click = False
+        if (not comm_loaded):
+            messagebox.showerror("","No community loaded.\n Create new community or load an existing one then try again.")
         return
     
     # PLACES NEW MARKER, HIGHLIGHTS IT
@@ -676,10 +693,53 @@ def delete_event():
 # --- UI Setup ---
 root = ctk.CTk()
 root.title("PV Community Planner")
+root.iconbitmap("icon.ico")
+
+
+# ==== Map Control Panel ======
+
+map_control_panel = ctk.CTkFrame(root,
+                                 fg_color="#e7e7e7",
+                                 bg_color="#e7e7e7",
+                                 corner_radius=0)
+
+btn_style = dict(
+    width=30,
+    height=30,
+    corner_radius=4,
+    fg_color=("white", "#2b2b2b"),
+    hover_color=("gray90", "#3b3b3b"),
+    border_width=1,
+    border_color=("gray70", "gray40"),
+)
+
+btn_zoom_in = ctk.CTkButton(
+    map_control_panel, text="+",
+    font=ctk.CTkFont(size=18, weight="bold"),
+    command=lambda: map_widget.set_zoom(map_widget.zoom + 1),
+    **btn_style
+)
+btn_zoom_in.pack(pady=4,padx=4)
+
+btn_zoom_out = ctk.CTkButton(
+    map_control_panel, text="−",
+    font=ctk.CTkFont(size=18, weight="bold"),
+    command=lambda: map_widget.set_zoom(map_widget.zoom - 1),
+    **btn_style
+)
+btn_zoom_out.pack(pady=4,padx=4)
+
+btn_fit = ctk.CTkButton(
+    map_control_panel, text="⛶",
+    font=ctk.CTkFont(size=16),
+    command=lambda:fit_map_to_markers(padding=5e-3),
+    **btn_style
+)
+btn_fit.pack(pady=4,padx=4)
 
 
 # ── Community Panel  ───────────────────────────────────────────────────────────
-comm_panel = ctk.CTkFrame(root, corner_radius=12, border_width=2, border_color="#444")
+comm_panel = ctk.CTkFrame(root, corner_radius=12, border_width=2, border_color="#444",bg_color="transparent")
 
 comm_data_panel = ctk.CTkFrame(comm_panel)
 
@@ -918,6 +978,7 @@ ctk.CTkButton(system_panel, text="Close", command=close_sys_panel,
 
 # PLACE PANELS
 comm_panel.place(relx=0.0, rely=0.0, anchor="nw", x=10, y=10)
+map_control_panel.place(relx=0.0, rely=1.0, anchor="sw", x=10, y=-10)
 system_panel.place(relx=1.0, rely=0.0, anchor="ne", x=-10, y=10)
 system_panel.place_forget()
 
@@ -931,5 +992,6 @@ map_widget.add_left_click_map_command(place_marker)
 
 # LIFT PANELS
 comm_panel.lift()
+map_control_panel.lift()
 
 root.mainloop()
