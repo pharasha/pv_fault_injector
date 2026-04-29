@@ -6,12 +6,14 @@ import tkintermapview
 import pvlib
 import json
 from tkcalendar import DateEntry,Calendar
-import copy
 import secrets
 import ast
 from src.WeatherModel import WeatherModel
 from src.Simulation import Simulation
 import ctypes
+from tkintermapview.canvas_button import CanvasButton
+from geopy.geocoders import Nominatim
+
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("hslu.starsolar.pvsim")
 
@@ -112,6 +114,25 @@ perm_events_widgets = {}
 
 
 # --- Accessory Functions ------
+
+def search_address(event=None):
+
+    address = adress_entry.get().strip()
+
+    if not address:
+        adress_entry.configure(border_color="red")
+        return
+    
+    geolocator = Nominatim(user_agent="map_app")
+    location = geolocator.geocode(address)
+    
+    if location:
+        map_widget.set_position(location.latitude, location.longitude)
+        map_widget.set_zoom(14)
+        adress_entry.configure(border_color=adress_entry.default_border_color)
+    else:
+        adress_entry.configure(border_color="red")
+        return
 
 def fit_map_to_markers(padding=0.5):
     """Fit map to show all markers with padding."""
@@ -747,15 +768,20 @@ comm_data_panel = ctk.CTkFrame(comm_panel)
 comm_button_panel = ctk.CTkFrame(comm_panel)
 comm_button_panel.pack(pady=8,padx=8)
 
-# ── Community Name label (spans both columns) ──────────────────────────────────
-"""
-ctk.CTkLabel(
-    comm_data_panel,
-    text="Community Name",
-    font=("Arial", 10),
-    text_color="#aab4c8",
-).grid(row=0, column=0, columnspan=2, pady=0)
-"""
+
+adress_entry=ctk.CTkEntry(
+    comm_button_panel,
+    placeholder_text="Type an adress then press enter...",
+    font=("Arial", 12)    
+)
+
+adress_entry.default_border_color=adress_entry._border_color
+
+adress_entry.bind("<Return>", search_address)
+adress_entry.pack(pady=5,fill="x")
+
+# ── Community Info panel ──────────────────────────────────
+
 com_id_entry = ctk.CTkLabel(
     comm_data_panel,
     text="-",
@@ -826,11 +852,13 @@ save_comm_btn.grid(row=5, column=0,  pady=5);save_comm_btn.grid_forget()
 run_sim_btn.grid(row=5, column=1,  pady=5);run_sim_btn.grid_forget()
 
 new_comm_btn=ctk.CTkButton(comm_button_panel, text="＋  New Community", command=newComm,
-              fg_color="#27ae60", hover_color="#2ecc71", width=240)
+              fg_color="#27ae60", hover_color="#2ecc71")
 load_comm_btn=ctk.CTkButton(comm_button_panel, text="⬆  Load Community", command=loadComm,
-              fg_color="#2980b9", hover_color="#3498db", width=240)
+              fg_color="#2980b9", hover_color="#3498db")
 
-new_comm_btn.pack(fill="x", pady=5);load_comm_btn.pack(fill="x", pady=5);
+
+
+new_comm_btn.pack( pady=5,padx=4,side="left");load_comm_btn.pack( padx=4,pady=5,side="left");
 #ctk.CTkButton(comm_button_panel, text="🐛  DEBUG", command=debug_print,fg_color="#222", hover_color="#444", width=240).pack(fill="x", pady=5, padx=10)
 
 # ── PV parameter Panel ──────────────────────────────────────────────────────
@@ -985,6 +1013,17 @@ system_panel.place_forget()
 
 # ── Map ───────────────────────────────────────────────
 map_widget = tkintermapview.TkinterMapView(root, width=850, height=600)
+
+#REMOVE DEFAULT ZOOM CONTROLS
+# Hide zoom in button
+map_widget.canvas.itemconfigure(map_widget.button_zoom_in.canvas_rect, state="hidden")
+map_widget.canvas.itemconfigure(map_widget.button_zoom_in.canvas_text, state="hidden")
+
+# Hide zoom out button
+map_widget.canvas.itemconfigure(map_widget.button_zoom_out.canvas_rect, state="hidden")
+map_widget.canvas.itemconfigure(map_widget.button_zoom_out.canvas_text, state="hidden")
+
+
 map_widget.pack(side="top", fill="both", expand=True)
 map_widget.set_position(47.028, 8.298)
 map_widget.set_zoom(13)
