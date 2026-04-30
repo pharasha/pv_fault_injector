@@ -13,6 +13,7 @@ from src.Simulation import Simulation
 import ctypes
 from tkintermapview.canvas_button import CanvasButton
 from geopy.geocoders import Nominatim
+import osmnx as ox
 
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("hslu.starsolar.pvsim")
@@ -89,6 +90,14 @@ CEC_MODULES = list(pvlib.pvsystem.retrieve_sam('cecmod').columns)
 CEC_INVERTERS = list(pvlib.pvsystem.retrieve_sam('CECInverter').columns)
 
 
+TILES = {
+    "Default":   "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "Google-Maps":       "https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga",
+    "Google-Maps-Satellite": "https://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga",
+    "Google-Maps-Hybrid":    "https://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga",
+    "Esri-Satellite": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    "SWISS-OSM": "https://tile.osm.ch/switzerland/{z}/{x}/{y}.png",
+}
 
 # ---- Global Variables ------
 
@@ -112,6 +121,7 @@ properties_widgets = {}
 perm_events_widgets = {}
 
 
+buildings_poly=[]
 
 # --- Accessory Functions ------
 
@@ -124,12 +134,18 @@ def search_address(event=None):
         return
     
     geolocator = Nominatim(user_agent="map_app")
-    location = geolocator.geocode(address)
-    
+    location = geolocator.geocode(address,language="english")
+    # boundingbox comes as [south, north, west, east] — all strings
+    south, north, west, east = [float(x) for x in location.raw["boundingbox"]]
+
+    center_lat = (north + south) / 2
+    center_lon = (east + west) / 2
     if location:
-        map_widget.set_position(location.latitude, location.longitude)
-        map_widget.set_zoom(14)
+        map_widget.set_position(center_lat,center_lon)
+        map_widget.fit_bounding_box((north, west), (south, east))
         adress_entry.configure(border_color=adress_entry.default_border_color)
+        adress_entry.delete(0, "end")
+        root.focus_set()
     else:
         adress_entry.configure(border_color="red")
         return
@@ -220,7 +236,9 @@ def runSim():
 
 
 def debug_print():
-    print(community_start_day,community_end_day)
+    print(map_widget.zoom)
+    [poly.delete() for poly in buildings_poly]
+    
 
 def stateToDict():
     global all_markers,community_name,community_description,community_start_day,community_end_day
@@ -245,6 +263,67 @@ def stateToDict():
 def switchColors(marker, marker_color_circle="#2ecc71", marker_color_outside="#27ae60"):
     map_widget.canvas.itemconfig(marker.polygon, fill=marker_color_outside, outline=marker_color_outside)
     map_widget.canvas.itemconfig(marker.big_circle, fill=marker_color_circle, outline=marker_color_outside)
+
+def highlightBuildings():
+    #CHECK IF WE ARE ON STREET LEVEL
+    if map_widget.zoom<18 : 
+        return
+    
+    #clear previous highlights
+
+    [poly.delete() for poly in buildings_poly]
+    # Get the corners of the widget
+    width = map_widget.winfo_width()
+    height = map_widget.winfo_height()
+
+    # Get bottom-left (SouthWest) and top-right (NorthEast)
+    sw = map_widget.convert_canvas_coords_to_decimal_coords(0, height)
+    ne = map_widget.convert_canvas_coords_to_decimal_coords(width, 0)
+    
+    # Overpass format: (min_lat, min_lon, max_lat, max_lon)
+    bbox = (sw[1], sw[0], ne[1], ne[0])
+
+    buildings = ox.features_from_bbox(
+        bbox=bbox,
+        tags={"building": ["house", "residential", "apartments", "detached", "semidetached_house", "terrace", "bungalow", "dormitory"]}
+    )
+
+    buildings[buildings.geometry.geom_type.isin(["Polygon", "MultiPolygon"])]
+    buildings['centroid']=buildings.centroid.apply(lambda p: (p.y, p.x))
+    # FILTER RESIDENTIAL ONLY
+    # FILTER ONLY BUILDING THAT HAVE SOLAR PANELS
+
+    for _, row in buildings.iterrows():
+            geom = row['geometry']
+            centroid=row['centroid']
+            # Handle standard Polygons
+            if geom.geom_type == 'Polygon':
+                # Get coordinates and swap to (lat, lon) for tkintermapwidget
+                # shapely provides (lon, lat), so we reverse them
+                path = [(lat, lon) for lon, lat in geom.exterior.coords]
+                poly=map_widget.set_polygon(path,fill_color="#ff0000",outline_color="white", border_width=2,command=placeBuildingMarker)
+                poly.centroid=centroid
+                buildings_poly.append(poly)
+                
+            # Handle MultiPolygons (complex buildings with holes or separate parts)
+            elif geom.geom_type == 'MultiPolygon':
+                for part in geom.geoms:
+                    path = [(lat, lon) for lon, lat in part.exterior.coords]
+                    poly=map_widget.set_polygon(path,fill_color="#ff0000",outline_color="white", border_width=2,command=placeBuildingMarker)
+                    poly.centroid=centroid
+                    buildings_poly.append(poly)
+    print(f"Found {len(buildings)} buildings.")
+def placeBuildingMarker(poly):
+    global ignore_click
+    coords=poly.centroid
+    buildings_poly.remove(poly)
+    poly.delete()
+    place_marker(coords)
+    ignore_click = True
+
+def on_tile_change(choice):
+    url = TILES[choice]
+    map_widget.set_tile_server(url,max_zoom=23)
 
 # -------------------  Community Tools
 
@@ -515,7 +594,7 @@ def update_sidebar_fields(marker):
     #UPDATE PARAMS FIELDS
     for key, value in marker.props.items():    
         widget=properties_widgets[key]  
-        if isinstance(widget, ctk.CTkComboBox):
+        if isinstance(widget, ctk.CTkOptionMenu):
             widget.set(str(value))
         elif isinstance(widget, ctk.CTkEntry):
             widget.delete(0, "end")
@@ -593,7 +672,7 @@ def delete_selected_marker():
         for item in event_tree.get_children():
             event_tree.delete(item)
         for widget in properties_widgets.values():
-            if isinstance(widget, ctk.CTkComboBox):
+            if isinstance(widget, ctk.CTkOptionMenu):
                 widget.set("")
             else:
                 widget.delete(0, tkinter.END)
@@ -660,7 +739,7 @@ def new_event():
 
     # ── Event name ────────────────────────────────────────────────────────────
     ctk.CTkLabel(dialog, text="Event Name").pack(anchor="w", padx=20, pady=(15, 2))
-    event_entry = ctk.CTkComboBox(dialog,values=[format_key(ev) for ev in TEMPORARY_EVENTS_DATA.keys()],command=setupParameter)
+    event_entry = ctk.CTkOptionMenu(dialog,values=[format_key(ev) for ev in TEMPORARY_EVENTS_DATA.keys()],command=setupParameter)
     event_entry.pack(padx=20, fill="x")
     event_entry.focus()
 
@@ -722,7 +801,7 @@ root.iconbitmap("icon.ico")
 # ==== Map Control Panel ======
 
 map_control_panel = ctk.CTkFrame(root,
-                                 fg_color="#e7e7e7",
+                                 fg_color="#2b2b2b",
                                  bg_color="#e7e7e7",
                                  corner_radius=0)
 
@@ -742,7 +821,7 @@ btn_zoom_in = ctk.CTkButton(
     command=lambda: map_widget.set_zoom(map_widget.zoom + 1),
     **btn_style
 )
-btn_zoom_in.pack(pady=4,padx=4)
+btn_zoom_in.pack(pady=4,padx=(10,4),side="left")
 
 btn_zoom_out = ctk.CTkButton(
     map_control_panel, text="−",
@@ -750,7 +829,7 @@ btn_zoom_out = ctk.CTkButton(
     command=lambda: map_widget.set_zoom(map_widget.zoom - 1),
     **btn_style
 )
-btn_zoom_out.pack(pady=4,padx=4)
+btn_zoom_out.pack(pady=4,padx=4,side="left")
 
 btn_fit = ctk.CTkButton(
     map_control_panel, text="⛶",
@@ -758,8 +837,15 @@ btn_fit = ctk.CTkButton(
     command=lambda:fit_map_to_markers(padding=5e-3),
     **btn_style
 )
-btn_fit.pack(pady=4,padx=4)
+btn_fit.pack(pady=4,padx=4,side="left")
 
+tile_dropdown = ctk.CTkOptionMenu(
+    map_control_panel,
+    values=list(TILES.keys()),
+    command=on_tile_change
+)
+tile_dropdown.set("Default")
+tile_dropdown.pack(pady=8,padx=(0,10))
 
 # ── Community Panel  ───────────────────────────────────────────────────────────
 comm_panel = ctk.CTkFrame(root, corner_radius=12, border_width=2, border_color="#444",bg_color="transparent",fg_color="transparent")
@@ -781,6 +867,22 @@ adress_entry.default_border_color=adress_entry._border_color
 
 adress_entry.bind("<Return>", search_address)
 adress_entry.pack(pady=5,fill="x")
+
+new_comm_btn=ctk.CTkButton(comm_button_panel, text="＋  New Community", command=newComm,
+              fg_color="#27ae60", hover_color="#2ecc71")
+load_comm_btn=ctk.CTkButton(comm_button_panel, text="⬆  Load Community", command=loadComm,
+              fg_color="#2980b9", hover_color="#3498db")
+
+
+# TODO: BUILDING FOOTPRINT SUPPORT
+
+highlight_buildings_btn=ctk.CTkButton(comm_button_panel, text="💡 Analyze Buildings", command=highlightBuildings,
+              fg_color="#d44040", hover_color="#883434")
+
+new_comm_btn.pack( pady=5,padx=4,side="left");load_comm_btn.pack( padx=4,pady=5,side="left");
+
+#highlight_buildings_btn.pack( padx=4,pady=5,side="left")
+#ctk.CTkButton(comm_button_panel, text="🐛  DEBUG", command=debug_print,fg_color="#222", hover_color="#444", width=240).pack(fill="x", pady=5, padx=10)
 
 # ── Community Info panel ──────────────────────────────────
 
@@ -853,16 +955,6 @@ run_sim_btn=ctk.CTkButton(comm_data_panel, text="▶  Run Simulation", command=r
 save_comm_btn.grid(row=5, column=0,  pady=5);save_comm_btn.grid_forget()
 run_sim_btn.grid(row=5, column=1,  pady=5);run_sim_btn.grid_forget()
 
-new_comm_btn=ctk.CTkButton(comm_button_panel, text="＋  New Community", command=newComm,
-              fg_color="#27ae60", hover_color="#2ecc71")
-load_comm_btn=ctk.CTkButton(comm_button_panel, text="⬆  Load Community", command=loadComm,
-              fg_color="#2980b9", hover_color="#3498db")
-
-
-
-new_comm_btn.pack( pady=5,padx=4,side="left");load_comm_btn.pack( padx=4,pady=5,side="left");
-#ctk.CTkButton(comm_button_panel, text="🐛  DEBUG", command=debug_print,fg_color="#222", hover_color="#444", width=240).pack(fill="x", pady=5, padx=10)
-
 # ── PV parameter Panel ──────────────────────────────────────────────────────
 
 system_panel = ctk.CTkFrame(root, corner_radius=12,width=350)
@@ -890,12 +982,13 @@ for idx, key in enumerate(SYSTEM_PROPERTIES_DATA.keys()):
                  anchor="w",height=20).grid(row=row*2, column=col, sticky="w", padx=(8, 4), pady=(8, 0))
 
     if key in ["module_cec", "inverter_cec"]:
-        ent = ctk.CTkComboBox(
+        ent = ctk.CTkOptionMenu(
             tabview.tab("System Properties"),
             values=CEC_MODULES if key == "module_cec" else CEC_INVERTERS,
             width=140,
             height=20,
             command=update_markers,
+            dynamic_resizing=False
         )
         ent.set(str(SYSTEM_PROPERTIES_DATA[key]))
     else:
@@ -1029,8 +1122,8 @@ map_widget.canvas.itemconfigure(map_widget.button_zoom_out.canvas_text, state="h
 map_widget.pack(side="top", fill="both", expand=True)
 map_widget.set_position(47.028, 8.298)
 map_widget.set_zoom(13)
+map_widget.unbind("<MouseWheel>") 
 map_widget.add_left_click_map_command(place_marker)
-
 # LIFT PANELS
 comm_panel.lift()
 map_control_panel.lift()
