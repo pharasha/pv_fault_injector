@@ -1,0 +1,12 @@
+pvlib
+numpy
+pandas
+matplotlib
+seaborn
+prompt_toolkit
+tkcalendar
+customtkinter
+tkintermapview
+openmeteo_requests
+requests_cache
+retry_requests
