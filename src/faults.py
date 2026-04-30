@@ -11,10 +11,10 @@ FAULT_LIST=["soiling","degradation","inverter_fault","pid","open_string","mask_s
 
 
 
-def soiling_kimber(weather_df, soiling_loss_rate=0.0015, cleaning_threshold=6.0,
+def soiling_kimber(weather_df, soiling_loss_rate=0.15, cleaning_threshold=6.0,
                    max_soiling=0.30, grace_period=14):
-    soiling_loss_rate = float(soiling_loss_rate)
-    cleaning_threshold = float(cleaning_threshold)
+    soiling_loss_rate = float(soiling_loss_rate) / 100   # GUI stores %/day (e.g. 0.1 = 0.1%/day), pvlib expects fraction/day
+    cleaning_threshold = float(cleaning_threshold) * 100  # GUI stores fraction 0-1 (e.g. 0.05 → 5mm), pvlib expects mm
     max_soiling = float(max_soiling)
     grace_period = int(grace_period)
     # Kimber (2006): rain-based soiling model where loss builds up daily and resets on rain
@@ -84,9 +84,9 @@ def trapezoid_score(x, x_lo, x_hi, ramp = 10):
 # Injection point B: modify module params or system config
 # ==========================================================
 
-def degradation(module_params, years, annual_rate=0.005):
+def degradation(module_params, years, annual_rate=0.5):
     years = float(years)
-    annual_rate = float(annual_rate)
+    annual_rate = float(annual_rate) / 100  # GUI stores %/year (e.g. 0.5 = 0.5%/year)
     # Jordan & Kurtz (2013): median 0.5%/year Pmax loss
     # PVsyst internally assumes ca. 80% of that loss maps to I_L_ref reduction,
     # we will use this assumption for now
