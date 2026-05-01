@@ -201,8 +201,10 @@ class Simulation():
 
     
     def save(self):
-        
+
         sim_id=self.community["name"]+"_"+datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+
+        meta_rows = []
 
         for id, sys in self.systems.items():
 
@@ -217,10 +219,13 @@ class Simulation():
             fault_ratio_col = fault_ratio.rename("fault_ratio")
             fault_flag = (fault_ratio >= 0.2).astype(int).rename("fault_flag")
 
+            p_peak = sys.module['STC'] * sys.modules_per_string * sys.strings
+
             # Combine columns: ac power | original weather | anomaly weather | fault flags | shading loss
             all_frame = pd.concat([
                 self.output[id].rename("ac_power"),
                 self.output_healthy[id].rename("ac_power_healthy"),
+                pd.Series(p_peak, index=self.weather[id].index, name="p_peak_w"),
                 self.weather[id],
                 self.weather_with_anomalies[id].add_suffix("_anomaly"),
                 fault_ratio_col,
@@ -239,6 +244,25 @@ class Simulation():
 
             # Save All
             all_frame.to_csv('./output/'+sim_id+'/'+id+'.csv')
+
+            meta_rows.append({
+                "system_id":         id,
+                "latitude":          sys.latitude,
+                "longitude":         sys.longitude,
+                "altitude_m":        sys.altitude,
+                "tilt_deg":          sys.tilt,
+                "azimuth_deg":       sys.azimuth,
+                "modules_per_string":sys.modules_per_string,
+                "strings":           sys.strings,
+                "p_peak_w":          p_peak,
+                "module_cec":        sys.module_cec,
+                "inverter_cec":      sys.inverter_cec,
+                "timezone":          sys.timezone,
+                "start_date":        self.community["start_date"],
+                "end_date":          self.community["end_date"],
+            })
+
+        pd.DataFrame(meta_rows).to_csv('./output/'+sim_id+'/metadata.csv', index=False)
 
 
 
