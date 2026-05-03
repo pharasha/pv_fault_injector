@@ -589,7 +589,8 @@ def on_marker_click(marker):
 
 def update_sidebar_fields(marker):
 
-    sys_id_label.configure(text=f"{marker.text}")
+    sys_id_label.delete(0, "end")
+    sys_id_label.insert(0,f"{marker.text}")
 
     #UPDATE PARAMS FIELDS
     for key, value in marker.props.items():    
@@ -631,6 +632,10 @@ def update_markers(*args):
     global selected_marker
     if selected_marker:
    
+    # UPDATE NAME
+        selected_marker.text=(sys_id_label.get())
+        selected_marker.map_widget.canvas.itemconfig(selected_marker.canvas_text,text=selected_marker.text)
+
     # UPDATE PARAMS 
         for key, widget in properties_widgets.items():
             selected_marker.props[key]=SYSTEM_PROPERTIES_DATA[key]["type"](widget.get())
@@ -668,7 +673,7 @@ def delete_selected_marker():
         all_markers.remove(selected_marker)
         selected_marker.delete()
         selected_marker = None
-        sys_id_label.configure(text="--")
+        sys_id_label.delete(0, "end")
         for item in event_tree.get_children():
             event_tree.delete(item)
         for widget in properties_widgets.values():
@@ -959,7 +964,8 @@ run_sim_btn.grid(row=5, column=1,  pady=5);run_sim_btn.grid_forget()
 
 system_panel = ctk.CTkFrame(root, corner_radius=12,width=350)
 
-sys_id_label = ctk.CTkLabel(system_panel, text="-", font=("Arial", 15, "bold"), text_color="#ffffff")
+sys_id_label = ctk.CTkEntry(system_panel, font=("Arial", 15, "bold"), text_color="#ffffff")
+sys_id_label.bind("<KeyRelease>", update_markers)
 sys_id_label.pack(pady=(5, 5))
 
 
