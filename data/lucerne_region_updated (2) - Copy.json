@@ -1,0 +1,403 @@
+{
+    "name": "lucerne_region_energy_community",
+    "desc": "100 PV systems across Kanton Luzern. 1 temporary fault per year (2023-2025). All permanent faults active. 50% of systems have mask shading enabled.",
+    "start_date": "2023-01-01",
+    "end_date": "2023-12-31",
+    "systems": [
+        {
+            "name": "Horw #1",
+            "props": {
+                "latitude": 47.02130775919762,
+                "longitude": 8.304698227397893,
+                "module_cec": "Trina_Solar_TSM_275DD05A_051_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 4.8,
+                "tilt_deg": 52.5,
+                "azimuth_deg": 128.7,
+                "modules_per_string": 6,
+                "strings": 1
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.08,
+                            "cleaning_threshold": 0.04,
+                            "max_soiling": 0.4,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                48.0,
+                                128.0
+                            ],
+                            "el_range": [
+                                10.0,
+                                28.0
+                            ],
+                            "affected_fraction": 0.28,
+                            "opacity": 0.9,
+                            "ramp": 2
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 2
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.38
+                        }
+                    }
+                },
+                "temporary": {
+                    "inverter_fault_125": {
+                        "start": "2023-05-21",
+                        "end": "2023-05-25",
+                        "params": {
+                            "efficiency_loss": 0.19
+                        }
+                    },
+                    "inverter_fault_792": {
+                        "start": "2024-10-06",
+                        "end": "2024-10-08",
+                        "params": {
+                            "efficiency_loss": 0.48
+                        }
+                    },
+                    "inverter_fault_130": {
+                        "start": "2025-02-17",
+                        "end": "2025-02-21",
+                        "params": {
+                            "efficiency_loss": 0.19
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "Horw #2",
+            "props": {
+                "latitude": 47.024467369869555,
+                "longitude": 8.308217285625432,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM250P_60_V",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 13.9,
+                "tilt_deg": 30.7,
+                "azimuth_deg": 130.3,
+                "modules_per_string": 4,
+                "strings": 4
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.45,
+                            "grace_period": 10
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                55.0,
+                                140.0
+                            ],
+                            "el_range": [
+                                7.0,
+                                22.0
+                            ],
+                            "affected_fraction": 0.35,
+                            "opacity": 1.0,
+                            "ramp": 3
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.6,
+                            "initial_years": 1
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.45
+                        }
+                    }
+                },
+                "temporary": {
+                    "inverter_fault_674": {
+                        "start": "2023-04-12",
+                        "end": "2023-04-24",
+                        "params": {
+                            "efficiency_loss": 0.52
+                        }
+                    },
+                    "open_string_325": {
+                        "start": "2024-08-17",
+                        "end": "2024-08-27",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_877": {
+                        "start": "2025-03-23",
+                        "end": "2025-04-04",
+                        "params": {
+                            "efficiency_loss": 0.34
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "Kriens #1",
+            "props": {
+                "latitude": 47.0334,
+                "longitude": 8.2775,
+                "module_cec": "Trina_Solar_TSM_260PE05A",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 9.6,
+                "tilt_deg": 23.0,
+                "azimuth_deg": 187.9,
+                "modules_per_string": 8,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.07,
+                            "cleaning_threshold": 0.03,
+                            "max_soiling": 0.35,
+                            "grace_period": 8
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                40.0,
+                                110.0
+                            ],
+                            "el_range": [
+                                12.0,
+                                35.0
+                            ],
+                            "affected_fraction": 0.25,
+                            "opacity": 0.85,
+                            "ramp": 1
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.4,
+                            "initial_years": 3
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.3
+                        }
+                    }
+                },
+                "temporary": {
+                    "open_string_259": {
+                        "start": "2023-04-21",
+                        "end": "2023-05-04",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_194": {
+                        "start": "2024-07-13",
+                        "end": "2024-07-15",
+                        "params": {
+                            "efficiency_loss": 0.29
+                        }
+                    },
+                    "open_string_718": {
+                        "start": "2025-05-16",
+                        "end": "2025-05-29",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "Kriens #2",
+            "props": {
+                "latitude": 47.0298,
+                "longitude": 8.2839,
+                "module_cec": "Trina_Solar_TSM_255PD05_051",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 29.4,
+                "tilt_deg": 39.8,
+                "azimuth_deg": 237.2,
+                "modules_per_string": 8,
+                "strings": 1
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.12,
+                            "cleaning_threshold": 0.06,
+                            "max_soiling": 0.5,
+                            "grace_period": 6
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                60.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                18.0
+                            ],
+                            "affected_fraction": 0.4,
+                            "opacity": 0.95,
+                            "ramp": 4
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.7,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.55
+                        }
+                    }
+                },
+                "temporary": {
+                    "open_string_649": {
+                        "start": "2023-03-05",
+                        "end": "2023-03-12",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_949": {
+                        "start": "2024-11-17",
+                        "end": "2024-11-27",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_821": {
+                        "start": "2025-02-05",
+                        "end": "2025-02-06",
+                        "params": {
+                            "efficiency_loss": 0.53
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "Luzern #1",
+            "props": {
+                "latitude": 47.04951375560391,
+                "longitude": 8.312257551358101,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKMS270M_60B_EP",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 22.2,
+                "tilt_deg": 27.2,
+                "azimuth_deg": 134.1,
+                "modules_per_string": 8,
+                "strings": 3
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.09,
+                            "cleaning_threshold": 0.04,
+                            "max_soiling": 0.42,
+                            "grace_period": 9
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                35.0,
+                                125.0
+                            ],
+                            "el_range": [
+                                8.0,
+                                25.0
+                            ],
+                            "affected_fraction": 0.32,
+                            "opacity": 0.88,
+                            "ramp": 2
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 4
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.42
+                        }
+                    }
+                },
+                "temporary": {
+                    "open_string_181": {
+                        "start": "2023-04-30",
+                        "end": "2023-05-14",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_384": {
+                        "start": "2024-08-20",
+                        "end": "2024-08-31",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_479": {
+                        "start": "2025-07-01",
+                        "end": "2025-07-05",
+                        "params": {
+                            "efficiency_loss": 0.54
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
