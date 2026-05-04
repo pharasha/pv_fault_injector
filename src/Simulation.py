@@ -28,11 +28,15 @@ class Simulation():
         self.output_healthy             = {}
         self.timezone                   = { id: sys.timezone for id, sys in self.systems.items() }
 
-    def fetchWeather(self, sys, id):
+    def fetchWeather(self):
         start = self.community["start_date"]
         end   = self.community["end_date"]
-        weather = self.weather_model.request_historical(sys.latitude, sys.longitude, start, end)
-        return weather.tz_convert(sys.timezone)
+        ids=[id for id in self.systems.keys()]
+        latitudes=[sys.latitude for sys in self.systems.values()]
+        longitudes=[sys.latitude for sys in self.systems.values()]
+        tzs=[sys.timezone for sys in self.systems.values()]
+        weather = self.weather_model.request_historical(ids,latitudes, longitudes, start, end,tzs)
+        return weather
 
     def set_timezone(self, timestamp, timezone):
         ts = pd.Timestamp(timestamp)
@@ -170,11 +174,12 @@ class Simulation():
 
     #  new pipeline when apply functions are done:
     def run(self, save=True):
+
+        #ONE API CALL FETCH WEATHER FOR ALL LOCATIONS
+        self.weather = self.fetchWeather()
+
         for id, sys in self.systems.items():
             fault_list = self.build_fault_list(self.system_data[id]["events"])
-
-            # featch weather system
-            self.weather[id] = self.fetchWeather(sys, id)
 
             # Injection Point A: weather modifications
             self.weather_with_anomalies[id] = self.apply_point_a(id, self.weather[id], fault_list, sys.location)

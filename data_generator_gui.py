@@ -233,8 +233,6 @@ def runSim():
         messagebox.showerror("Simulation Failed", str(e))
 
 
-
-
 def debug_print():
     print(map_widget.zoom)
     [poly.delete() for poly in buildings_poly]
