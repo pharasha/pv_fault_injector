@@ -9,13 +9,13 @@
             "props": {
                 "latitude": 47.02130775919762,
                 "longitude": 8.304698227397893,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_72HBD_385M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 468,
-                "tilt_deg": 25.0,
-                "azimuth_deg": 178.0,
-                "modules_per_string": 5,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_275DD05A_051_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 4.8,
+                "tilt_deg": 52.5,
+                "azimuth_deg": 128.7,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -59,25 +59,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_143": {
-                        "start": "2023-03-12",
-                        "end": "2023-04-01",
+                    "inverter_fault_125": {
+                        "start": "2023-05-21",
+                        "end": "2023-05-25",
                         "params": {
-                            "efficiency_loss": 0.5
+                            "efficiency_loss": 0.19
                         }
                     },
-                    "open_string_287": {
-                        "start": "2024-06-18",
-                        "end": "2024-07-05",
+                    "inverter_fault_792": {
+                        "start": "2024-10-06",
+                        "end": "2024-10-08",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.48
                         }
                     },
-                    "inverter_fault_531": {
-                        "start": "2025-09-22",
-                        "end": "2025-10-10",
+                    "inverter_fault_130": {
+                        "start": "2025-02-17",
+                        "end": "2025-02-21",
                         "params": {
-                            "efficiency_loss": 0.35
+                            "efficiency_loss": 0.19
                         }
                     }
                 }
@@ -88,13 +88,13 @@
             "props": {
                 "latitude": 47.024467369869555,
                 "longitude": 8.308217285625432,
-                "module_cec": "Trina_Solar_TSM_365DEG14C_07_II_",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 472,
-                "tilt_deg": 22.0,
-                "azimuth_deg": 182.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM250P_60_V",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 13.9,
+                "tilt_deg": 30.7,
+                "azimuth_deg": 130.3,
                 "modules_per_string": 4,
-                "strings": 3
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -138,25 +138,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_162": {
-                        "start": "2023-05-08",
-                        "end": "2023-05-28",
+                    "inverter_fault_674": {
+                        "start": "2023-04-12",
+                        "end": "2023-04-24",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.52
                         }
                     },
-                    "inverter_fault_394": {
-                        "start": "2024-01-15",
-                        "end": "2024-02-03",
+                    "open_string_325": {
+                        "start": "2024-08-17",
+                        "end": "2024-08-27",
                         "params": {
-                            "efficiency_loss": 0.6
+                            "strings_lost": 2
                         }
                     },
-                    "open_string_718": {
-                        "start": "2025-08-11",
-                        "end": "2025-08-29",
+                    "inverter_fault_877": {
+                        "start": "2025-03-23",
+                        "end": "2025-04-04",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.34
                         }
                     }
                 }
@@ -167,12 +167,12 @@
             "props": {
                 "latitude": 47.0334,
                 "longitude": 8.2775,
-                "module_cec": "Jinko_Solar_Co___Ltd_JKM340PP_72_J4",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 480,
-                "tilt_deg": 28.0,
-                "azimuth_deg": 170.0,
-                "modules_per_string": 6,
+                "module_cec": "Trina_Solar_TSM_260PE05A",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 9.6,
+                "tilt_deg": 23.0,
+                "azimuth_deg": 187.9,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -217,25 +217,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_229": {
-                        "start": "2023-08-05",
-                        "end": "2023-08-25",
+                    "open_string_259": {
+                        "start": "2023-04-21",
+                        "end": "2023-05-04",
                         "params": {
-                            "efficiency_loss": 0.4
+                            "strings_lost": 2
                         }
                     },
-                    "open_string_447": {
-                        "start": "2024-03-17",
-                        "end": "2024-04-04",
+                    "inverter_fault_194": {
+                        "start": "2024-07-13",
+                        "end": "2024-07-15",
+                        "params": {
+                            "efficiency_loss": 0.29
+                        }
+                    },
+                    "open_string_718": {
+                        "start": "2025-05-16",
+                        "end": "2025-05-29",
                         "params": {
                             "strings_lost": 1
-                        }
-                    },
-                    "inverter_fault_683": {
-                        "start": "2025-11-10",
-                        "end": "2025-11-28",
-                        "params": {
-                            "efficiency_loss": 0.55
                         }
                     }
                 }
@@ -246,13 +246,13 @@
             "props": {
                 "latitude": 47.0298,
                 "longitude": 8.2839,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_60PE_305M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 475,
-                "tilt_deg": 30.0,
-                "azimuth_deg": 185.0,
-                "modules_per_string": 5,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_255PD05_051",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 29.4,
+                "tilt_deg": 39.8,
+                "azimuth_deg": 237.2,
+                "modules_per_string": 8,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -296,25 +296,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_318": {
-                        "start": "2023-02-20",
+                    "open_string_649": {
+                        "start": "2023-03-05",
                         "end": "2023-03-12",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_562": {
-                        "start": "2024-10-14",
-                        "end": "2024-11-01",
+                    "open_string_949": {
+                        "start": "2024-11-17",
+                        "end": "2024-11-27",
                         "params": {
-                            "efficiency_loss": 0.7
+                            "strings_lost": 2
                         }
                     },
-                    "open_string_794": {
-                        "start": "2025-04-07",
-                        "end": "2025-04-25",
+                    "inverter_fault_821": {
+                        "start": "2025-02-05",
+                        "end": "2025-02-06",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.53
                         }
                     }
                 }
@@ -325,13 +325,13 @@
             "props": {
                 "latitude": 47.04951375560391,
                 "longitude": 8.312257551358101,
-                "module_cec": "Trina_Solar_TSM_310PD14_18",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 445,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKMS270M_60B_EP",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 22.2,
+                "tilt_deg": 27.2,
+                "azimuth_deg": 134.1,
+                "modules_per_string": 8,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -375,25 +375,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_175": {
-                        "start": "2023-07-14",
-                        "end": "2023-08-02",
-                        "params": {
-                            "efficiency_loss": 0.3
-                        }
-                    },
-                    "open_string_489": {
-                        "start": "2024-02-09",
-                        "end": "2024-02-27",
+                    "open_string_181": {
+                        "start": "2023-04-30",
+                        "end": "2023-05-14",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_823": {
-                        "start": "2025-06-16",
-                        "end": "2025-07-04",
+                    "open_string_384": {
+                        "start": "2024-08-20",
+                        "end": "2024-08-31",
                         "params": {
-                            "efficiency_loss": 0.65
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_479": {
+                        "start": "2025-07-01",
+                        "end": "2025-07-05",
+                        "params": {
+                            "efficiency_loss": 0.54
                         }
                     }
                 }
@@ -404,12 +404,12 @@
             "props": {
                 "latitude": 47.05841373523454,
                 "longitude": 8.318803273500663,
-                "module_cec": "Jinko_Solar_Co___Ltd_JKM390M_72L_V",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 450,
-                "tilt_deg": 23.0,
-                "azimuth_deg": 173.0,
-                "modules_per_string": 5,
+                "module_cec": "Trina_Solar_TSM_325PD14_05C",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 19.5,
+                "tilt_deg": 49.1,
+                "azimuth_deg": 196.7,
+                "modules_per_string": 4,
                 "strings": 3
             },
             "events": {
@@ -454,25 +454,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_256": {
-                        "start": "2023-10-08",
-                        "end": "2023-10-28",
+                    "inverter_fault_723": {
+                        "start": "2023-11-22",
+                        "end": "2023-11-25",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.43
                         }
                     },
-                    "inverter_fault_614": {
-                        "start": "2024-04-22",
-                        "end": "2024-05-12",
+                    "inverter_fault_267": {
+                        "start": "2024-08-24",
+                        "end": "2024-08-31",
                         "params": {
-                            "efficiency_loss": 0.45
+                            "efficiency_loss": 0.22
                         }
                     },
-                    "open_string_857": {
-                        "start": "2025-02-14",
-                        "end": "2025-03-04",
+                    "inverter_fault_801": {
+                        "start": "2025-06-16",
+                        "end": "2025-06-30",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.62
                         }
                     }
                 }
@@ -483,13 +483,13 @@
             "props": {
                 "latitude": 47.07415112202511,
                 "longitude": 8.282033054165595,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_72HV_340M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 440,
-                "tilt_deg": 26.0,
-                "azimuth_deg": 178.0,
+                "module_cec": "Trina_Solar_TSM_275PD05_10D",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US__480V_",
+                "altitude_m": 3.8,
+                "tilt_deg": 23.0,
+                "azimuth_deg": 144.7,
                 "modules_per_string": 6,
-                "strings": 2
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -533,25 +533,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_341": {
-                        "start": "2023-04-17",
-                        "end": "2023-05-05",
+                    "inverter_fault_334": {
+                        "start": "2023-01-17",
+                        "end": "2023-01-30",
                         "params": {
-                            "efficiency_loss": 0.6
+                            "efficiency_loss": 0.26
                         }
                     },
-                    "open_string_578": {
-                        "start": "2024-08-12",
-                        "end": "2024-08-30",
+                    "open_string_167": {
+                        "start": "2024-04-18",
+                        "end": "2024-04-28",
                         "params": {
-                            "strings_lost": 1
+                            "strings_lost": 3
                         }
                     },
-                    "inverter_fault_912": {
-                        "start": "2025-01-20",
-                        "end": "2025-02-07",
+                    "open_string_317": {
+                        "start": "2025-12-02",
+                        "end": "2025-12-10",
                         "params": {
-                            "efficiency_loss": 0.4
+                            "strings_lost": 2
                         }
                     }
                 }
@@ -562,12 +562,12 @@
             "props": {
                 "latitude": 47.079311563115446,
                 "longitude": 8.272695988551078,
-                "module_cec": "Trina_Solar_TSM_385DE14H_II_",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 443,
-                "tilt_deg": 21.0,
-                "azimuth_deg": 185.0,
-                "modules_per_string": 4,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM310M_60BL",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US__480V_",
+                "altitude_m": 14.1,
+                "tilt_deg": 38.1,
+                "azimuth_deg": 149.8,
+                "modules_per_string": 5,
                 "strings": 2
             },
             "events": {
@@ -612,25 +612,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_423": {
-                        "start": "2023-07-24",
-                        "end": "2023-08-12",
+                    "open_string_246": {
+                        "start": "2023-05-16",
+                        "end": "2023-05-19",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_667": {
-                        "start": "2024-11-18",
-                        "end": "2024-12-06",
+                    "open_string_864": {
+                        "start": "2024-10-26",
+                        "end": "2024-11-02",
                         "params": {
-                            "efficiency_loss": 0.35
+                            "strings_lost": 3
                         }
                     },
-                    "open_string_891": {
-                        "start": "2025-06-09",
-                        "end": "2025-06-27",
+                    "open_string_470": {
+                        "start": "2025-04-23",
+                        "end": "2025-04-26",
                         "params": {
-                            "strings_lost": 1
+                            "strings_lost": 3
                         }
                     }
                 }
@@ -641,13 +641,13 @@
             "props": {
                 "latitude": 47.07568720521308,
                 "longitude": 8.33395616605901,
-                "module_cec": "Jinko_Solar_Co___Ltd_JKM310M_72",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 455,
-                "tilt_deg": 24.0,
-                "azimuth_deg": 176.0,
-                "modules_per_string": 5,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_185DA03",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_3_8KTL_USL0__240V_",
+                "altitude_m": 6.6,
+                "tilt_deg": 44.8,
+                "azimuth_deg": 161.2,
+                "modules_per_string": 6,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -691,25 +691,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_116": {
-                        "start": "2023-01-23",
-                        "end": "2023-02-10",
-                        "params": {
-                            "efficiency_loss": 0.5
-                        }
-                    },
-                    "open_string_352": {
-                        "start": "2024-05-06",
-                        "end": "2024-05-24",
+                    "open_string_193": {
+                        "start": "2023-01-25",
+                        "end": "2023-02-08",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_748": {
-                        "start": "2025-10-13",
-                        "end": "2025-11-01",
+                    "inverter_fault_742": {
+                        "start": "2024-03-22",
+                        "end": "2024-04-04",
                         "params": {
-                            "efficiency_loss": 0.45
+                            "efficiency_loss": 0.55
+                        }
+                    },
+                    "inverter_fault_494": {
+                        "start": "2025-07-15",
+                        "end": "2025-07-25",
+                        "params": {
+                            "efficiency_loss": 0.8
                         }
                     }
                 }
@@ -720,13 +720,13 @@
             "props": {
                 "latitude": 47.08275215967444,
                 "longitude": 8.344225228362859,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_72PH_370M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 460,
-                "tilt_deg": 27.0,
-                "azimuth_deg": 183.0,
-                "modules_per_string": 6,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_255PD05_05",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 3.9,
+                "tilt_deg": 45.6,
+                "azimuth_deg": 139.8,
+                "modules_per_string": 5,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -770,23 +770,23 @@
                     }
                 },
                 "temporary": {
-                    "open_string_235": {
-                        "start": "2023-09-05",
-                        "end": "2023-09-23",
+                    "open_string_666": {
+                        "start": "2023-01-06",
+                        "end": "2023-01-17",
                         "params": {
-                            "strings_lost": 1
+                            "strings_lost": 3
                         }
                     },
-                    "inverter_fault_479": {
-                        "start": "2024-07-22",
-                        "end": "2024-08-09",
+                    "inverter_fault_798": {
+                        "start": "2024-10-01",
+                        "end": "2024-10-14",
                         "params": {
-                            "efficiency_loss": 0.55
+                            "efficiency_loss": 0.22
                         }
                     },
-                    "open_string_816": {
-                        "start": "2025-03-18",
-                        "end": "2025-04-05",
+                    "open_string_214": {
+                        "start": "2025-05-31",
+                        "end": "2025-06-07",
                         "params": {
                             "strings_lost": 1
                         }
@@ -799,13 +799,13 @@
             "props": {
                 "latitude": 47.01782611978988,
                 "longitude": 8.314611671916936,
-                "module_cec": "Trina_Solar_TSM_340DEG14_47_II_",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 462,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 190.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKMS295M_60_EP",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 25.5,
+                "tilt_deg": 68.1,
+                "azimuth_deg": 129.3,
+                "modules_per_string": 6,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -849,25 +849,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_197": {
-                        "start": "2023-06-10",
-                        "end": "2023-06-28",
-                        "params": {
-                            "efficiency_loss": 0.4
-                        }
-                    },
-                    "open_string_433": {
-                        "start": "2024-01-08",
-                        "end": "2024-01-26",
+                    "open_string_103": {
+                        "start": "2023-05-15",
+                        "end": "2023-05-24",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_769": {
-                        "start": "2025-08-19",
-                        "end": "2025-09-06",
+                    "inverter_fault_991": {
+                        "start": "2024-11-16",
+                        "end": "2024-11-21",
                         "params": {
-                            "efficiency_loss": 0.6
+                            "efficiency_loss": 0.67
+                        }
+                    },
+                    "inverter_fault_256": {
+                        "start": "2025-07-11",
+                        "end": "2025-07-24",
+                        "params": {
+                            "efficiency_loss": 0.14
                         }
                     }
                 }
@@ -878,13 +878,13 @@
             "props": {
                 "latitude": 47.022829076567504,
                 "longitude": 8.299076317302678,
-                "module_cec": "Jinko_Solar_Co___Ltd_JKM390M_72L_V",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 32.0,
-                "azimuth_deg": 175.0,
-                "modules_per_string": 5,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM305M_60L",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 10.1,
+                "tilt_deg": 49.0,
+                "azimuth_deg": 174.7,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -928,25 +928,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_284": {
-                        "start": "2023-03-27",
-                        "end": "2023-04-14",
+                    "inverter_fault_713": {
+                        "start": "2023-06-15",
+                        "end": "2023-06-23",
+                        "params": {
+                            "efficiency_loss": 0.03
+                        }
+                    },
+                    "open_string_999": {
+                        "start": "2024-06-06",
+                        "end": "2024-06-10",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_528": {
-                        "start": "2024-09-16",
-                        "end": "2024-10-04",
+                    "inverter_fault_680": {
+                        "start": "2025-02-10",
+                        "end": "2025-02-12",
                         "params": {
-                            "efficiency_loss": 0.5
-                        }
-                    },
-                    "open_string_862": {
-                        "start": "2025-11-24",
-                        "end": "2025-12-12",
-                        "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.59
                         }
                     }
                 }
@@ -957,13 +957,13 @@
             "props": {
                 "latitude": 47.0372,
                 "longitude": 8.2712,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_72HBD_385M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 490,
-                "tilt_deg": 25.0,
-                "azimuth_deg": 168.0,
-                "modules_per_string": 4,
-                "strings": 3
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM375M_72H_V",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_9KTL_USL0__240V_",
+                "altitude_m": 11.0,
+                "tilt_deg": 23.0,
+                "azimuth_deg": 204.2,
+                "modules_per_string": 6,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -1007,25 +1007,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_358": {
-                        "start": "2023-11-12",
-                        "end": "2023-11-30",
+                    "inverter_fault_878": {
+                        "start": "2023-09-30",
+                        "end": "2023-10-13",
                         "params": {
-                            "efficiency_loss": 0.7
+                            "efficiency_loss": 0.11
                         }
                     },
-                    "open_string_596": {
-                        "start": "2024-06-03",
-                        "end": "2024-06-21",
+                    "open_string_662": {
+                        "start": "2024-03-25",
+                        "end": "2024-03-30",
                         "params": {
-                            "strings_lost": 1
+                            "strings_lost": 3
                         }
                     },
-                    "inverter_fault_831": {
-                        "start": "2025-03-25",
-                        "end": "2025-04-12",
+                    "open_string_316": {
+                        "start": "2025-10-04",
+                        "end": "2025-10-17",
                         "params": {
-                            "efficiency_loss": 0.35
+                            "strings_lost": 3
                         }
                     }
                 }
@@ -1036,13 +1036,13 @@
             "props": {
                 "latitude": 47.0314,
                 "longitude": 8.2901,
-                "module_cec": "Trina_Solar_TSM_365DEG14C_07_II_",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 465,
-                "tilt_deg": 29.0,
-                "azimuth_deg": 192.0,
+                "module_cec": "Trina_Solar_TSM_275DD05A_00S_II_",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 13.6,
+                "tilt_deg": 37.4,
+                "azimuth_deg": 232.9,
                 "modules_per_string": 5,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -1086,25 +1086,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_176": {
-                        "start": "2023-04-29",
-                        "end": "2023-05-17",
+                    "inverter_fault_830": {
+                        "start": "2023-06-09",
+                        "end": "2023-06-16",
+                        "params": {
+                            "efficiency_loss": 0.8
+                        }
+                    },
+                    "open_string_548": {
+                        "start": "2024-09-21",
+                        "end": "2024-09-29",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_414": {
-                        "start": "2024-02-26",
-                        "end": "2024-03-15",
+                    "inverter_fault_330": {
+                        "start": "2025-02-02",
+                        "end": "2025-02-08",
                         "params": {
-                            "efficiency_loss": 0.65
-                        }
-                    },
-                    "open_string_752": {
-                        "start": "2025-10-27",
-                        "end": "2025-11-14",
-                        "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.03
                         }
                     }
                 }
@@ -1115,12 +1115,12 @@
             "props": {
                 "latitude": 47.0464,
                 "longitude": 8.3032,
-                "module_cec": "Jinko_Solar_Co___Ltd_JKM340PP_72_J4",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 438,
-                "tilt_deg": 22.0,
-                "azimuth_deg": 178.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_315PD14_102",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_9KTL_USL0__240V_",
+                "altitude_m": 8.9,
+                "tilt_deg": 30.9,
+                "azimuth_deg": 154.5,
+                "modules_per_string": 7,
                 "strings": 2
             },
             "events": {
@@ -1165,25 +1165,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_293": {
-                        "start": "2023-09-18",
-                        "end": "2023-10-06",
+                    "inverter_fault_702": {
+                        "start": "2023-04-23",
+                        "end": "2023-04-24",
                         "params": {
-                            "efficiency_loss": 0.3
+                            "efficiency_loss": 0.07
                         }
                     },
-                    "open_string_537": {
-                        "start": "2024-04-14",
-                        "end": "2024-05-02",
+                    "inverter_fault_334": {
+                        "start": "2024-02-04",
+                        "end": "2024-02-05",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.69
                         }
                     },
-                    "inverter_fault_875": {
-                        "start": "2025-05-21",
-                        "end": "2025-06-08",
+                    "inverter_fault_626": {
+                        "start": "2025-05-02",
+                        "end": "2025-05-07",
                         "params": {
-                            "efficiency_loss": 0.55
+                            "efficiency_loss": 0.54
                         }
                     }
                 }
@@ -1194,13 +1194,13 @@
             "props": {
                 "latitude": 47.05293245976041,
                 "longitude": 8.295442249507687,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_60PE_305M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 442,
-                "tilt_deg": 26.0,
-                "azimuth_deg": 169.0,
-                "modules_per_string": 6,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_330PD14_05U",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US__480V_",
+                "altitude_m": 13.5,
+                "tilt_deg": 24.0,
+                "azimuth_deg": 173.9,
+                "modules_per_string": 5,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -1244,25 +1244,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_148": {
-                        "start": "2023-01-16",
-                        "end": "2023-02-03",
+                    "inverter_fault_652": {
+                        "start": "2023-03-09",
+                        "end": "2023-03-21",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.75
                         }
                     },
-                    "inverter_fault_386": {
-                        "start": "2024-06-28",
-                        "end": "2024-07-16",
+                    "open_string_348": {
+                        "start": "2024-08-30",
+                        "end": "2024-09-12",
                         "params": {
-                            "efficiency_loss": 0.4
+                            "strings_lost": 2
                         }
                     },
-                    "open_string_724": {
-                        "start": "2025-07-14",
-                        "end": "2025-08-01",
+                    "inverter_fault_196": {
+                        "start": "2025-02-19",
+                        "end": "2025-03-02",
                         "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.35
                         }
                     }
                 }
@@ -1273,13 +1273,13 @@
             "props": {
                 "latitude": 47.077239793279126,
                 "longitude": 8.288142521153901,
-                "module_cec": "Trina_Solar_TSM_385DE14H_II_",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 437,
-                "tilt_deg": 28.0,
-                "azimuth_deg": 181.0,
-                "modules_per_string": 5,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_290DD05A_002_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US__480V_",
+                "altitude_m": 36.6,
+                "tilt_deg": 33.9,
+                "azimuth_deg": 169.8,
+                "modules_per_string": 7,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -1323,25 +1323,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_267": {
-                        "start": "2023-05-22",
-                        "end": "2023-06-09",
+                    "open_string_520": {
+                        "start": "2023-08-28",
+                        "end": "2023-09-11",
                         "params": {
-                            "efficiency_loss": 0.5
+                            "strings_lost": 3
                         }
                     },
-                    "open_string_503": {
-                        "start": "2024-10-07",
-                        "end": "2024-10-25",
+                    "inverter_fault_789": {
+                        "start": "2024-11-30",
+                        "end": "2024-12-11",
+                        "params": {
+                            "efficiency_loss": 0.09
+                        }
+                    },
+                    "open_string_845": {
+                        "start": "2025-06-23",
+                        "end": "2025-07-06",
                         "params": {
                             "strings_lost": 1
-                        }
-                    },
-                    "inverter_fault_841": {
-                        "start": "2025-02-17",
-                        "end": "2025-03-07",
-                        "params": {
-                            "efficiency_loss": 0.7
                         }
                     }
                 }
@@ -1352,13 +1352,13 @@
             "props": {
                 "latitude": 47.08491064539525,
                 "longitude": 8.292443625565681,
-                "module_cec": "Jinko_Solar_Co___Ltd_JKM310M_72",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 441,
-                "tilt_deg": 23.0,
-                "azimuth_deg": 188.0,
+                "module_cec": "Trina_Solar_TSM_280DD05A_05U_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 18.8,
+                "tilt_deg": 28.8,
+                "azimuth_deg": 147.8,
                 "modules_per_string": 4,
-                "strings": 3
+                "strings": 2
             },
             "events": {
                 "permanent": {
@@ -1402,25 +1402,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_389": {
-                        "start": "2023-08-28",
-                        "end": "2023-09-15",
+                    "inverter_fault_296": {
+                        "start": "2023-04-08",
+                        "end": "2023-04-17",
+                        "params": {
+                            "efficiency_loss": 0.36
+                        }
+                    },
+                    "open_string_287": {
+                        "start": "2024-05-22",
+                        "end": "2024-05-30",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_627": {
-                        "start": "2024-01-29",
-                        "end": "2024-02-16",
+                    "inverter_fault_553": {
+                        "start": "2025-10-09",
+                        "end": "2025-10-11",
                         "params": {
-                            "efficiency_loss": 0.45
-                        }
-                    },
-                    "open_string_963": {
-                        "start": "2025-05-12",
-                        "end": "2025-05-30",
-                        "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.05
                         }
                     }
                 }
@@ -1431,13 +1431,13 @@
             "props": {
                 "latitude": 47.07185504185645,
                 "longitude": 8.337319312893698,
-                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_72HV_340M",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 452,
-                "tilt_deg": 21.0,
-                "azimuth_deg": 176.0,
-                "modules_per_string": 5,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM300PP_72B",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_9KTL_USL0__240V_",
+                "altitude_m": 10.1,
+                "tilt_deg": 33.1,
+                "azimuth_deg": 120.5,
+                "modules_per_string": 8,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -1481,25 +1481,25 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_214": {
-                        "start": "2023-02-13",
-                        "end": "2023-03-03",
+                    "inverter_fault_195": {
+                        "start": "2023-05-02",
+                        "end": "2023-05-05",
                         "params": {
-                            "efficiency_loss": 0.6
+                            "efficiency_loss": 0.33
                         }
                     },
-                    "open_string_458": {
-                        "start": "2024-07-31",
-                        "end": "2024-08-18",
+                    "open_string_318": {
+                        "start": "2024-07-24",
+                        "end": "2024-07-25",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_793": {
-                        "start": "2025-11-17",
-                        "end": "2025-12-05",
+                    "open_string_102": {
+                        "start": "2025-07-19",
+                        "end": "2025-07-24",
                         "params": {
-                            "efficiency_loss": 0.35
+                            "strings_lost": 2
                         }
                     }
                 }
@@ -1510,13 +1510,13 @@
             "props": {
                 "latitude": 47.08318270294653,
                 "longitude": 8.33581160299181,
-                "module_cec": "Trina_Solar_TSM_310PD14_18",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 458,
-                "tilt_deg": 30.0,
-                "azimuth_deg": 184.0,
-                "modules_per_string": 6,
-                "strings": 2
+                "module_cec": "LONGi_Green_Energy_Technology_Co___Ltd__LR6_72HV_345M",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 9.8,
+                "tilt_deg": 67.7,
+                "azimuth_deg": 202.9,
+                "modules_per_string": 7,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -1560,25 +1560,25 @@
                     }
                 },
                 "temporary": {
-                    "open_string_472": {
-                        "start": "2023-06-19",
-                        "end": "2023-07-07",
+                    "open_string_533": {
+                        "start": "2023-12-23",
+                        "end": "2023-12-31",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_258": {
+                        "start": "2024-04-07",
+                        "end": "2024-04-12",
                         "params": {
                             "strings_lost": 1
                         }
                     },
-                    "inverter_fault_716": {
-                        "start": "2024-03-11",
-                        "end": "2024-03-29",
+                    "inverter_fault_693": {
+                        "start": "2025-10-05",
+                        "end": "2025-10-06",
                         "params": {
-                            "efficiency_loss": 0.55
-                        }
-                    },
-                    "open_string_954": {
-                        "start": "2025-01-13",
-                        "end": "2025-01-31",
-                        "params": {
-                            "strings_lost": 1
+                            "efficiency_loss": 0.6
                         }
                     }
                 }
@@ -1589,13 +1589,13 @@
             "props": {
                 "latitude": 47.016688576027526,
                 "longitude": 8.302108493406081,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_330DD14A_15_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 34.5,
+                "tilt_deg": 63.7,
+                "azimuth_deg": 215.7,
+                "modules_per_string": 7,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -1638,7 +1638,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_151": {
+                        "start": "2023-10-27",
+                        "end": "2023-11-04",
+                        "params": {
+                            "efficiency_loss": 0.41
+                        }
+                    },
+                    "inverter_fault_158": {
+                        "start": "2024-09-17",
+                        "end": "2024-09-19",
+                        "params": {
+                            "efficiency_loss": 0.68
+                        }
+                    },
+                    "inverter_fault_709": {
+                        "start": "2025-02-04",
+                        "end": "2025-02-15",
+                        "params": {
+                            "efficiency_loss": 0.69
+                        }
+                    }
+                }
             }
         },
         {
@@ -1646,13 +1668,13 @@
             "props": {
                 "latitude": 47.015869316308,
                 "longitude": 8.310519900876784,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_255PA05_08",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 4.2,
+                "tilt_deg": 51.7,
+                "azimuth_deg": 127.5,
+                "modules_per_string": 5,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -1695,7 +1717,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_222": {
+                        "start": "2023-10-19",
+                        "end": "2023-10-23",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_734": {
+                        "start": "2024-02-11",
+                        "end": "2024-02-18",
+                        "params": {
+                            "efficiency_loss": 0.53
+                        }
+                    },
+                    "open_string_367": {
+                        "start": "2025-04-15",
+                        "end": "2025-04-26",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -1703,12 +1747,12 @@
             "props": {
                 "latitude": 47.012592151736186,
                 "longitude": 8.30537005956819,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_300PD14_0x2",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_22KTL_US",
+                "altitude_m": 4.3,
+                "tilt_deg": 50.0,
+                "azimuth_deg": 132.3,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -1752,7 +1796,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_344": {
+                        "start": "2023-05-16",
+                        "end": "2023-05-23",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_568": {
+                        "start": "2024-06-10",
+                        "end": "2024-06-23",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_569": {
+                        "start": "2025-11-15",
+                        "end": "2025-11-25",
+                        "params": {
+                            "efficiency_loss": 0.8
+                        }
+                    }
+                }
             }
         },
         {
@@ -1760,13 +1826,13 @@
             "props": {
                 "latitude": 47.012592151736186,
                 "longitude": 8.311206546384597,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_265PD05_082",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US__480V_",
+                "altitude_m": 7.4,
+                "tilt_deg": 21.3,
+                "azimuth_deg": 224.9,
+                "modules_per_string": 5,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -1809,7 +1875,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_650": {
+                        "start": "2023-04-20",
+                        "end": "2023-04-29",
+                        "params": {
+                            "efficiency_loss": 0.22
+                        }
+                    },
+                    "open_string_170": {
+                        "start": "2024-05-05",
+                        "end": "2024-05-11",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_548": {
+                        "start": "2025-10-06",
+                        "end": "2025-10-18",
+                        "params": {
+                            "efficiency_loss": 0.25
+                        }
+                    }
+                }
             }
         },
         {
@@ -1817,13 +1905,13 @@
             "props": {
                 "latitude": 47.00990004467516,
                 "longitude": 8.305198398191237,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_270PEG5_47",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US",
+                "altitude_m": 14.5,
+                "tilt_deg": 50.1,
+                "azimuth_deg": 176.9,
+                "modules_per_string": 7,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -1866,7 +1954,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_783": {
+                        "start": "2023-10-11",
+                        "end": "2023-10-16",
+                        "params": {
+                            "efficiency_loss": 0.75
+                        }
+                    },
+                    "inverter_fault_999": {
+                        "start": "2024-03-09",
+                        "end": "2024-03-14",
+                        "params": {
+                            "efficiency_loss": 0.1
+                        }
+                    },
+                    "inverter_fault_860": {
+                        "start": "2025-10-11",
+                        "end": "2025-10-14",
+                        "params": {
+                            "efficiency_loss": 0.23
+                        }
+                    }
+                }
             }
         },
         {
@@ -1874,13 +1984,13 @@
             "props": {
                 "latitude": 47.02201345782855,
                 "longitude": 8.309232440549636,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_350DD14A_08_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 26.6,
+                "tilt_deg": 44.2,
+                "azimuth_deg": 130.3,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -1923,7 +2033,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_834": {
+                        "start": "2023-06-25",
+                        "end": "2023-06-29",
+                        "params": {
+                            "efficiency_loss": 0.55
+                        }
+                    },
+                    "open_string_617": {
+                        "start": "2024-09-07",
+                        "end": "2024-09-12",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_749": {
+                        "start": "2025-08-05",
+                        "end": "2025-08-19",
+                        "params": {
+                            "efficiency_loss": 0.23
+                        }
+                    }
+                }
             }
         },
         {
@@ -1931,12 +2063,12 @@
             "props": {
                 "latitude": 47.03218071894307,
                 "longitude": 8.273097720701003,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_250PEG5",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US",
+                "altitude_m": 8.7,
+                "tilt_deg": 54.6,
+                "azimuth_deg": 182.0,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -1980,7 +2112,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_441": {
+                        "start": "2023-03-08",
+                        "end": "2023-03-19",
+                        "params": {
+                            "efficiency_loss": 0.78
+                        }
+                    },
+                    "inverter_fault_859": {
+                        "start": "2024-08-14",
+                        "end": "2024-08-23",
+                        "params": {
+                            "efficiency_loss": 0.57
+                        }
+                    },
+                    "inverter_fault_214": {
+                        "start": "2025-02-08",
+                        "end": "2025-02-20",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    }
+                }
             }
         },
         {
@@ -1988,13 +2142,13 @@
             "props": {
                 "latitude": 47.03873244248832,
                 "longitude": 8.284255710202956,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_270PD05_05U",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 11.3,
+                "tilt_deg": 65.7,
+                "azimuth_deg": 211.0,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -2037,7 +2191,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_954": {
+                        "start": "2023-07-09",
+                        "end": "2023-07-19",
+                        "params": {
+                            "efficiency_loss": 0.45
+                        }
+                    },
+                    "open_string_230": {
+                        "start": "2024-01-22",
+                        "end": "2024-01-27",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_466": {
+                        "start": "2025-04-18",
+                        "end": "2025-04-29",
+                        "params": {
+                            "efficiency_loss": 0.21
+                        }
+                    }
+                }
             }
         },
         {
@@ -2045,12 +2221,12 @@
             "props": {
                 "latitude": 47.03674361144331,
                 "longitude": 8.282624927121901,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_265PD05_001",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 6.1,
+                "tilt_deg": 38.3,
+                "azimuth_deg": 140.0,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -2094,7 +2270,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_462": {
+                        "start": "2023-10-14",
+                        "end": "2023-10-28",
+                        "params": {
+                            "efficiency_loss": 0.33
+                        }
+                    },
+                    "inverter_fault_342": {
+                        "start": "2024-03-24",
+                        "end": "2024-04-06",
+                        "params": {
+                            "efficiency_loss": 0.65
+                        }
+                    },
+                    "open_string_125": {
+                        "start": "2025-04-02",
+                        "end": "2025-04-14",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -2102,12 +2300,12 @@
             "props": {
                 "latitude": 47.02937259117787,
                 "longitude": 8.289920535642409,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_240PA05_20",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 9.0,
+                "tilt_deg": 51.8,
+                "azimuth_deg": 193.6,
+                "modules_per_string": 5,
                 "strings": 2
             },
             "events": {
@@ -2151,7 +2349,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_921": {
+                        "start": "2023-12-09",
+                        "end": "2023-12-23",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_373": {
+                        "start": "2024-03-22",
+                        "end": "2024-04-04",
+                        "params": {
+                            "efficiency_loss": 0.56
+                        }
+                    },
+                    "open_string_993": {
+                        "start": "2025-01-20",
+                        "end": "2025-02-03",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -2159,13 +2379,13 @@
             "props": {
                 "latitude": 47.03820599442585,
                 "longitude": 8.290092197019362,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM385M_72_V",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 33.5,
+                "tilt_deg": 31.3,
+                "azimuth_deg": 182.1,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -2208,7 +2428,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_304": {
+                        "start": "2023-08-24",
+                        "end": "2023-08-30",
+                        "params": {
+                            "efficiency_loss": 0.25
+                        }
+                    },
+                    "inverter_fault_328": {
+                        "start": "2024-01-13",
+                        "end": "2024-01-24",
+                        "params": {
+                            "efficiency_loss": 0.16
+                        }
+                    },
+                    "open_string_385": {
+                        "start": "2025-02-05",
+                        "end": "2025-02-18",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -2216,13 +2458,13 @@
             "props": {
                 "latitude": 47.02966511138039,
                 "longitude": 8.273956027585768,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM265PP_60",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 34.8,
+                "tilt_deg": 43.6,
+                "azimuth_deg": 143.2,
+                "modules_per_string": 7,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -2265,7 +2507,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_756": {
+                        "start": "2023-09-18",
+                        "end": "2023-09-25",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_128": {
+                        "start": "2024-02-29",
+                        "end": "2024-03-05",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_139": {
+                        "start": "2025-02-25",
+                        "end": "2025-03-07",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -2273,13 +2537,13 @@
             "props": {
                 "latitude": 47.05318666484125,
                 "longitude": 8.30438300665071,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_225PD05",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 33.1,
+                "tilt_deg": 37.5,
+                "azimuth_deg": 236.9,
+                "modules_per_string": 5,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -2322,7 +2586,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_846": {
+                        "start": "2023-06-10",
+                        "end": "2023-06-17",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_494": {
+                        "start": "2024-10-22",
+                        "end": "2024-10-26",
+                        "params": {
+                            "efficiency_loss": 0.21
+                        }
+                    },
+                    "open_string_101": {
+                        "start": "2025-09-24",
+                        "end": "2025-10-07",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -2330,13 +2616,13 @@
             "props": {
                 "latitude": 47.05646133749731,
                 "longitude": 8.311163631040358,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM295P_72B",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 8.6,
+                "tilt_deg": 36.9,
+                "azimuth_deg": 177.9,
+                "modules_per_string": 7,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -2379,7 +2665,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_472": {
+                        "start": "2023-08-09",
+                        "end": "2023-08-11",
+                        "params": {
+                            "efficiency_loss": 0.76
+                        }
+                    },
+                    "open_string_738": {
+                        "start": "2024-06-09",
+                        "end": "2024-06-20",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_619": {
+                        "start": "2025-06-08",
+                        "end": "2025-06-19",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -2387,13 +2695,13 @@
             "props": {
                 "latitude": 47.05795241645002,
                 "longitude": 8.30215140875032,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_375DEG14_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_22KTL_US",
+                "altitude_m": 23.6,
+                "tilt_deg": 52.2,
+                "azimuth_deg": 220.2,
+                "modules_per_string": 7,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -2436,7 +2744,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_512": {
+                        "start": "2023-12-23",
+                        "end": "2023-12-28",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_296": {
+                        "start": "2024-08-03",
+                        "end": "2024-08-14",
+                        "params": {
+                            "efficiency_loss": 0.75
+                        }
+                    },
+                    "inverter_fault_730": {
+                        "start": "2025-10-19",
+                        "end": "2025-10-24",
+                        "params": {
+                            "efficiency_loss": 0.33
+                        }
+                    }
+                }
             }
         },
         {
@@ -2444,13 +2774,13 @@
             "props": {
                 "latitude": 47.0562566763476,
                 "longitude": 8.297859874326491,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_295PD14",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 33.8,
+                "tilt_deg": 43.9,
+                "azimuth_deg": 141.4,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -2493,7 +2823,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_411": {
+                        "start": "2023-05-27",
+                        "end": "2023-05-31",
+                        "params": {
+                            "efficiency_loss": 0.35
+                        }
+                    },
+                    "open_string_576": {
+                        "start": "2024-08-14",
+                        "end": "2024-08-22",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_623": {
+                        "start": "2025-08-31",
+                        "end": "2025-09-13",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    }
+                }
             }
         },
         {
@@ -2501,13 +2853,13 @@
             "props": {
                 "latitude": 47.04611034618518,
                 "longitude": 8.296314921933913,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM330P_72",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 39.3,
+                "tilt_deg": 39.8,
+                "azimuth_deg": 168.2,
+                "modules_per_string": 5,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -2550,7 +2902,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_774": {
+                        "start": "2023-02-13",
+                        "end": "2023-02-18",
+                        "params": {
+                            "efficiency_loss": 0.42
+                        }
+                    },
+                    "open_string_195": {
+                        "start": "2024-04-30",
+                        "end": "2024-05-11",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_925": {
+                        "start": "2025-04-12",
+                        "end": "2025-04-15",
+                        "params": {
+                            "efficiency_loss": 0.03
+                        }
+                    }
+                }
             }
         },
         {
@@ -2558,12 +2932,12 @@
             "props": {
                 "latitude": 47.04227938533204,
                 "longitude": 8.306786265928054,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_265PD05_08C",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 4.5,
+                "tilt_deg": 27.6,
+                "azimuth_deg": 228.6,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -2607,7 +2981,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_586": {
+                        "start": "2023-11-09",
+                        "end": "2023-11-23",
+                        "params": {
+                            "efficiency_loss": 0.62
+                        }
+                    },
+                    "open_string_524": {
+                        "start": "2024-11-18",
+                        "end": "2024-11-28",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_606": {
+                        "start": "2025-07-24",
+                        "end": "2025-07-28",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -2615,11 +3011,11 @@
             "props": {
                 "latitude": 47.04197263879906,
                 "longitude": 8.314060896808712,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_290DD05A_10_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 39.5,
+                "tilt_deg": 52.9,
+                "azimuth_deg": 162.0,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -2664,7 +3060,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_868": {
+                        "start": "2023-02-24",
+                        "end": "2023-03-09",
+                        "params": {
+                            "efficiency_loss": 0.35
+                        }
+                    },
+                    "inverter_fault_923": {
+                        "start": "2024-12-22",
+                        "end": "2024-12-31",
+                        "params": {
+                            "efficiency_loss": 0.38
+                        }
+                    },
+                    "inverter_fault_968": {
+                        "start": "2025-03-04",
+                        "end": "2025-03-12",
+                        "params": {
+                            "efficiency_loss": 0.12
+                        }
+                    }
+                }
             }
         },
         {
@@ -2672,12 +3090,12 @@
             "props": {
                 "latitude": 47.046300751962576,
                 "longitude": 8.316421240741818,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_255PA05_28",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 14.7,
+                "tilt_deg": 52.5,
+                "azimuth_deg": 183.2,
+                "modules_per_string": 7,
                 "strings": 2
             },
             "events": {
@@ -2721,7 +3139,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_783": {
+                        "start": "2023-09-29",
+                        "end": "2023-10-08",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_873": {
+                        "start": "2024-08-14",
+                        "end": "2024-08-24",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_950": {
+                        "start": "2025-10-08",
+                        "end": "2025-10-16",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -2729,12 +3169,12 @@
             "props": {
                 "latitude": 47.047353483150395,
                 "longitude": 8.307752341205685,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_345DEG14C_07_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 19.9,
+                "tilt_deg": 63.7,
+                "azimuth_deg": 123.4,
+                "modules_per_string": 6,
                 "strings": 2
             },
             "events": {
@@ -2778,7 +3218,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_560": {
+                        "start": "2023-05-13",
+                        "end": "2023-05-26",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_884": {
+                        "start": "2024-09-23",
+                        "end": "2024-10-01",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_381": {
+                        "start": "2025-08-14",
+                        "end": "2025-08-16",
+                        "params": {
+                            "efficiency_loss": 0.57
+                        }
+                    }
+                }
             }
         },
         {
@@ -2786,11 +3248,11 @@
             "props": {
                 "latitude": 47.03931125975167,
                 "longitude": 8.304662436420529,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_265PEG5_07",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US__480V_",
+                "altitude_m": 12.2,
+                "tilt_deg": 36.3,
+                "azimuth_deg": 185.3,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -2835,7 +3297,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_378": {
+                        "start": "2023-06-21",
+                        "end": "2023-06-27",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    },
+                    "inverter_fault_241": {
+                        "start": "2024-03-18",
+                        "end": "2024-03-22",
+                        "params": {
+                            "efficiency_loss": 0.31
+                        }
+                    },
+                    "inverter_fault_823": {
+                        "start": "2025-04-20",
+                        "end": "2025-04-22",
+                        "params": {
+                            "efficiency_loss": 0.34
+                        }
+                    }
+                }
             }
         },
         {
@@ -2843,13 +3327,13 @@
             "props": {
                 "latitude": 47.04290847680457,
                 "longitude": 8.298825949604122,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_335DD14A_15_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US",
+                "altitude_m": 23.8,
+                "tilt_deg": 42.9,
+                "azimuth_deg": 190.0,
+                "modules_per_string": 8,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -2892,7 +3376,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_655": {
+                        "start": "2023-08-27",
+                        "end": "2023-09-03",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_952": {
+                        "start": "2024-08-03",
+                        "end": "2024-08-10",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    },
+                    "inverter_fault_977": {
+                        "start": "2025-10-22",
+                        "end": "2025-10-29",
+                        "params": {
+                            "efficiency_loss": 0.39
+                        }
+                    }
+                }
             }
         },
         {
@@ -2900,12 +3406,12 @@
             "props": {
                 "latitude": 47.06062781001216,
                 "longitude": 8.306464880878536,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_285PD14_08",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 4.8,
+                "tilt_deg": 45.5,
+                "azimuth_deg": 224.7,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -2949,7 +3455,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_405": {
+                        "start": "2023-07-19",
+                        "end": "2023-08-02",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_599": {
+                        "start": "2024-04-22",
+                        "end": "2024-04-27",
+                        "params": {
+                            "efficiency_loss": 0.35
+                        }
+                    },
+                    "inverter_fault_498": {
+                        "start": "2025-06-22",
+                        "end": "2025-07-03",
+                        "params": {
+                            "efficiency_loss": 0.55
+                        }
+                    }
+                }
             }
         },
         {
@@ -2957,13 +3485,13 @@
             "props": {
                 "latitude": 47.050394589875864,
                 "longitude": 8.30011340993127,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_285DD05A_05U_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_3_8KTL_USL0__240V_",
+                "altitude_m": 12.6,
+                "tilt_deg": 28.6,
+                "azimuth_deg": 176.8,
+                "modules_per_string": 8,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -3006,7 +3534,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_841": {
+                        "start": "2023-03-26",
+                        "end": "2023-04-09",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_737": {
+                        "start": "2024-09-30",
+                        "end": "2024-10-01",
+                        "params": {
+                            "efficiency_loss": 0.73
+                        }
+                    },
+                    "inverter_fault_185": {
+                        "start": "2025-11-26",
+                        "end": "2025-12-03",
+                        "params": {
+                            "efficiency_loss": 0.12
+                        }
+                    }
+                }
             }
         },
         {
@@ -3014,13 +3564,13 @@
             "props": {
                 "latitude": 47.04422447122569,
                 "longitude": 8.318567007953732,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_260PA05_20",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 11.2,
+                "tilt_deg": 46.5,
+                "azimuth_deg": 177.9,
+                "modules_per_string": 8,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -3063,7 +3613,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_286": {
+                        "start": "2023-01-26",
+                        "end": "2023-01-31",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_316": {
+                        "start": "2024-08-20",
+                        "end": "2024-08-26",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_384": {
+                        "start": "2025-08-04",
+                        "end": "2025-08-09",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -3071,13 +3643,13 @@
             "props": {
                 "latitude": 47.03919427301132,
                 "longitude": 8.313159674579708,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_250PA05A_18",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 5.3,
+                "tilt_deg": 22.1,
+                "azimuth_deg": 131.7,
+                "modules_per_string": 8,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -3120,7 +3692,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_119": {
+                        "start": "2023-10-04",
+                        "end": "2023-10-05",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_765": {
+                        "start": "2024-02-05",
+                        "end": "2024-02-18",
+                        "params": {
+                            "efficiency_loss": 0.77
+                        }
+                    },
+                    "inverter_fault_872": {
+                        "start": "2025-01-16",
+                        "end": "2025-01-20",
+                        "params": {
+                            "efficiency_loss": 0.17
+                        }
+                    }
+                }
             }
         },
         {
@@ -3128,12 +3722,12 @@
             "props": {
                 "latitude": 47.06322435417359,
                 "longitude": 8.313372297552803,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_240PA05",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US__480V_",
+                "altitude_m": 13.7,
+                "tilt_deg": 23.2,
+                "azimuth_deg": 159.1,
+                "modules_per_string": 6,
                 "strings": 2
             },
             "events": {
@@ -3177,7 +3771,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_736": {
+                        "start": "2023-03-20",
+                        "end": "2023-03-24",
+                        "params": {
+                            "efficiency_loss": 0.11
+                        }
+                    },
+                    "inverter_fault_677": {
+                        "start": "2024-04-21",
+                        "end": "2024-04-29",
+                        "params": {
+                            "efficiency_loss": 0.56
+                        }
+                    },
+                    "open_string_271": {
+                        "start": "2025-11-07",
+                        "end": "2025-11-17",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -3185,13 +3801,13 @@
             "props": {
                 "latitude": 47.07681831191178,
                 "longitude": 8.264432629677344,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_330DE14A_08_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US__480V_",
+                "altitude_m": 9.4,
+                "tilt_deg": 43.9,
+                "azimuth_deg": 233.0,
+                "modules_per_string": 8,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -3234,7 +3850,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_896": {
+                        "start": "2023-03-25",
+                        "end": "2023-03-30",
+                        "params": {
+                            "efficiency_loss": 0.1
+                        }
+                    },
+                    "inverter_fault_419": {
+                        "start": "2024-10-21",
+                        "end": "2024-11-01",
+                        "params": {
+                            "efficiency_loss": 0.73
+                        }
+                    },
+                    "open_string_506": {
+                        "start": "2025-04-12",
+                        "end": "2025-04-14",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -3242,13 +3880,13 @@
             "props": {
                 "latitude": 47.07424635414632,
                 "longitude": 8.266835888954688,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_225PA05_15",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US__480V_",
+                "altitude_m": 20.1,
+                "tilt_deg": 42.4,
+                "azimuth_deg": 170.0,
+                "modules_per_string": 7,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -3291,7 +3929,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_204": {
+                        "start": "2023-12-23",
+                        "end": "2023-12-31",
+                        "params": {
+                            "efficiency_loss": 0.25
+                        }
+                    },
+                    "inverter_fault_915": {
+                        "start": "2024-10-16",
+                        "end": "2024-10-29",
+                        "params": {
+                            "efficiency_loss": 0.04
+                        }
+                    },
+                    "open_string_777": {
+                        "start": "2025-07-09",
+                        "end": "2025-07-11",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -3299,13 +3959,13 @@
             "props": {
                 "latitude": 47.07038818474244,
                 "longitude": 8.28674860868125,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_285DD05A_081_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_10KTL_USL0__240V_",
+                "altitude_m": 11.1,
+                "tilt_deg": 41.4,
+                "azimuth_deg": 145.5,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -3348,7 +4008,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_112": {
+                        "start": "2023-08-04",
+                        "end": "2023-08-18",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_543": {
+                        "start": "2024-07-04",
+                        "end": "2024-07-15",
+                        "params": {
+                            "efficiency_loss": 0.71
+                        }
+                    },
+                    "open_string_824": {
+                        "start": "2025-03-20",
+                        "end": "2025-03-27",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -3356,12 +4038,12 @@
             "props": {
                 "latitude": 47.080792911564245,
                 "longitude": 8.27953883084922,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_170DA01",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 18.9,
+                "tilt_deg": 55.8,
+                "azimuth_deg": 199.2,
+                "modules_per_string": 6,
                 "strings": 2
             },
             "events": {
@@ -3405,7 +4087,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_730": {
+                        "start": "2023-10-03",
+                        "end": "2023-10-16",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_546": {
+                        "start": "2024-10-30",
+                        "end": "2024-11-04",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_950": {
+                        "start": "2025-02-14",
+                        "end": "2025-02-19",
+                        "params": {
+                            "efficiency_loss": 0.71
+                        }
+                    }
+                }
             }
         },
         {
@@ -3413,13 +4117,13 @@
             "props": {
                 "latitude": 47.07325260994533,
                 "longitude": 8.272414883705665,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_250PD05_08",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_30KTL_US",
+                "altitude_m": 39.2,
+                "tilt_deg": 31.0,
+                "azimuth_deg": 234.3,
+                "modules_per_string": 7,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -3462,7 +4166,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_868": {
+                        "start": "2023-08-26",
+                        "end": "2023-09-05",
+                        "params": {
+                            "efficiency_loss": 0.49
+                        }
+                    },
+                    "open_string_444": {
+                        "start": "2024-01-15",
+                        "end": "2024-01-23",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_599": {
+                        "start": "2025-04-19",
+                        "end": "2025-04-25",
+                        "params": {
+                            "efficiency_loss": 0.64
+                        }
+                    }
+                }
             }
         },
         {
@@ -3470,13 +4196,13 @@
             "props": {
                 "latitude": 47.0801053248595,
                 "longitude": 8.34468432340293,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_275DE05A_08_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US",
+                "altitude_m": 11.0,
+                "tilt_deg": 31.2,
+                "azimuth_deg": 204.8,
+                "modules_per_string": 6,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -3519,7 +4245,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_386": {
+                        "start": "2023-11-02",
+                        "end": "2023-11-14",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_629": {
+                        "start": "2024-04-07",
+                        "end": "2024-04-09",
+                        "params": {
+                            "efficiency_loss": 0.2
+                        }
+                    },
+                    "open_string_600": {
+                        "start": "2025-10-12",
+                        "end": "2025-10-25",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -3527,13 +4275,13 @@
             "props": {
                 "latitude": 47.07747507432769,
                 "longitude": 8.33996363553672,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_240PD05_10",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US",
+                "altitude_m": 7.3,
+                "tilt_deg": 24.6,
+                "azimuth_deg": 163.9,
+                "modules_per_string": 8,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -3576,7 +4324,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_761": {
+                        "start": "2023-09-09",
+                        "end": "2023-09-17",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_401": {
+                        "start": "2024-04-23",
+                        "end": "2024-04-30",
+                        "params": {
+                            "efficiency_loss": 0.56
+                        }
+                    },
+                    "open_string_779": {
+                        "start": "2025-10-25",
+                        "end": "2025-10-31",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -3584,13 +4354,13 @@
             "props": {
                 "latitude": 47.08402123507708,
                 "longitude": 8.350606640907813,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_290DD05A_05_II_",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 11.4,
+                "tilt_deg": 39.2,
+                "azimuth_deg": 182.1,
+                "modules_per_string": 8,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -3633,7 +4403,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_535": {
+                        "start": "2023-10-09",
+                        "end": "2023-10-15",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_377": {
+                        "start": "2024-06-05",
+                        "end": "2024-06-10",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_838": {
+                        "start": "2025-04-09",
+                        "end": "2025-04-15",
+                        "params": {
+                            "efficiency_loss": 0.1
+                        }
+                    }
+                }
             }
         },
         {
@@ -3641,13 +4433,13 @@
             "props": {
                 "latitude": 47.08519010771714,
                 "longitude": 8.340478619667579,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_175D",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_30KTL_US",
+                "altitude_m": 17.8,
+                "tilt_deg": 65.9,
+                "azimuth_deg": 147.4,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -3690,7 +4482,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_296": {
+                        "start": "2023-04-21",
+                        "end": "2023-05-03",
+                        "params": {
+                            "efficiency_loss": 0.39
+                        }
+                    },
+                    "open_string_202": {
+                        "start": "2024-04-09",
+                        "end": "2024-04-14",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_283": {
+                        "start": "2025-06-04",
+                        "end": "2025-06-05",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -3698,12 +4512,12 @@
             "props": {
                 "latitude": 47.0764813903359,
                 "longitude": 8.337302884193946,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_320PD14_002",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 3.5,
+                "tilt_deg": 58.9,
+                "azimuth_deg": 152.5,
+                "modules_per_string": 7,
                 "strings": 2
             },
             "events": {
@@ -3747,7 +4561,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_380": {
+                        "start": "2023-01-24",
+                        "end": "2023-01-25",
+                        "params": {
+                            "efficiency_loss": 0.45
+                        }
+                    },
+                    "inverter_fault_753": {
+                        "start": "2024-09-08",
+                        "end": "2024-09-10",
+                        "params": {
+                            "efficiency_loss": 0.7
+                        }
+                    },
+                    "open_string_580": {
+                        "start": "2025-09-03",
+                        "end": "2025-09-11",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -3755,13 +4591,13 @@
             "props": {
                 "latitude": 47.074983522830436,
                 "longitude": 8.330452345954,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_320PE14A_18",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US",
+                "altitude_m": 31.9,
+                "tilt_deg": 67.3,
+                "azimuth_deg": 168.7,
+                "modules_per_string": 6,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -3804,7 +4640,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_152": {
+                        "start": "2023-05-10",
+                        "end": "2023-05-24",
+                        "params": {
+                            "efficiency_loss": 0.39
+                        }
+                    },
+                    "inverter_fault_510": {
+                        "start": "2024-09-08",
+                        "end": "2024-09-10",
+                        "params": {
+                            "efficiency_loss": 0.47
+                        }
+                    },
+                    "inverter_fault_255": {
+                        "start": "2025-03-18",
+                        "end": "2025-03-31",
+                        "params": {
+                            "efficiency_loss": 0.45
+                        }
+                    }
+                }
             }
         },
         {
@@ -3812,13 +4670,13 @@
             "props": {
                 "latitude": 47.04877992531089,
                 "longitude": 8.367245407708936,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM235M_60",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_3_8KTL_USL0__240V_",
+                "altitude_m": 3.7,
+                "tilt_deg": 54.4,
+                "azimuth_deg": 171.0,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -3861,7 +4719,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_187": {
+                        "start": "2023-05-08",
+                        "end": "2023-05-10",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_720": {
+                        "start": "2024-11-01",
+                        "end": "2024-11-14",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_894": {
+                        "start": "2025-09-25",
+                        "end": "2025-10-02",
+                        "params": {
+                            "efficiency_loss": 0.37
+                        }
+                    }
+                }
             }
         },
         {
@@ -3869,11 +4749,11 @@
             "props": {
                 "latitude": 47.045884941970364,
                 "longitude": 8.363468857415967,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_220PA05_xy2",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US__480V_",
+                "altitude_m": 30.9,
+                "tilt_deg": 60.1,
+                "azimuth_deg": 130.0,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -3918,7 +4798,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_404": {
+                        "start": "2023-10-29",
+                        "end": "2023-11-05",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_724": {
+                        "start": "2024-02-20",
+                        "end": "2024-03-04",
+                        "params": {
+                            "efficiency_loss": 0.17
+                        }
+                    },
+                    "inverter_fault_370": {
+                        "start": "2025-12-05",
+                        "end": "2025-12-07",
+                        "params": {
+                            "efficiency_loss": 0.13
+                        }
+                    }
+                }
             }
         },
         {
@@ -3926,13 +4828,13 @@
             "props": {
                 "latitude": 47.04249264037016,
                 "longitude": 8.363554688104443,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM340PP_72H_V",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 4.5,
+                "tilt_deg": 20.6,
+                "azimuth_deg": 239.3,
+                "modules_per_string": 6,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -3975,7 +4877,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_665": {
+                        "start": "2023-02-08",
+                        "end": "2023-02-11",
+                        "params": {
+                            "efficiency_loss": 0.01
+                        }
+                    },
+                    "open_string_805": {
+                        "start": "2024-10-31",
+                        "end": "2024-11-08",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_337": {
+                        "start": "2025-05-28",
+                        "end": "2025-06-09",
+                        "params": {
+                            "efficiency_loss": 0.23
+                        }
+                    }
+                }
             }
         },
         {
@@ -3983,12 +4907,12 @@
             "props": {
                 "latitude": 47.04486142541866,
                 "longitude": 8.370979042657666,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_275DD05A_05_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_5KTL_USL0__240V_",
+                "altitude_m": 3.5,
+                "tilt_deg": 55.5,
+                "azimuth_deg": 232.6,
+                "modules_per_string": 6,
                 "strings": 2
             },
             "events": {
@@ -4032,7 +4956,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_172": {
+                        "start": "2023-12-18",
+                        "end": "2023-12-22",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_535": {
+                        "start": "2024-02-28",
+                        "end": "2024-03-08",
+                        "params": {
+                            "efficiency_loss": 0.19
+                        }
+                    },
+                    "inverter_fault_372": {
+                        "start": "2025-03-14",
+                        "end": "2025-03-16",
+                        "params": {
+                            "efficiency_loss": 0.06
+                        }
+                    }
+                }
             }
         },
         {
@@ -4040,12 +4986,12 @@
             "props": {
                 "latitude": 47.04056244145189,
                 "longitude": 8.359778137811475,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM315M_60",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_3_8KTL_USL0__240V_",
+                "altitude_m": 5.4,
+                "tilt_deg": 35.6,
+                "azimuth_deg": 156.6,
+                "modules_per_string": 6,
                 "strings": 2
             },
             "events": {
@@ -4089,7 +5035,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_709": {
+                        "start": "2023-10-19",
+                        "end": "2023-10-24",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_579": {
+                        "start": "2024-12-18",
+                        "end": "2024-12-23",
+                        "params": {
+                            "efficiency_loss": 0.56
+                        }
+                    },
+                    "open_string_612": {
+                        "start": "2025-10-04",
+                        "end": "2025-10-12",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -4097,13 +5065,13 @@
             "props": {
                 "latitude": 47.04199547459855,
                 "longitude": 8.366258354791455,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_340DD14A_08_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 11.1,
+                "tilt_deg": 33.5,
+                "azimuth_deg": 216.4,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -4146,7 +5114,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_712": {
+                        "start": "2023-01-21",
+                        "end": "2023-01-28",
+                        "params": {
+                            "efficiency_loss": 0.59
+                        }
+                    },
+                    "open_string_126": {
+                        "start": "2024-02-16",
+                        "end": "2024-02-20",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_883": {
+                        "start": "2025-12-11",
+                        "end": "2025-12-25",
+                        "params": {
+                            "efficiency_loss": 0.22
+                        }
+                    }
+                }
             }
         },
         {
@@ -4154,13 +5144,13 @@
             "props": {
                 "latitude": 47.04632358590943,
                 "longitude": 8.366687508233838,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_270PD05_15C",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_3_8KTL_USL0__240V_",
+                "altitude_m": 11.8,
+                "tilt_deg": 47.6,
+                "azimuth_deg": 142.7,
+                "modules_per_string": 5,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -4203,7 +5193,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_881": {
+                        "start": "2023-03-31",
+                        "end": "2023-04-08",
+                        "params": {
+                            "efficiency_loss": 0.42
+                        }
+                    },
+                    "open_string_384": {
+                        "start": "2024-04-02",
+                        "end": "2024-04-12",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_193": {
+                        "start": "2025-08-29",
+                        "end": "2025-09-04",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -4211,13 +5223,13 @@
             "props": {
                 "latitude": 47.043691668169934,
                 "longitude": 8.3701207357729,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_265PD05_08D",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 17.7,
+                "tilt_deg": 60.9,
+                "azimuth_deg": 171.9,
+                "modules_per_string": 8,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -4260,7 +5272,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_428": {
+                        "start": "2023-12-10",
+                        "end": "2023-12-12",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_521": {
+                        "start": "2024-12-21",
+                        "end": "2024-12-29",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_933": {
+                        "start": "2025-10-09",
+                        "end": "2025-10-10",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -4268,12 +5302,12 @@
             "props": {
                 "latitude": 47.047785706322415,
                 "longitude": 8.370163651117139,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_225PA05_10",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 24.8,
+                "tilt_deg": 45.3,
+                "azimuth_deg": 202.5,
+                "modules_per_string": 6,
                 "strings": 2
             },
             "events": {
@@ -4317,7 +5351,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_422": {
+                        "start": "2023-05-10",
+                        "end": "2023-05-16",
+                        "params": {
+                            "efficiency_loss": 0.1
+                        }
+                    },
+                    "open_string_985": {
+                        "start": "2024-09-20",
+                        "end": "2024-10-04",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_523": {
+                        "start": "2025-01-28",
+                        "end": "2025-02-01",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -4325,13 +5381,13 @@
             "props": {
                 "latitude": 47.04047470347818,
                 "longitude": 8.36239597381001,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_245PA05_38",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_9KTL_USL0__240V_",
+                "altitude_m": 13.6,
+                "tilt_deg": 56.4,
+                "azimuth_deg": 136.8,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -4374,7 +5430,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_737": {
+                        "start": "2023-09-13",
+                        "end": "2023-09-24",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_308": {
+                        "start": "2024-05-16",
+                        "end": "2024-05-25",
+                        "params": {
+                            "efficiency_loss": 0.11
+                        }
+                    },
+                    "open_string_548": {
+                        "start": "2025-12-24",
+                        "end": "2025-12-31",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -4382,13 +5460,13 @@
             "props": {
                 "latitude": 47.067754911614365,
                 "longitude": 8.36498466247724,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_345DE14A_08_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_100KTL_USH0__800V_",
+                "altitude_m": 15.4,
+                "tilt_deg": 51.3,
+                "azimuth_deg": 225.6,
+                "modules_per_string": 5,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -4431,7 +5509,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_745": {
+                        "start": "2023-11-08",
+                        "end": "2023-11-21",
+                        "params": {
+                            "efficiency_loss": 0.2
+                        }
+                    },
+                    "inverter_fault_418": {
+                        "start": "2024-10-09",
+                        "end": "2024-10-10",
+                        "params": {
+                            "efficiency_loss": 0.45
+                        }
+                    },
+                    "inverter_fault_330": {
+                        "start": "2025-02-28",
+                        "end": "2025-03-08",
+                        "params": {
+                            "efficiency_loss": 0.76
+                        }
+                    }
+                }
             }
         },
         {
@@ -4439,13 +5539,13 @@
             "props": {
                 "latitude": 47.0765738934804,
                 "longitude": 8.361663750986082,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM285P_72",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_22KTL_US",
+                "altitude_m": 11.0,
+                "tilt_deg": 39.0,
+                "azimuth_deg": 180.7,
+                "modules_per_string": 8,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -4488,7 +5588,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_610": {
+                        "start": "2023-05-30",
+                        "end": "2023-06-08",
+                        "params": {
+                            "efficiency_loss": 0.57
+                        }
+                    },
+                    "open_string_954": {
+                        "start": "2024-09-04",
+                        "end": "2024-09-12",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_664": {
+                        "start": "2025-03-16",
+                        "end": "2025-03-23",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -4496,13 +5618,13 @@
             "props": {
                 "latitude": 47.0730081751588,
                 "longitude": 8.359303407052977,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_315DD14A_05_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US",
+                "altitude_m": 6.5,
+                "tilt_deg": 43.0,
+                "azimuth_deg": 138.9,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -4545,7 +5667,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_984": {
+                        "start": "2023-02-05",
+                        "end": "2023-02-10",
+                        "params": {
+                            "efficiency_loss": 0.62
+                        }
+                    },
+                    "open_string_448": {
+                        "start": "2024-09-16",
+                        "end": "2024-09-21",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_843": {
+                        "start": "2025-06-02",
+                        "end": "2025-06-16",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -4553,11 +5697,11 @@
             "props": {
                 "latitude": 47.07286203407249,
                 "longitude": 8.366513184885008,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_280PD14_10",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_3_8KTL_USL0__240V_",
+                "altitude_m": 14.5,
+                "tilt_deg": 68.6,
+                "azimuth_deg": 185.6,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -4602,7 +5746,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_986": {
+                        "start": "2023-03-18",
+                        "end": "2023-03-26",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_453": {
+                        "start": "2024-06-19",
+                        "end": "2024-06-28",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_566": {
+                        "start": "2025-06-14",
+                        "end": "2025-06-28",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -4610,13 +5776,13 @@
             "props": {
                 "latitude": 47.072131322629666,
                 "longitude": 8.362607888559324,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_300DEG5_47_II_",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 22.7,
+                "tilt_deg": 37.8,
+                "azimuth_deg": 120.1,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -4659,7 +5825,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_685": {
+                        "start": "2023-07-16",
+                        "end": "2023-07-20",
+                        "params": {
+                            "efficiency_loss": 0.69
+                        }
+                    },
+                    "open_string_144": {
+                        "start": "2024-06-11",
+                        "end": "2024-06-23",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_495": {
+                        "start": "2025-12-06",
+                        "end": "2025-12-19",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -4667,13 +5855,13 @@
             "props": {
                 "latitude": 47.064823657164666,
                 "longitude": 8.359646729806883,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM320M_60HB_V",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 9.0,
+                "tilt_deg": 30.0,
+                "azimuth_deg": 180.6,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -4716,7 +5904,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_607": {
+                        "start": "2023-01-19",
+                        "end": "2023-01-22",
+                        "params": {
+                            "efficiency_loss": 0.41
+                        }
+                    },
+                    "open_string_990": {
+                        "start": "2024-02-21",
+                        "end": "2024-03-06",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_638": {
+                        "start": "2025-08-22",
+                        "end": "2025-08-23",
+                        "params": {
+                            "efficiency_loss": 0.58
+                        }
+                    }
+                }
             }
         },
         {
@@ -4724,13 +5934,13 @@
             "props": {
                 "latitude": 47.071517517275176,
                 "longitude": 8.369388512948973,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM305M_60B",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 4.1,
+                "tilt_deg": 40.0,
+                "azimuth_deg": 125.0,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -4773,7 +5983,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_991": {
+                        "start": "2023-12-02",
+                        "end": "2023-12-05",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_900": {
+                        "start": "2024-05-15",
+                        "end": "2024-05-21",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_765": {
+                        "start": "2025-02-11",
+                        "end": "2025-02-25",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -4781,12 +6013,12 @@
             "props": {
                 "latitude": 47.07581400630249,
                 "longitude": 8.362522057870848,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_275PE05A_08",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 5.8,
+                "tilt_deg": 49.3,
+                "azimuth_deg": 183.5,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -4830,7 +6062,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_424": {
+                        "start": "2023-11-17",
+                        "end": "2023-11-29",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_732": {
+                        "start": "2024-02-05",
+                        "end": "2024-02-09",
+                        "params": {
+                            "efficiency_loss": 0.51
+                        }
+                    },
+                    "open_string_332": {
+                        "start": "2025-02-16",
+                        "end": "2025-02-23",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -4838,11 +6092,11 @@
             "props": {
                 "latitude": 47.072160551279744,
                 "longitude": 8.379044465402586,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_220PD05_08",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 6.9,
+                "tilt_deg": 69.2,
+                "azimuth_deg": 137.9,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -4887,7 +6141,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_554": {
+                        "start": "2023-03-27",
+                        "end": "2023-04-08",
+                        "params": {
+                            "efficiency_loss": 0.25
+                        }
+                    },
+                    "inverter_fault_147": {
+                        "start": "2024-06-15",
+                        "end": "2024-06-28",
+                        "params": {
+                            "efficiency_loss": 0.05
+                        }
+                    },
+                    "open_string_483": {
+                        "start": "2025-08-09",
+                        "end": "2025-08-12",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -4895,12 +6171,12 @@
             "props": {
                 "latitude": 47.06546677192949,
                 "longitude": 8.363294534067137,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_285PD14_18",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US__480V_",
+                "altitude_m": 32.9,
+                "tilt_deg": 45.6,
+                "azimuth_deg": 171.5,
+                "modules_per_string": 8,
                 "strings": 2
             },
             "events": {
@@ -4944,7 +6220,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_679": {
+                        "start": "2023-12-16",
+                        "end": "2023-12-29",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_279": {
+                        "start": "2024-02-10",
+                        "end": "2024-02-20",
+                        "params": {
+                            "efficiency_loss": 0.7
+                        }
+                    },
+                    "inverter_fault_609": {
+                        "start": "2025-10-26",
+                        "end": "2025-10-29",
+                        "params": {
+                            "efficiency_loss": 0.19
+                        }
+                    }
+                }
             }
         },
         {
@@ -4952,11 +6250,11 @@
             "props": {
                 "latitude": 47.07078108861309,
                 "longitude": 8.278883737751784,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM325M_72_J4",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 29.2,
+                "tilt_deg": 60.6,
+                "azimuth_deg": 121.9,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -5001,7 +6299,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_570": {
+                        "start": "2023-05-11",
+                        "end": "2023-05-22",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_394": {
+                        "start": "2024-12-12",
+                        "end": "2024-12-21",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_552": {
+                        "start": "2025-06-26",
+                        "end": "2025-07-06",
+                        "params": {
+                            "efficiency_loss": 0.25
+                        }
+                    }
+                }
             }
         },
         {
@@ -5009,13 +6329,13 @@
             "props": {
                 "latitude": 47.09663388584759,
                 "longitude": 8.273905557820143,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_225PD05",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US__480V_",
+                "altitude_m": 4.6,
+                "tilt_deg": 38.0,
+                "azimuth_deg": 132.6,
+                "modules_per_string": 8,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -5058,7 +6378,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_806": {
+                        "start": "2023-05-09",
+                        "end": "2023-05-17",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_493": {
+                        "start": "2024-09-04",
+                        "end": "2024-09-06",
+                        "params": {
+                            "efficiency_loss": 0.2
+                        }
+                    },
+                    "open_string_688": {
+                        "start": "2025-06-01",
+                        "end": "2025-06-13",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -5066,13 +6408,13 @@
             "props": {
                 "latitude": 47.09464721401141,
                 "longitude": 8.266781610676588,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_250PE05A",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 3.2,
+                "tilt_deg": 46.6,
+                "azimuth_deg": 149.3,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -5115,7 +6457,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_949": {
+                        "start": "2023-12-04",
+                        "end": "2023-12-11",
+                        "params": {
+                            "efficiency_loss": 0.23
+                        }
+                    },
+                    "inverter_fault_720": {
+                        "start": "2024-09-11",
+                        "end": "2024-09-25",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    },
+                    "open_string_894": {
+                        "start": "2025-04-28",
+                        "end": "2025-05-08",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -5123,13 +6487,13 @@
             "props": {
                 "latitude": 47.09540683258302,
                 "longitude": 8.27648047847444,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_280DEG5_40_II_",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 3.8,
+                "tilt_deg": 66.6,
+                "azimuth_deg": 227.7,
+                "modules_per_string": 8,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -5172,7 +6536,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_751": {
+                        "start": "2023-04-08",
+                        "end": "2023-04-18",
+                        "params": {
+                            "efficiency_loss": 0.21
+                        }
+                    },
+                    "inverter_fault_743": {
+                        "start": "2024-02-19",
+                        "end": "2024-03-01",
+                        "params": {
+                            "efficiency_loss": 0.52
+                        }
+                    },
+                    "open_string_907": {
+                        "start": "2025-08-14",
+                        "end": "2025-08-15",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -5180,13 +6566,13 @@
             "props": {
                 "latitude": 47.10230133637153,
                 "longitude": 8.266438287922682,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_325PE14A_15",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 11.8,
+                "tilt_deg": 32.6,
+                "azimuth_deg": 128.9,
+                "modules_per_string": 5,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -5229,7 +6615,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_849": {
+                        "start": "2023-03-09",
+                        "end": "2023-03-11",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_865": {
+                        "start": "2024-07-31",
+                        "end": "2024-08-03",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_905": {
+                        "start": "2025-10-04",
+                        "end": "2025-10-10",
+                        "params": {
+                            "efficiency_loss": 0.43
+                        }
+                    }
+                }
             }
         },
         {
@@ -5237,13 +6645,13 @@
             "props": {
                 "latitude": 47.099090298262645,
                 "longitude": 8.272167486378493,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_170PEG40_07",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_25KTL_US",
+                "altitude_m": 5.5,
+                "tilt_deg": 57.0,
+                "azimuth_deg": 237.1,
+                "modules_per_string": 7,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -5286,7 +6694,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_950": {
+                        "start": "2023-03-26",
+                        "end": "2023-03-31",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_864": {
+                        "start": "2024-06-22",
+                        "end": "2024-07-05",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_177": {
+                        "start": "2025-03-14",
+                        "end": "2025-03-27",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -5294,11 +6724,11 @@
             "props": {
                 "latitude": 47.09928018807615,
                 "longitude": 8.282510084339918,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM320P_72_V",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 13.9,
+                "tilt_deg": 34.4,
+                "azimuth_deg": 125.6,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -5343,7 +6773,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_966": {
+                        "start": "2023-10-13",
+                        "end": "2023-10-19",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_114": {
+                        "start": "2024-05-15",
+                        "end": "2024-05-24",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_477": {
+                        "start": "2025-12-11",
+                        "end": "2025-12-23",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    }
+                }
             }
         },
         {
@@ -5351,11 +6803,11 @@
             "props": {
                 "latitude": 47.09285277179183,
                 "longitude": 8.269377989003004,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Trina_Solar_TSM_310PEG14",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_33KTL_US",
+                "altitude_m": 7.0,
+                "tilt_deg": 52.6,
+                "azimuth_deg": 203.1,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -5400,7 +6852,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_698": {
+                        "start": "2023-07-15",
+                        "end": "2023-07-29",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_210": {
+                        "start": "2024-12-11",
+                        "end": "2024-12-15",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_734": {
+                        "start": "2025-10-15",
+                        "end": "2025-10-21",
+                        "params": {
+                            "efficiency_loss": 0.73
+                        }
+                    }
+                }
             }
         },
         {
@@ -5408,12 +6882,12 @@
             "props": {
                 "latitude": 47.09502941554572,
                 "longitude": 8.260773462483229,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_285DD05A_08S_II_",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 8.8,
+                "tilt_deg": 68.6,
+                "azimuth_deg": 131.9,
+                "modules_per_string": 7,
                 "strings": 2
             },
             "events": {
@@ -5457,7 +6931,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_763": {
+                        "start": "2023-02-02",
+                        "end": "2023-02-13",
+                        "params": {
+                            "efficiency_loss": 0.66
+                        }
+                    },
+                    "open_string_764": {
+                        "start": "2024-07-28",
+                        "end": "2024-07-30",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_138": {
+                        "start": "2025-06-05",
+                        "end": "2025-06-13",
+                        "params": {
+                            "efficiency_loss": 0.1
+                        }
+                    }
+                }
             }
         },
         {
@@ -5465,13 +6961,13 @@
             "props": {
                 "latitude": 47.09438665751954,
                 "longitude": 8.26324109477693,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_270DD05A",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_7_6KTL_USL0__240V_",
+                "altitude_m": 9.2,
+                "tilt_deg": 43.2,
+                "azimuth_deg": 176.0,
+                "modules_per_string": 8,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -5514,7 +7010,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_650": {
+                        "start": "2023-03-11",
+                        "end": "2023-03-18",
+                        "params": {
+                            "efficiency_loss": 0.37
+                        }
+                    },
+                    "open_string_701": {
+                        "start": "2024-03-20",
+                        "end": "2024-03-27",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_953": {
+                        "start": "2025-09-08",
+                        "end": "2025-09-18",
+                        "params": {
+                            "efficiency_loss": 0.33
+                        }
+                    }
+                }
             }
         },
         {
@@ -5522,13 +7040,13 @@
             "props": {
                 "latitude": 47.09619804662627,
                 "longitude": 8.271030229756178,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM230M_60",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 14.7,
+                "tilt_deg": 66.8,
+                "azimuth_deg": 122.1,
                 "modules_per_string": 4,
-                "strings": 2
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -5571,7 +7089,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_133": {
+                        "start": "2023-12-20",
+                        "end": "2023-12-26",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_555": {
+                        "start": "2024-04-30",
+                        "end": "2024-05-14",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_802": {
+                        "start": "2025-07-08",
+                        "end": "2025-07-17",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    }
+                }
             }
         },
         {
@@ -5579,12 +7119,12 @@
             "props": {
                 "latitude": 47.08498978686295,
                 "longitude": 8.397702229855668,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
+                "module_cec": "Trina_Solar_TSM_320PEG14_47",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 39.2,
+                "tilt_deg": 42.5,
+                "azimuth_deg": 152.2,
+                "modules_per_string": 5,
                 "strings": 2
             },
             "events": {
@@ -5628,7 +7168,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_162": {
+                        "start": "2023-07-23",
+                        "end": "2023-07-28",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_968": {
+                        "start": "2024-08-20",
+                        "end": "2024-08-22",
+                        "params": {
+                            "efficiency_loss": 0.53
+                        }
+                    },
+                    "inverter_fault_151": {
+                        "start": "2025-06-20",
+                        "end": "2025-06-24",
+                        "params": {
+                            "efficiency_loss": 0.79
+                        }
+                    }
+                }
             }
         },
         {
@@ -5636,13 +7198,13 @@
             "props": {
                 "latitude": 47.08970886707583,
                 "longitude": 8.399268639920365,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_300PA14A",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_40KTL_US",
+                "altitude_m": 4.1,
+                "tilt_deg": 57.4,
+                "azimuth_deg": 151.4,
+                "modules_per_string": 5,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -5685,7 +7247,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_170": {
+                        "start": "2023-10-11",
+                        "end": "2023-10-15",
+                        "params": {
+                            "efficiency_loss": 0.47
+                        }
+                    },
+                    "inverter_fault_436": {
+                        "start": "2024-03-16",
+                        "end": "2024-03-29",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    },
+                    "inverter_fault_383": {
+                        "start": "2025-03-16",
+                        "end": "2025-03-19",
+                        "params": {
+                            "efficiency_loss": 0.44
+                        }
+                    }
+                }
             }
         },
         {
@@ -5693,13 +7277,13 @@
             "props": {
                 "latitude": 47.08778037707221,
                 "longitude": 8.399955285428177,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_355DEG14_40_II_",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 10.6,
+                "tilt_deg": 34.0,
+                "azimuth_deg": 133.5,
+                "modules_per_string": 5,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -5742,7 +7326,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_212": {
+                        "start": "2023-12-05",
+                        "end": "2023-12-19",
+                        "params": {
+                            "efficiency_loss": 0.03
+                        }
+                    },
+                    "inverter_fault_466": {
+                        "start": "2024-05-01",
+                        "end": "2024-05-11",
+                        "params": {
+                            "efficiency_loss": 0.27
+                        }
+                    },
+                    "inverter_fault_371": {
+                        "start": "2025-01-27",
+                        "end": "2025-01-30",
+                        "params": {
+                            "efficiency_loss": 0.6
+                        }
+                    }
+                }
             }
         },
         {
@@ -5750,13 +7356,13 @@
             "props": {
                 "latitude": 47.09033707222665,
                 "longitude": 8.405040753720414,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM335M_72HB_V",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 13.5,
+                "tilt_deg": 39.7,
+                "azimuth_deg": 139.1,
+                "modules_per_string": 7,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -5799,7 +7405,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_863": {
+                        "start": "2023-02-02",
+                        "end": "2023-02-10",
+                        "params": {
+                            "efficiency_loss": 0.36
+                        }
+                    },
+                    "open_string_625": {
+                        "start": "2024-10-30",
+                        "end": "2024-11-01",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "inverter_fault_729": {
+                        "start": "2025-01-23",
+                        "end": "2025-02-04",
+                        "params": {
+                            "efficiency_loss": 0.63
+                        }
+                    }
+                }
             }
         },
         {
@@ -5807,13 +7435,13 @@
             "props": {
                 "latitude": 47.09188563932465,
                 "longitude": 8.400727761624466,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_255PA05_28",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US__480V_",
+                "altitude_m": 11.7,
+                "tilt_deg": 40.8,
+                "azimuth_deg": 165.1,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -5856,7 +7484,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_569": {
+                        "start": "2023-11-26",
+                        "end": "2023-11-27",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_967": {
+                        "start": "2024-07-24",
+                        "end": "2024-07-31",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_602": {
+                        "start": "2025-08-16",
+                        "end": "2025-08-18",
+                        "params": {
+                            "efficiency_loss": 0.72
+                        }
+                    }
+                }
             }
         },
         {
@@ -5864,11 +7514,11 @@
             "props": {
                 "latitude": 47.08899299635979,
                 "longitude": 8.40463305795015,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM300M_60",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_36KTL_US__480V_",
+                "altitude_m": 12.0,
+                "tilt_deg": 62.0,
+                "azimuth_deg": 134.4,
                 "modules_per_string": 4,
                 "strings": 2
             },
@@ -5913,7 +7563,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_722": {
+                        "start": "2023-03-17",
+                        "end": "2023-03-19",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_739": {
+                        "start": "2024-11-20",
+                        "end": "2024-11-30",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_490": {
+                        "start": "2025-11-02",
+                        "end": "2025-11-11",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -5921,13 +7593,13 @@
             "props": {
                 "latitude": 47.08694759843956,
                 "longitude": 8.397723687527787,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_275PD14_08",
+                "inverter_cec": "Kostal_Solar_Electric__Piko_5_3_US",
+                "altitude_m": 22.2,
+                "tilt_deg": 38.6,
+                "azimuth_deg": 167.1,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -5970,7 +7642,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_617": {
+                        "start": "2023-11-06",
+                        "end": "2023-11-13",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "inverter_fault_973": {
+                        "start": "2024-12-01",
+                        "end": "2024-12-12",
+                        "params": {
+                            "efficiency_loss": 0.7
+                        }
+                    },
+                    "inverter_fault_540": {
+                        "start": "2025-08-20",
+                        "end": "2025-08-24",
+                        "params": {
+                            "efficiency_loss": 0.34
+                        }
+                    }
+                }
             }
         },
         {
@@ -5978,13 +7672,13 @@
             "props": {
                 "latitude": 47.09020558804077,
                 "longitude": 8.396479142544877,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_275PD05_18C",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_10KTL_USL0__240V_",
+                "altitude_m": 33.9,
+                "tilt_deg": 62.7,
+                "azimuth_deg": 153.7,
+                "modules_per_string": 6,
+                "strings": 1
             },
             "events": {
                 "permanent": {
@@ -6027,7 +7721,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_508": {
+                        "start": "2023-08-01",
+                        "end": "2023-08-13",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_537": {
+                        "start": "2024-06-09",
+                        "end": "2024-06-20",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    },
+                    "open_string_256": {
+                        "start": "2025-12-18",
+                        "end": "2025-12-26",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    }
+                }
             }
         },
         {
@@ -6035,13 +7751,13 @@
             "props": {
                 "latitude": 47.090351681560605,
                 "longitude": 8.407937539456498,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Trina_Solar_TSM_230PA05_28",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_100KTL_USH0__800V_",
+                "altitude_m": 4.8,
+                "tilt_deg": 68.6,
+                "azimuth_deg": 172.3,
+                "modules_per_string": 5,
+                "strings": 3
             },
             "events": {
                 "permanent": {
@@ -6084,7 +7800,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "inverter_fault_951": {
+                        "start": "2023-02-13",
+                        "end": "2023-02-15",
+                        "params": {
+                            "efficiency_loss": 0.35
+                        }
+                    },
+                    "open_string_931": {
+                        "start": "2024-03-07",
+                        "end": "2024-03-16",
+                        "params": {
+                            "strings_lost": 1
+                        }
+                    },
+                    "open_string_786": {
+                        "start": "2025-03-04",
+                        "end": "2025-03-11",
+                        "params": {
+                            "strings_lost": 2
+                        }
+                    }
+                }
             }
         },
         {
@@ -6092,13 +7830,13 @@
             "props": {
                 "latitude": 47.089562771792764,
                 "longitude": 8.402101052640091,
-                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
-                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
-                "altitude_m": 470,
-                "tilt_deg": 20.0,
-                "azimuth_deg": 180.0,
-                "modules_per_string": 4,
-                "strings": 2
+                "module_cec": "Jinko_Solar_Co___Ltd_JKM270M_72B",
+                "inverter_cec": "Huawei_Technologies_Co___Ltd___SUN2000_11_4KTL_USL0__240V_",
+                "altitude_m": 34.6,
+                "tilt_deg": 41.4,
+                "azimuth_deg": 123.5,
+                "modules_per_string": 8,
+                "strings": 4
             },
             "events": {
                 "permanent": {
@@ -6141,7 +7879,29 @@
                         }
                     }
                 },
-                "temporary": null
+                "temporary": {
+                    "open_string_988": {
+                        "start": "2023-01-27",
+                        "end": "2023-02-01",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "open_string_460": {
+                        "start": "2024-02-23",
+                        "end": "2024-03-04",
+                        "params": {
+                            "strings_lost": 3
+                        }
+                    },
+                    "inverter_fault_258": {
+                        "start": "2025-12-03",
+                        "end": "2025-12-11",
+                        "params": {
+                            "efficiency_loss": 0.19
+                        }
+                    }
+                }
             }
         }
     ]
