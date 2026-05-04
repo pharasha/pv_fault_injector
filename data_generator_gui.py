@@ -31,7 +31,7 @@ SYSTEM_PROPERTIES_DATA = {
     "longitude":          {"default": None,                                          "min": -180.0, "max": 180.0,  "type": float},
     "module_cec":         {"default": "Canadian_Solar_Inc__CS6X_305P",               "min": None,   "max": None,   "type": str},
     "inverter_cec":       {"default": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_", "min": None, "max": None, "type": str},
-    "altitude_m":         {"default": 470,                                           "min": 0,      "max": 9000,   "type": int},
+    "altitude_m":         {"default": 470,                                           "min": 0,      "max": 9000,   "type": float},
     "tilt_deg":           {"default": 20.0,                                            "min": 0,      "max": 90,     "type": float},
     "azimuth_deg":        {"default": 180.0,                                           "min": 0,      "max": 360,    "type": float},
     "modules_per_string": {"default": 4,                                             "min": 1,      "max": 100,    "type": int},
