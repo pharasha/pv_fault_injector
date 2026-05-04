@@ -59,23 +59,9 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_125": {
+                    "inverter_fault_2e6": {
                         "start": "2023-05-21",
                         "end": "2023-05-25",
-                        "params": {
-                            "efficiency_loss": 0.19
-                        }
-                    },
-                    "inverter_fault_792": {
-                        "start": "2024-10-06",
-                        "end": "2024-10-08",
-                        "params": {
-                            "efficiency_loss": 0.48
-                        }
-                    },
-                    "inverter_fault_130": {
-                        "start": "2025-02-17",
-                        "end": "2025-02-21",
                         "params": {
                             "efficiency_loss": 0.19
                         }
@@ -138,25 +124,11 @@
                     }
                 },
                 "temporary": {
-                    "inverter_fault_674": {
+                    "inverter_fault_f2e": {
                         "start": "2023-04-12",
                         "end": "2023-04-24",
                         "params": {
                             "efficiency_loss": 0.52
-                        }
-                    },
-                    "open_string_325": {
-                        "start": "2024-08-17",
-                        "end": "2024-08-27",
-                        "params": {
-                            "strings_lost": 2
-                        }
-                    },
-                    "inverter_fault_877": {
-                        "start": "2025-03-23",
-                        "end": "2025-04-04",
-                        "params": {
-                            "efficiency_loss": 0.34
                         }
                     }
                 }
@@ -217,25 +189,11 @@
                     }
                 },
                 "temporary": {
-                    "open_string_259": {
+                    "open_string_f77": {
                         "start": "2023-04-21",
                         "end": "2023-05-04",
                         "params": {
                             "strings_lost": 2
-                        }
-                    },
-                    "inverter_fault_194": {
-                        "start": "2024-07-13",
-                        "end": "2024-07-15",
-                        "params": {
-                            "efficiency_loss": 0.29
-                        }
-                    },
-                    "open_string_718": {
-                        "start": "2025-05-16",
-                        "end": "2025-05-29",
-                        "params": {
-                            "strings_lost": 1
                         }
                     }
                 }
@@ -296,25 +254,11 @@
                     }
                 },
                 "temporary": {
-                    "open_string_649": {
+                    "open_string_8ef": {
                         "start": "2023-03-05",
                         "end": "2023-03-12",
                         "params": {
                             "strings_lost": 1
-                        }
-                    },
-                    "open_string_949": {
-                        "start": "2024-11-17",
-                        "end": "2024-11-27",
-                        "params": {
-                            "strings_lost": 2
-                        }
-                    },
-                    "inverter_fault_821": {
-                        "start": "2025-02-05",
-                        "end": "2025-02-06",
-                        "params": {
-                            "efficiency_loss": 0.53
                         }
                     }
                 }
@@ -375,25 +319,11 @@
                     }
                 },
                 "temporary": {
-                    "open_string_181": {
+                    "open_string_dd9": {
                         "start": "2023-04-30",
                         "end": "2023-05-14",
                         "params": {
                             "strings_lost": 1
-                        }
-                    },
-                    "open_string_384": {
-                        "start": "2024-08-20",
-                        "end": "2024-08-31",
-                        "params": {
-                            "strings_lost": 2
-                        }
-                    },
-                    "inverter_fault_479": {
-                        "start": "2025-07-01",
-                        "end": "2025-07-05",
-                        "params": {
-                            "efficiency_loss": 0.54
                         }
                     }
                 }

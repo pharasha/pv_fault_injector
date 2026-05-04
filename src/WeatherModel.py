@@ -22,7 +22,7 @@ class WeatherModel():
             "hourly": [
                 "cloud_cover", "shortwave_radiation","diffuse_radiation", "direct_normal_irradiance", "direct_radiation","temperature_2m","wind_speed_10m","precipitation","snowfall","is_day"
             ],
-            "models":"meteoswiss_icon_ch1"
+            "models":"dwd_icon_d2"
         }
         responses = self.openmeteo.weather_api(url, params=params)
 
