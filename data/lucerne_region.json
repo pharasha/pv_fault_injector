@@ -1583,6 +1583,4566 @@
                     }
                 }
             }
+        },
+        {
+            "name": "Horw #5",
+            "props": {
+                "latitude": 47.016688576027526,
+                "longitude": 8.302108493406081,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Horw #6",
+            "props": {
+                "latitude": 47.015869316308,
+                "longitude": 8.310519900876784,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Horw #7",
+            "props": {
+                "latitude": 47.012592151736186,
+                "longitude": 8.30537005956819,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Horw #9",
+            "props": {
+                "latitude": 47.012592151736186,
+                "longitude": 8.311206546384597,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Horw #8",
+            "props": {
+                "latitude": 47.00990004467516,
+                "longitude": 8.305198398191237,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Horw #10",
+            "props": {
+                "latitude": 47.02201345782855,
+                "longitude": 8.309232440549636,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Kriens #6",
+            "props": {
+                "latitude": 47.03218071894307,
+                "longitude": 8.273097720701003,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Kriens #5",
+            "props": {
+                "latitude": 47.03873244248832,
+                "longitude": 8.284255710202956,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Kriens #9",
+            "props": {
+                "latitude": 47.03674361144331,
+                "longitude": 8.282624927121901,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Kriens #8",
+            "props": {
+                "latitude": 47.02937259117787,
+                "longitude": 8.289920535642409,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Kriens #10",
+            "props": {
+                "latitude": 47.03820599442585,
+                "longitude": 8.290092197019362,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Kriens #7",
+            "props": {
+                "latitude": 47.02966511138039,
+                "longitude": 8.273956027585768,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #17",
+            "props": {
+                "latitude": 47.05318666484125,
+                "longitude": 8.30438300665071,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #5",
+            "props": {
+                "latitude": 47.05646133749731,
+                "longitude": 8.311163631040358,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #6",
+            "props": {
+                "latitude": 47.05795241645002,
+                "longitude": 8.30215140875032,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #7",
+            "props": {
+                "latitude": 47.0562566763476,
+                "longitude": 8.297859874326491,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #9",
+            "props": {
+                "latitude": 47.04611034618518,
+                "longitude": 8.296314921933913,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #16",
+            "props": {
+                "latitude": 47.04227938533204,
+                "longitude": 8.306786265928054,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #13",
+            "props": {
+                "latitude": 47.04197263879906,
+                "longitude": 8.314060896808712,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #11",
+            "props": {
+                "latitude": 47.046300751962576,
+                "longitude": 8.316421240741818,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #10",
+            "props": {
+                "latitude": 47.047353483150395,
+                "longitude": 8.307752341205685,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #15",
+            "props": {
+                "latitude": 47.03931125975167,
+                "longitude": 8.304662436420529,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #8",
+            "props": {
+                "latitude": 47.04290847680457,
+                "longitude": 8.298825949604122,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #18",
+            "props": {
+                "latitude": 47.06062781001216,
+                "longitude": 8.306464880878536,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #20",
+            "props": {
+                "latitude": 47.050394589875864,
+                "longitude": 8.30011340993127,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #12",
+            "props": {
+                "latitude": 47.04422447122569,
+                "longitude": 8.318567007953732,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #14",
+            "props": {
+                "latitude": 47.03919427301132,
+                "longitude": 8.313159674579708,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Luzern #19",
+            "props": {
+                "latitude": 47.06322435417359,
+                "longitude": 8.313372297552803,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Emmen #5",
+            "props": {
+                "latitude": 47.07681831191178,
+                "longitude": 8.264432629677344,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Emmen #6",
+            "props": {
+                "latitude": 47.07424635414632,
+                "longitude": 8.266835888954688,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Emmen #7",
+            "props": {
+                "latitude": 47.07038818474244,
+                "longitude": 8.28674860868125,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Emmen #9",
+            "props": {
+                "latitude": 47.080792911564245,
+                "longitude": 8.27953883084922,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Emmen #10",
+            "props": {
+                "latitude": 47.07325260994533,
+                "longitude": 8.272414883705665,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Ebikon #5",
+            "props": {
+                "latitude": 47.0801053248595,
+                "longitude": 8.34468432340293,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Ebikon #6",
+            "props": {
+                "latitude": 47.07747507432769,
+                "longitude": 8.33996363553672,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Ebikon #7",
+            "props": {
+                "latitude": 47.08402123507708,
+                "longitude": 8.350606640907813,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Ebikon #8",
+            "props": {
+                "latitude": 47.08519010771714,
+                "longitude": 8.340478619667579,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Ebikon #9",
+            "props": {
+                "latitude": 47.0764813903359,
+                "longitude": 8.337302884193946,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Ebikon #10",
+            "props": {
+                "latitude": 47.074983522830436,
+                "longitude": 8.330452345954,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #1",
+            "props": {
+                "latitude": 47.04877992531089,
+                "longitude": 8.367245407708936,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #2",
+            "props": {
+                "latitude": 47.045884941970364,
+                "longitude": 8.363468857415967,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #3",
+            "props": {
+                "latitude": 47.04249264037016,
+                "longitude": 8.363554688104443,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #4",
+            "props": {
+                "latitude": 47.04486142541866,
+                "longitude": 8.370979042657666,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #5",
+            "props": {
+                "latitude": 47.04056244145189,
+                "longitude": 8.359778137811475,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #6",
+            "props": {
+                "latitude": 47.04199547459855,
+                "longitude": 8.366258354791455,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #7",
+            "props": {
+                "latitude": 47.04632358590943,
+                "longitude": 8.366687508233838,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #8",
+            "props": {
+                "latitude": 47.043691668169934,
+                "longitude": 8.3701207357729,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #9",
+            "props": {
+                "latitude": 47.047785706322415,
+                "longitude": 8.370163651117139,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Meggen #10",
+            "props": {
+                "latitude": 47.04047470347818,
+                "longitude": 8.36239597381001,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #1",
+            "props": {
+                "latitude": 47.067754911614365,
+                "longitude": 8.36498466247724,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #2",
+            "props": {
+                "latitude": 47.0765738934804,
+                "longitude": 8.361663750986082,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #3",
+            "props": {
+                "latitude": 47.0730081751588,
+                "longitude": 8.359303407052977,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #4",
+            "props": {
+                "latitude": 47.07286203407249,
+                "longitude": 8.366513184885008,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #5",
+            "props": {
+                "latitude": 47.072131322629666,
+                "longitude": 8.362607888559324,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #6",
+            "props": {
+                "latitude": 47.064823657164666,
+                "longitude": 8.359646729806883,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #7",
+            "props": {
+                "latitude": 47.071517517275176,
+                "longitude": 8.369388512948973,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #8",
+            "props": {
+                "latitude": 47.07581400630249,
+                "longitude": 8.362522057870848,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #9",
+            "props": {
+                "latitude": 47.072160551279744,
+                "longitude": 8.379044465402586,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Aldigenswil #10",
+            "props": {
+                "latitude": 47.06546677192949,
+                "longitude": 8.363294534067137,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Emmen #8",
+            "props": {
+                "latitude": 47.07078108861309,
+                "longitude": 8.278883737751784,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #1",
+            "props": {
+                "latitude": 47.09663388584759,
+                "longitude": 8.273905557820143,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #2",
+            "props": {
+                "latitude": 47.09464721401141,
+                "longitude": 8.266781610676588,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #3",
+            "props": {
+                "latitude": 47.09540683258302,
+                "longitude": 8.27648047847444,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #4",
+            "props": {
+                "latitude": 47.10230133637153,
+                "longitude": 8.266438287922682,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #5",
+            "props": {
+                "latitude": 47.099090298262645,
+                "longitude": 8.272167486378493,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #6",
+            "props": {
+                "latitude": 47.09928018807615,
+                "longitude": 8.282510084339918,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #7",
+            "props": {
+                "latitude": 47.09285277179183,
+                "longitude": 8.269377989003004,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #8",
+            "props": {
+                "latitude": 47.09502941554572,
+                "longitude": 8.260773462483229,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #9",
+            "props": {
+                "latitude": 47.09438665751954,
+                "longitude": 8.26324109477693,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Rothenburg #10",
+            "props": {
+                "latitude": 47.09619804662627,
+                "longitude": 8.271030229756178,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #1",
+            "props": {
+                "latitude": 47.08498978686295,
+                "longitude": 8.397702229855668,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #2",
+            "props": {
+                "latitude": 47.08970886707583,
+                "longitude": 8.399268639920365,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #3",
+            "props": {
+                "latitude": 47.08778037707221,
+                "longitude": 8.399955285428177,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #4",
+            "props": {
+                "latitude": 47.09033707222665,
+                "longitude": 8.405040753720414,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #5",
+            "props": {
+                "latitude": 47.09188563932465,
+                "longitude": 8.400727761624466,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #6",
+            "props": {
+                "latitude": 47.08899299635979,
+                "longitude": 8.40463305795015,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #7",
+            "props": {
+                "latitude": 47.08694759843956,
+                "longitude": 8.397723687527787,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #8",
+            "props": {
+                "latitude": 47.09020558804077,
+                "longitude": 8.396479142544877,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #9",
+            "props": {
+                "latitude": 47.090351681560605,
+                "longitude": 8.407937539456498,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
+        },
+        {
+            "name": "Uldigenswil #10",
+            "props": {
+                "latitude": 47.089562771792764,
+                "longitude": 8.402101052640091,
+                "module_cec": "Canadian_Solar_Inc__CS6X_305P",
+                "inverter_cec": "Fronius_USA__Fronius_Primo_3_8_1_208_240__208V_",
+                "altitude_m": 470,
+                "tilt_deg": 20.0,
+                "azimuth_deg": 180.0,
+                "modules_per_string": 4,
+                "strings": 2
+            },
+            "events": {
+                "permanent": {
+                    "soiling": {
+                        "enabled": true,
+                        "params": {
+                            "soiling_loss_rate": 0.1,
+                            "cleaning_threshold": 0.05,
+                            "max_soiling": 0.5,
+                            "grace_period": 7
+                        }
+                    },
+                    "mask_shading": {
+                        "enabled": true,
+                        "params": {
+                            "az_range": [
+                                39.0,
+                                150.0
+                            ],
+                            "el_range": [
+                                5.0,
+                                45.0
+                            ],
+                            "affected_fraction": 0.3,
+                            "opacity": 1.0,
+                            "ramp": 0
+                        }
+                    },
+                    "degradation": {
+                        "enabled": true,
+                        "params": {
+                            "annual_rate": 0.5,
+                            "initial_years": 0
+                        }
+                    },
+                    "pid": {
+                        "enabled": true,
+                        "params": {
+                            "severity": 0.5
+                        }
+                    }
+                },
+                "temporary": null
+            }
         }
     ]
 }
