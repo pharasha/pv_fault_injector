@@ -175,7 +175,7 @@ class Simulation():
         # Manage weather API calls
         no_days = (pd.to_datetime('2023-12-31') - pd.to_datetime('2023-01-01')).days
         no_single_call=no_days/14.0
-        no_calls=len(self.systems)*no_single_calls
+        no_calls=len(self.systems)*no_single_call
 
         if no_calls>5000:
             raise RuntimeError("API Calls are superior to hourly limit (5000).")
