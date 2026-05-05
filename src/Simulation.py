@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from prompt_toolkit import prompt
 from datetime import datetime
 import os
+import time
 
 KNOWN_FAULT_TYPES = sorted(
     ["soiling", "mask_shading", "degradation", "pid", "open_string", "inverter_fault", "snow"],
@@ -170,7 +171,18 @@ class Simulation():
 
     #  new pipeline when apply functions are done:
     def run(self, save=True):
-        for id, sys in self.systems.items():
+
+        # Manage weather API calls
+        no_days = (pd.to_datetime('2023-12-31') - pd.to_datetime('2023-01-01')).days
+        no_single_call=no_days/14.0
+        no_calls=len(self.systems)*no_single_calls
+
+        if no_calls>5000:
+            raise RuntimeError("API Calls are superior to hourly limit (5000).")
+            
+        print(f"SIM TIME: {(no_calls//600)+1} MINUTES")
+
+        for i,(id, sys) in enumerate(self.systems.items()):
             fault_list = self.build_fault_list(self.system_data[id]["events"])
 
             # featch weather system
@@ -186,6 +198,13 @@ class Simulation():
             self.output[id] = self.apply_point_c(ac, fault_list,self.weather[id],sys)
 
             self.output_healthy[id] =  sys.run_model(self.weather[id]).ac
+            
+            # STOP WHEN API LIMIT REACHED
+            if (i+1)%(no_single_call)==0:
+                print("API PAUSE")
+                time.sleep(65) 
+
+
 
         # Save the outputs
         if save:
